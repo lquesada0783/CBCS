@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="testcases.CBCS305_ReceiverLogin">
+        <methods>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS305_ReceiverLogin -->
+      <class name="testcases.CBCS315_AsAdminICanDeleteAReceiver">
+        <methods>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS315_AsAdminICanDeleteAReceiver -->
+      <class name="testcases.CBCS138_AsShippingICanChangeTierStatusToShipped">
+        <methods>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS138_AsShippingICanChangeTierStatusToShipped -->
+      <class name="testcases.CBCS183_ValidateExpandedConsumerTierRulesCorrectly">
+        <methods>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS183_ValidateExpandedConsumerTierRulesCorrectly -->
+      <class name="testcases.CBCS86_AsQCICanMarkATierLikeQCFinished">
+        <methods>
+          <include name="asQCICanMarkATierLikeQCFinishedTest" invocation-numbers="0"/>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS86_AsQCICanMarkATierLikeQCFinished -->
+      <class name="testcases.CBCS309_AsGraderICanChangeTierStatusToGraded">
+        <methods>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="validateTestStandar"/>
+          <include name="asGraderICanChangeTierStatusToGradedTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testcases.CBCS309_AsGraderICanChangeTierStatusToGraded -->
+      <class name="testcases.CBCS80_AsCustomerICanAddANewBillingAddress">
+        <methods>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS80_AsCustomerICanAddANewBillingAddress -->
+      <class name="testcases.CBCS316_AsCustomerICanCreateAOrder">
+        <methods>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS316_AsCustomerICanCreateAOrder -->
+      <class name="testcases.CBCS318_AsCustomerICanSeeTheCalendar">
+        <methods>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS318_AsCustomerICanSeeTheCalendar -->
+      <class name="testcases.CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping">
+        <methods>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping -->
+      <class name="testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping">
+        <methods>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping -->
+      <class name="testcases.CBCS105_AsReiverSearchOneOrderUsingOrderNumber">
+        <methods>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS105_AsReiverSearchOneOrderUsingOrderNumber -->
+      <class name="testcases.CBCS306_AsReceiverICanChangeOrderStatusToInSafe">
+        <methods>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="validateTestStandar"/>
+          <include name="changeOrderStatusToInSafeTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testcases.CBCS306_AsReceiverICanChangeOrderStatusToInSafe -->
+      <class name="testcases.CBCS317_AsCustomerICanUseMyBillingAddressAsShippingAddress">
+        <methods>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS317_AsCustomerICanUseMyBillingAddressAsShippingAddress -->
+      <class name="testcases.CBCS316_AsCustomerICanAddANewShippingAddress">
+        <methods>
+          <include name="setup"/>
+          <include name="asCustomerICanAddANewShippingAddressTest" invocation-numbers="0"/>
+          <include name="close"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS316_AsCustomerICanAddANewShippingAddress -->
+      <class name="testcases.CBCS77_AdminLogin">
+        <methods>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS77_AdminLogin -->
+      <class name="testcases.CBCS81_AsFinalizerICanQualifyAComic">
+        <methods>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="asFinalizerICanQualifyAComicTest" invocation-numbers="0"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS81_AsFinalizerICanQualifyAComic -->
+      <class name="testcases.CBCS92_AsAdminICanCreateAReceiverUser">
+        <methods>
+          <include name="close"/>
+          <include name="setup"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS92_AsAdminICanCreateAReceiverUser -->
+      <class name="testcases.CBCS308_AsSlabICanPrintLabelsOfAllComicBooks">
+        <methods>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="asSlabICanPrintLabelsOfAllComicBooksTest" invocation-numbers="0"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS308_AsSlabICanPrintLabelsOfAllComicBooks -->
+      <class name="testcases.CBCS_319AsCustomerICanEditABillingAddress">
+        <methods>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS_319AsCustomerICanEditABillingAddress -->
+      <class name="testcases.CBCS316_AsCustomerICanSeeTheListOfAllMyOrders">
+        <methods>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS316_AsCustomerICanSeeTheListOfAllMyOrders -->
+      <class name="testcases.CBCS214_AsCustomerICanAddACouponToTheaOrder">
+        <methods>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS214_AsCustomerICanAddACouponToTheaOrder -->
+      <class name="testcases.CBCS_318AsCustomerICanDeleteABillingAddress">
+        <methods>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS_318AsCustomerICanDeleteABillingAddress -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

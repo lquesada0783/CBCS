@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="false">
+  <test name="Test">
+    <classes>
+   	  <class name="testcases.CBCS316_AsCustomerICanCreateAOrder"/>
+   	  <class name="testcases.CBCS306_AsReceiverICanChangeOrderStatusToInSafe"/>   	  
+   	  <class name="testcases.CBCS309_AsGraderICanChangeTierStatusToGraded"/>
+   	  <class name="testcases.CBCS81_AsFinalizerICanQualifyAComic"/>
+   	  <class name="testcases.CBCS308_AsSlabICanPrintLabelsOfAllComicBooks"/>   	  
+   	  <class name="testcases.CBCS86_AsQCICanMarkATierLikeQCFinished"/>
+   	  <class name="testcases.CBCS138_AsShippingICanChangeTierStatusToShipped"/>   	  
+      <class name="testcases.CBCS105_AsReiverSearchOneOrderUsingOrderNumber"/>
+      <class name="testcases.CBCS315_AsAdminICanDeleteAReceiver"/>
+      <class name="testcases.CBCS80_AsCustomerICanAddANewBillingAddress"/>
+      <class name="testcases.CBCS316_AsCustomerICanSeeTheListOfAllMyOrders"/>
+      <class name="testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping"/>
+      <class name="testcases.CBCS316_AsCustomerICanAddANewShippingAddress"/>      
+      <class name="testcases.CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping"/>      
+      <class name="testcases.CBCS305_ReceiverLogin"/>
+      <class name="testcases.CBCS_318AsCustomerICanDeleteABillingAddress"/>         
+      <class name="testcases.CBCS317_AsCustomerICanUseMyBillingAddressAsShippingAddress"/>
+      <class name="testcases.CBCS214_AsCustomerICanAddACouponToTheaOrder"/>
+      <class name="testcases.CBCS77_AdminLogin"/>          
+      <class name="testcases.CBCS318_AsCustomerICanSeeTheCalendar"/>    
+      <class name="testcases.CBCS92_AsAdminICanCreateAReceiverUser"/>
+      <class name="testcases.CBCS_319AsCustomerICanEditABillingAddress"/>
+      <class name="testcases.CBCS183_ValidateExpandedConsumerTierRulesCorrectly"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

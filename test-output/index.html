@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 6 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Suite">
+              <span class="suite-name border-failed">Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
+                    <span>C:\Users\Laur\Documents\GitHub\projects\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">23 methods, 6 failed,   17 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS316_AsCustomerICanAddANewShippingAddress" hash-for-method="asCustomerICanAddANewShippingAddressTest(lquesada@testingsoft.com, QAtest2014)">asCustomerICanAddANewShippingAddressTest(lquesada@testingsoft.com, QAtest2014)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS81_AsFinalizerICanQualifyAComic" hash-for-method="asFinalizerICanQualifyAComicTest(lqfinalizer, 123, finalizer, 0002754-AA, 3, 1, 1, 9.4, White, Finalized, Finalizer)">asFinalizerICanQualifyAComicTest(lqfinalizer, 123, finalizer, 0002754-AA, 3, 1, 1, 9.4, White, Finalized, Finalizer)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS309_AsGraderICanChangeTierStatusToGraded" hash-for-method="asGraderICanChangeTierStatusToGradedTest(lqgrader, 123, grader, 0002754-AA, 3, 1, 1, 7.5, White, Graded, Grader)">asGraderICanChangeTierStatusToGradedTest(lqgrader, 123, grader, 0002754-AA, 3, 1, 1, 7.5, White, Graded, Grader)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS86_AsQCICanMarkATierLikeQCFinished" hash-for-method="asQCICanMarkATierLikeQCFinishedTest(lqqc, 123, qc, 0002754-AA, 3, 1, 1, 9.4, White, QC, QC)">asQCICanMarkATierLikeQCFinishedTest(lqqc, 123, qc, 0002754-AA, 3, 1, 1, 9.4, White, QC, QC)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS308_AsSlabICanPrintLabelsOfAllComicBooks" hash-for-method="asSlabICanPrintLabelsOfAllComicBooksTest(lqslab, 123, slab, 0002754-AA, 3, 1, 1, 9.4, White, Slab, Slab)">asSlabICanPrintLabelsOfAllComicBooksTest(lqslab, 123, slab, 0002754-AA, 3, 1, 1, 9.4, White, Slab, Slab)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS306_AsReceiverICanChangeOrderStatusToInSafe" hash-for-method="changeOrderStatusToInSafeTest(lqreceiver, 123, receiver, 0002754-AA, 3, 1, 3, 9.4, White, In Safe, Receiver)">changeOrderStatusToInSafeTest(lqreceiver, 123, receiver, 0002754-AA, 3, 1, 3, 9.4, White, In Safe, Receiver)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS77_AdminLogin" hash-for-method="adminLoginTest(lqadmin, 123, admin)">adminLoginTest(lqadmin, 123, admin)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS92_AsAdminICanCreateAReceiverUser" hash-for-method="asAdminIMayCreateAReceiverUserTest(lqadmin, 123, admin, Receiver)">asAdminIMayCreateAReceiverUserTest(lqadmin, 123, admin, Receiver)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS315_AsAdminICanDeleteAReceiver" hash-for-method="asAdminIMayDeleteAReceiverTest(lqadmin, 123, admin, Receiver)">asAdminIMayDeleteAReceiverTest(lqadmin, 123, admin, Receiver)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS214_AsCustomerICanAddACouponToTheaOrder" hash-for-method="asCustomerICanAddACouponToTheaOrderTest(lquesada@testingsoft.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling...)">asCustomerICanAddACouponToTheaOrderTest(lquesada@testingsoft.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS316_AsCustomerICanCreateAOrder" hash-for-method="asCustomerICanCreateAOrderTest(lquesada@testingsoft.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling...)">asCustomerICanCreateAOrderTest(lquesada@testingsoft.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS_318AsCustomerICanDeleteABillingAddress" hash-for-method="asCustomerICanDeleteABillingAddressTest(lquesada@testingsoft.com, QAtest2014)">asCustomerICanDeleteABillingAddressTest(lquesada@testingsoft.com, QAtest2014)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS_319AsCustomerICanEditABillingAddress" hash-for-method="asCustomerICanEditABillingAddressTest(lquesada@testingsoft.com, QAtest2014)">asCustomerICanEditABillingAddressTest(lquesada@testingsoft.com, QAtest2014)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS318_AsCustomerICanSeeTheCalendar" hash-for-method="asCustomerICanSeeEventsCalendarTest(lquesada@testingsoft.com, QAtest2014)">asCustomerICanSeeEventsCalendarTest(lquesada@testingsoft.com, QAtest2014)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS316_AsCustomerICanSeeTheListOfAllMyOrders" hash-for-method="asCustomerICanSeeTheListOfAllMyOrdersTest(lquesada@testingsoft.com, QAtest2014)">asCustomerICanSeeTheListOfAllMyOrdersTest(lquesada@testingsoft.com, QAtest2014)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping" hash-for-method="asCustomerICanSelectPickUpAtCBCSAsShippingTest(lquesada@testingsoft.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling...)">asCustomerICanSelectPickUpAtCBCSAsShippingTest(lquesada@testingsoft.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping" hash-for-method="asCustomerICanSelectPickUpAtConvetionAsShippingTest(lquesada@testingsoft.com, QAtest2014, 3, T&amp;T, Aurora Copy, Consumer $29. Value up to $400, chkBillin...)">asCustomerICanSelectPickUpAtConvetionAsShippingTest(lquesada@testingsoft.com, QAtest2014, 3, T&T, Aurora Copy, Consumer $29. Value up to $400, chkBillin...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS317_AsCustomerICanUseMyBillingAddressAsShippingAddress" hash-for-method="asCustomerICanUseMyBillingAddressAsShippingAddressTest(lquesada@testingsoft.com, QAtest2014)">asCustomerICanUseMyBillingAddressAsShippingAddressTest(lquesada@testingsoft.com, QAtest2014)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS80_AsCustomerICanAddANewBillingAddress" hash-for-method="asCustomerIMayAddANewBillingAddressTest(lquesada@testingsoft.com, QAtest2014)">asCustomerIMayAddANewBillingAddressTest(lquesada@testingsoft.com, QAtest2014)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS105_AsReiverSearchOneOrderUsingOrderNumber" hash-for-method="asReiverSearchOneOrderUsingOrderNumberTest(lqreceiver, 123, receiver, 0002759-AA, 3, 1, 3, 9.4, White, In Safe, Receiver)">asReiverSearchOneOrderUsingOrderNumberTest(lqreceiver, 123, receiver, 0002759-AA, 3, 1, 3, 9.4, White, In Safe, Receiver)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS138_AsShippingICanChangeTierStatusToShipped" hash-for-method="changeTierStatusToShippedTest(lqshipping, 123, shipping, 0002754-AA, 3, 1, 1, 9.4, White, Shipped, 777, Shipping)">changeTierStatusToShippedTest(lqshipping, 123, shipping, 0002754-AA, 3, 1, 1, 9.4, White, Shipped, 777, Shipping)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS305_ReceiverLogin" hash-for-method="receiverLoginTest(lqreceiver, 123, receiver, 0002754-AA, 3, 1, 3, 9.4, White, In Safe, Receiver)">receiverLoginTest(lqreceiver, 123, receiver, 0002754-AA, 3, 1, 3, 9.4, White, In Safe, Receiver)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.CBCS183_ValidateExpandedConsumerTierRulesCorrectly" hash-for-method="validateExpandedConsumerTierRulesCorrectlyTest(lquesada@testingsoft.com, QAtest2014, 1, 50, Aurora Copy, Expanded Consumer (Pre-1969) $22. Value up...)">validateExpandedConsumerTierRulesCorrectlyTest(lquesada@testingsoft.com, QAtest2014, 1, 50, Aurora Copy, Expanded Consumer (Pre-1969) $22. Value up...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testcases.CBCS316_AsCustomerICanAddANewShippingAddress</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="asCustomerICanAddANewShippingAddressTest(lquesada@testingsoft.com, QAtest2014)">
+                  </a> <!-- asCustomerICanAddANewShippingAddressTest(lquesada@testingsoft.com, QAtest2014) -->
+                  <span class="method-name">asCustomerICanAddANewShippingAddressTest</span>
+                  <span class="parameters">(lquesada@testingsoft.com, QAtest2014)</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
+Command duration or timeout: 30.12 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 52abe2af-6738-449e-b970-e4fa1f435f9f
+Driver info: com.ts.commons.FirefoxDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=30.0}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:152)
+	at pages.AddressesInformationCustomerPage.isTextPresentInShippingAddress(AddressesInformationCustomerPage.java:376)
+	at pages.AddressesInformationCustomerPage$5.Validate(AddressesInformationCustomerPage.java:421)
+	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:71)
+	at testcases.CBCS316_AsCustomerICanAddANewShippingAddress.asCustomerICanAddANewShippingAddressTest(CBCS316_AsCustomerICanAddANewShippingAddress.java:104)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Element not found in the cache - perhaps the page has changed since it was looked up
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.fxdriver.cache.getElementAt(resource://fxdriver/modules/web_element_cache.js:7610:5)
+	at &lt;anonymous class&gt;.Utils.getElementAt(file:///C:/Users/Laur/AppData/Local/Temp/anonymous3921029865329728316webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:7210:3)
+	at &lt;anonymous class&gt;.WebElement.getElementText(file:///C:/Users/Laur/AppData/Local/Temp/anonymous3921029865329728316webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10322:1)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Laur/AppData/Local/Temp/anonymous3921029865329728316webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10884:11)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Laur/AppData/Local/Temp/anonymous3921029865329728316webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:396:5)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testcases.CBCS81_AsFinalizerICanQualifyAComic</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="asFinalizerICanQualifyAComicTest(lqfinalizer, 123, finalizer, 0002754-AA, 3, 1, 1, 9.4, White, Finalized, Finalizer)">
+                  </a> <!-- asFinalizerICanQualifyAComicTest(lqfinalizer, 123, finalizer, 0002754-AA, 3, 1, 1, 9.4, White, Finalized, Finalizer) -->
+                  <span class="method-name">asFinalizerICanQualifyAComicTest</span>
+                  <span class="parameters">(lqfinalizer, 123, finalizer, 0002754-AA, 3, 1, 1, 9.4, White, Finalized, Finalizer)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;Finalized&apos;)]&quot;}
+Command duration or timeout: 30.07 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: a739c3aa-8a49-4929-9a3a-96d874103a0b
+Driver info: com.ts.commons.FirefoxDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=30.0}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at utils.Utils$2.Validate(Utils.java:86)
+	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:71)
+	at testcases.CBCS81_AsFinalizerICanQualifyAComic.asFinalizerICanQualifyAComicTest(CBCS81_AsFinalizerICanQualifyAComic.java:127)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;Finalized&apos;)]&quot;}
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Laur/AppData/Local/Temp/anonymous1385365678988963347webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8905:7)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Laur/AppData/Local/Temp/anonymous1385365678988963347webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:396:5)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testcases.CBCS86_AsQCICanMarkATierLikeQCFinished</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="asQCICanMarkATierLikeQCFinishedTest(lqqc, 123, qc, 0002754-AA, 3, 1, 1, 9.4, White, QC, QC)">
+                  </a> <!-- asQCICanMarkATierLikeQCFinishedTest(lqqc, 123, qc, 0002754-AA, 3, 1, 1, 9.4, White, QC, QC) -->
+                  <span class="method-name">asQCICanMarkATierLikeQCFinishedTest</span>
+                  <span class="parameters">(lqqc, 123, qc, 0002754-AA, 3, 1, 1, 9.4, White, QC, QC)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 5.06 seconds
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: ee7bdb67-983a-4d9f-bf37-e024a680f84e
+Driver info: com.ts.commons.FirefoxDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=30.0}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:41)
+	at com.sun.proxy.$Proxy10.click(Unknown Source)
+	at pages.TierDetailsQCPage.clickQCFinishedCheckbox(TierDetailsQCPage.java:41)
+	at testcases.CBCS86_AsQCICanMarkATierLikeQCFinished.asQCICanMarkATierLikeQCFinishedTest(CBCS86_AsQCICanMarkATierLikeQCFinished.java:83)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Element is not currently visible and so may not be interacted with
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.fxdriver.preconditions.visible(file:///C:/Users/Laur/AppData/Local/Temp/anonymous8609106500083775333webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:8225:5)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/Laur/AppData/Local/Temp/anonymous8609106500083775333webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10867:1)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Laur/AppData/Local/Temp/anonymous8609106500083775333webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10884:11)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Laur/AppData/Local/Temp/anonymous8609106500083775333webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:396:5)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testcases.CBCS309_AsGraderICanChangeTierStatusToGraded</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="asGraderICanChangeTierStatusToGradedTest(lqgrader, 123, grader, 0002754-AA, 3, 1, 1, 7.5, White, Graded, Grader)">
+                  </a> <!-- asGraderICanChangeTierStatusToGradedTest(lqgrader, 123, grader, 0002754-AA, 3, 1, 1, 7.5, White, Graded, Grader) -->
+                  <span class="method-name">asGraderICanChangeTierStatusToGradedTest</span>
+                  <span class="parameters">(lqgrader, 123, grader, 0002754-AA, 3, 1, 1, 7.5, White, Graded, Grader)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;Graded&apos;)]&quot;}
+Command duration or timeout: 30.08 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 2a9e85bf-d324-4b40-a026-0d5ae4a3b87b
+Driver info: com.ts.commons.FirefoxDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=30.0}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at utils.Utils$2.Validate(Utils.java:86)
+	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:71)
+	at testcases.CBCS309_AsGraderICanChangeTierStatusToGraded.asGraderICanChangeTierStatusToGradedTest(CBCS309_AsGraderICanChangeTierStatusToGraded.java:133)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;Graded&apos;)]&quot;}
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Laur/AppData/Local/Temp/anonymous6236478822604126635webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8905:7)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Laur/AppData/Local/Temp/anonymous6236478822604126635webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:396:5)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testcases.CBCS308_AsSlabICanPrintLabelsOfAllComicBooks</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="asSlabICanPrintLabelsOfAllComicBooksTest(lqslab, 123, slab, 0002754-AA, 3, 1, 1, 9.4, White, Slab, Slab)">
+                  </a> <!-- asSlabICanPrintLabelsOfAllComicBooksTest(lqslab, 123, slab, 0002754-AA, 3, 1, 1, 9.4, White, Slab, Slab) -->
+                  <span class="method-name">asSlabICanPrintLabelsOfAllComicBooksTest</span>
+                  <span class="parameters">(lqslab, 123, slab, 0002754-AA, 3, 1, 1, 9.4, White, Slab, Slab)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;Slab&apos;)]&quot;}
+Command duration or timeout: 30.11 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: dc9abbe9-396a-47cb-8b1b-3b8d2cc9731e
+Driver info: com.ts.commons.FirefoxDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=30.0}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at utils.Utils$2.Validate(Utils.java:86)
+	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:71)
+	at testcases.CBCS308_AsSlabICanPrintLabelsOfAllComicBooks.asSlabICanPrintLabelsOfAllComicBooksTest(CBCS308_AsSlabICanPrintLabelsOfAllComicBooks.java:89)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;Slab&apos;)]&quot;}
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Laur/AppData/Local/Temp/anonymous696684438852070015webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8905:7)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Laur/AppData/Local/Temp/anonymous696684438852070015webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:396:5)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testcases.CBCS306_AsReceiverICanChangeOrderStatusToInSafe</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="changeOrderStatusToInSafeTest(lqreceiver, 123, receiver, 0002754-AA, 3, 1, 3, 9.4, White, In Safe, Receiver)">
+                  </a> <!-- changeOrderStatusToInSafeTest(lqreceiver, 123, receiver, 0002754-AA, 3, 1, 3, 9.4, White, In Safe, Receiver) -->
+                  <span class="method-name">changeOrderStatusToInSafeTest</span>
+                  <span class="parameters">(lqreceiver, 123, receiver, 0002754-AA, 3, 1, 3, 9.4, White, In Safe, Receiver)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;In Safe&apos;)]&quot;}
+Command duration or timeout: 30.07 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: dd7e44aa-131f-4e79-a202-d17dbc44bb58
+Driver info: com.ts.commons.FirefoxDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=30.0}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at utils.Utils$2.Validate(Utils.java:86)
+	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:71)
+	at testcases.CBCS306_AsReceiverICanChangeOrderStatusToInSafe.changeOrderStatusToInSafeTest(CBCS306_AsReceiverICanChangeOrderStatusToInSafe.java:74)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;In Safe&apos;)]&quot;}
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Laur/AppData/Local/Temp/anonymous1220199972256237521webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8905:7)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Laur/AppData/Local/Temp/anonymous1220199972256237521webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:396:5)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.CBCS305_ReceiverLogin</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="receiverLoginTest(lqreceiver, 123, receiver, 0002754-AA, 3, 1, 3, 9.4, White, In Safe, Receiver)">
+                  </a> <!-- receiverLoginTest(lqreceiver, 123, receiver, 0002754-AA, 3, 1, 3, 9.4, White, In Safe, Receiver) -->
+                  <span class="method-name">receiverLoginTest</span>
+                  <span class="parameters">(lqreceiver, 123, receiver, 0002754-AA, 3, 1, 3, 9.4, White, In Safe, Receiver)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.CBCS315_AsAdminICanDeleteAReceiver</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="asAdminIMayDeleteAReceiverTest(lqadmin, 123, admin, Receiver)">
+                  </a> <!-- asAdminIMayDeleteAReceiverTest(lqadmin, 123, admin, Receiver) -->
+                  <span class="method-name">asAdminIMayDeleteAReceiverTest</span>
+                  <span class="parameters">(lqadmin, 123, admin, Receiver)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.CBCS183_ValidateExpandedConsumerTierRulesCorrectly</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateExpandedConsumerTierRulesCorrectlyTest(lquesada@testingsoft.com, QAtest2014, 1, 50, Aurora Copy, Expanded Consumer (Pre-1969) $22. Value up...)">
+                  </a> <!-- validateExpandedConsumerTierRulesCorrectlyTest(lquesada@testingsoft.com, QAtest2014, 1, 50, Aurora Copy, Expanded Consumer (Pre-1969) $22. Value up...) -->
+                  <span class="method-name">validateExpandedConsumerTierRulesCorrectlyTest</span>
+                  <span class="parameters">(lquesada@testingsoft.com, QAtest2014, 1, 50, Aurora Copy, Expanded Consumer (Pre-1969) $22. Value up to $250, 29, 1968, 8.0, 250, USD $8.00, USD $30.00, USD $4.00, USD $64.00, chkBilling0, address0, FEDEX, Credit Card)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.CBCS138_AsShippingICanChangeTierStatusToShipped</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="changeTierStatusToShippedTest(lqshipping, 123, shipping, 0002754-AA, 3, 1, 1, 9.4, White, Shipped, 777, Shipping)">
+                  </a> <!-- changeTierStatusToShippedTest(lqshipping, 123, shipping, 0002754-AA, 3, 1, 1, 9.4, White, Shipped, 777, Shipping) -->
+                  <span class="method-name">changeTierStatusToShippedTest</span>
+                  <span class="parameters">(lqshipping, 123, shipping, 0002754-AA, 3, 1, 1, 9.4, White, Shipped, 777, Shipping)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.CBCS80_AsCustomerICanAddANewBillingAddress</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="asCustomerIMayAddANewBillingAddressTest(lquesada@testingsoft.com, QAtest2014)">
+                  </a> <!-- asCustomerIMayAddANewBillingAddressTest(lquesada@testingsoft.com, QAtest2014) -->
+                  <span class="method-name">asCustomerIMayAddANewBillingAddressTest</span>
+                  <span class="parameters">(lquesada@testingsoft.com, QAtest2014)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.CBCS316_AsCustomerICanCreateAOrder</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="asCustomerICanCreateAOrderTest(lquesada@testingsoft.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling...)">
+                  </a> <!-- asCustomerICanCreateAOrderTest(lquesada@testingsoft.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling...) -->
+                  <span class="method-name">asCustomerICanCreateAOrderTest</span>
+                  <span class="parameters">(lquesada@testingsoft.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling0, address0, FEDEX, Credit Card)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.CBCS318_AsCustomerICanSeeTheCalendar</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="asCustomerICanSeeEventsCalendarTest(lquesada@testingsoft.com, QAtest2014)">
+                  </a> <!-- asCustomerICanSeeEventsCalendarTest(lquesada@testingsoft.com, QAtest2014) -->
+                  <span class="method-name">asCustomerICanSeeEventsCalendarTest</span>
+                  <span class="parameters">(lquesada@testingsoft.com, QAtest2014)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="asCustomerICanSelectPickUpAtCBCSAsShippingTest(lquesada@testingsoft.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling...)">
+                  </a> <!-- asCustomerICanSelectPickUpAtCBCSAsShippingTest(lquesada@testingsoft.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling...) -->
+                  <span class="method-name">asCustomerICanSelectPickUpAtCBCSAsShippingTest</span>
+                  <span class="parameters">(lquesada@testingsoft.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling0, address0, FEDEX, Credit Card)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.CBCS105_AsReiverSearchOneOrderUsingOrderNumber</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="asReiverSearchOneOrderUsingOrderNumberTest(lqreceiver, 123, receiver, 0002759-AA, 3, 1, 3, 9.4, White, In Safe, Receiver)">
+                  </a> <!-- asReiverSearchOneOrderUsingOrderNumberTest(lqreceiver, 123, receiver, 0002759-AA, 3, 1, 3, 9.4, White, In Safe, Receiver) -->
+                  <span class="method-name">asReiverSearchOneOrderUsingOrderNumberTest</span>
+                  <span class="parameters">(lqreceiver, 123, receiver, 0002759-AA, 3, 1, 3, 9.4, White, In Safe, Receiver)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="asCustomerICanSelectPickUpAtConvetionAsShippingTest(lquesada@testingsoft.com, QAtest2014, 3, T&amp;T, Aurora Copy, Consumer $29. Value up to $400, chkBillin...)">
+                  </a> <!-- asCustomerICanSelectPickUpAtConvetionAsShippingTest(lquesada@testingsoft.com, QAtest2014, 3, T&T, Aurora Copy, Consumer $29. Value up to $400, chkBillin...) -->
+                  <span class="method-name">asCustomerICanSelectPickUpAtConvetionAsShippingTest</span>
+                  <span class="parameters">(lquesada@testingsoft.com, QAtest2014, 3, T&T, Aurora Copy, Consumer $29. Value up to $400, chkBilling0, address0, FEDEX, Credit Card)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.CBCS317_AsCustomerICanUseMyBillingAddressAsShippingAddress</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="asCustomerICanUseMyBillingAddressAsShippingAddressTest(lquesada@testingsoft.com, QAtest2014)">
+                  </a> <!-- asCustomerICanUseMyBillingAddressAsShippingAddressTest(lquesada@testingsoft.com, QAtest2014) -->
+                  <span class="method-name">asCustomerICanUseMyBillingAddressAsShippingAddressTest</span>
+                  <span class="parameters">(lquesada@testingsoft.com, QAtest2014)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.CBCS77_AdminLogin</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="adminLoginTest(lqadmin, 123, admin)">
+                  </a> <!-- adminLoginTest(lqadmin, 123, admin) -->
+                  <span class="method-name">adminLoginTest</span>
+                  <span class="parameters">(lqadmin, 123, admin)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.CBCS92_AsAdminICanCreateAReceiverUser</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="asAdminIMayCreateAReceiverUserTest(lqadmin, 123, admin, Receiver)">
+                  </a> <!-- asAdminIMayCreateAReceiverUserTest(lqadmin, 123, admin, Receiver) -->
+                  <span class="method-name">asAdminIMayCreateAReceiverUserTest</span>
+                  <span class="parameters">(lqadmin, 123, admin, Receiver)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.CBCS_319AsCustomerICanEditABillingAddress</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="asCustomerICanEditABillingAddressTest(lquesada@testingsoft.com, QAtest2014)">
+                  </a> <!-- asCustomerICanEditABillingAddressTest(lquesada@testingsoft.com, QAtest2014) -->
+                  <span class="method-name">asCustomerICanEditABillingAddressTest</span>
+                  <span class="parameters">(lquesada@testingsoft.com, QAtest2014)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.CBCS316_AsCustomerICanSeeTheListOfAllMyOrders</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="asCustomerICanSeeTheListOfAllMyOrdersTest(lquesada@testingsoft.com, QAtest2014)">
+                  </a> <!-- asCustomerICanSeeTheListOfAllMyOrdersTest(lquesada@testingsoft.com, QAtest2014) -->
+                  <span class="method-name">asCustomerICanSeeTheListOfAllMyOrdersTest</span>
+                  <span class="parameters">(lquesada@testingsoft.com, QAtest2014)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.CBCS214_AsCustomerICanAddACouponToTheaOrder</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="asCustomerICanAddACouponToTheaOrderTest(lquesada@testingsoft.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling...)">
+                  </a> <!-- asCustomerICanAddACouponToTheaOrderTest(lquesada@testingsoft.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling...) -->
+                  <span class="method-name">asCustomerICanAddACouponToTheaOrderTest</span>
+                  <span class="parameters">(lquesada@testingsoft.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling0, address0, FEDEX, Credit Card)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.CBCS_318AsCustomerICanDeleteABillingAddress</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="asCustomerICanDeleteABillingAddressTest(lquesada@testingsoft.com, QAtest2014)">
+                  </a> <!-- asCustomerICanDeleteABillingAddressTest(lquesada@testingsoft.com, QAtest2014) -->
+                  <span class="method-name">asCustomerICanDeleteABillingAddressTest</span>
+                  <span class="parameters">(lquesada@testingsoft.com, QAtest2014)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\Laur\Documents\GitHub\projects\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Suite&quot;&gt;
+  &lt;test name=&quot;Test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.CBCS316_AsCustomerICanCreateAOrder&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS306_AsReceiverICanChangeOrderStatusToInSafe&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS309_AsGraderICanChangeTierStatusToGraded&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS81_AsFinalizerICanQualifyAComic&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS308_AsSlabICanPrintLabelsOfAllComicBooks&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS86_AsQCICanMarkATierLikeQCFinished&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS138_AsShippingICanChangeTierStatusToShipped&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS105_AsReiverSearchOneOrderUsingOrderNumber&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS315_AsAdminICanDeleteAReceiver&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS80_AsCustomerICanAddANewBillingAddress&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS316_AsCustomerICanSeeTheListOfAllMyOrders&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS316_AsCustomerICanAddANewShippingAddress&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS305_ReceiverLogin&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS_318AsCustomerICanDeleteABillingAddress&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS317_AsCustomerICanUseMyBillingAddressAsShippingAddress&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS214_AsCustomerICanAddACouponToTheaOrder&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS77_AdminLogin&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS318_AsCustomerICanSeeTheCalendar&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS92_AsAdminICanCreateAReceiverUser&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS_319AsCustomerICanEditABillingAddress&quot;/&gt;
+      &lt;class name=&quot;testcases.CBCS183_ValidateExpandedConsumerTierRulesCorrectly&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Test (23 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(23);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'asFinalizerICanQualifyAComicTest')
+data.setCell(0, 2, 'testcases.CBCS81_AsFinalizerICanQualifyAComic')
+data.setCell(0, 3, 103467);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'asGraderICanChangeTierStatusToGradedTest')
+data.setCell(1, 2, 'testcases.CBCS309_AsGraderICanChangeTierStatusToGraded')
+data.setCell(1, 3, 99921);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'asCustomerICanAddACouponToTheaOrderTest')
+data.setCell(2, 2, 'testcases.CBCS214_AsCustomerICanAddACouponToTheaOrder')
+data.setCell(2, 3, 58505);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'validateExpandedConsumerTierRulesCorrectlyTest')
+data.setCell(3, 2, 'testcases.CBCS183_ValidateExpandedConsumerTierRulesCorrectly')
+data.setCell(3, 3, 56049);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'asCustomerICanSelectPickUpAtConvetionAsShippingTest')
+data.setCell(4, 2, 'testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping')
+data.setCell(4, 3, 54564);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'asCustomerICanSelectPickUpAtCBCSAsShippingTest')
+data.setCell(5, 2, 'testcases.CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping')
+data.setCell(5, 3, 54306);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'asCustomerICanCreateAOrderTest')
+data.setCell(6, 2, 'testcases.CBCS316_AsCustomerICanCreateAOrder')
+data.setCell(6, 3, 53931);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'asCustomerICanAddANewShippingAddressTest')
+data.setCell(7, 2, 'testcases.CBCS316_AsCustomerICanAddANewShippingAddress')
+data.setCell(7, 3, 48840);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'asAdminIMayDeleteAReceiverTest')
+data.setCell(8, 2, 'testcases.CBCS315_AsAdminICanDeleteAReceiver')
+data.setCell(8, 3, 48494);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'asSlabICanPrintLabelsOfAllComicBooksTest')
+data.setCell(9, 2, 'testcases.CBCS308_AsSlabICanPrintLabelsOfAllComicBooks')
+data.setCell(9, 3, 40042);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'asCustomerICanEditABillingAddressTest')
+data.setCell(10, 2, 'testcases.CBCS_319AsCustomerICanEditABillingAddress')
+data.setCell(10, 3, 39399);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'changeOrderStatusToInSafeTest')
+data.setCell(11, 2, 'testcases.CBCS306_AsReceiverICanChangeOrderStatusToInSafe')
+data.setCell(11, 3, 39143);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'asCustomerICanDeleteABillingAddressTest')
+data.setCell(12, 2, 'testcases.CBCS_318AsCustomerICanDeleteABillingAddress')
+data.setCell(12, 3, 29741);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'asCustomerIMayAddANewBillingAddressTest')
+data.setCell(13, 2, 'testcases.CBCS80_AsCustomerICanAddANewBillingAddress')
+data.setCell(13, 3, 20407);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'asCustomerICanUseMyBillingAddressAsShippingAddressTest')
+data.setCell(14, 2, 'testcases.CBCS317_AsCustomerICanUseMyBillingAddressAsShippingAddress')
+data.setCell(14, 3, 18698);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'asQCICanMarkATierLikeQCFinishedTest')
+data.setCell(15, 2, 'testcases.CBCS86_AsQCICanMarkATierLikeQCFinished')
+data.setCell(15, 3, 15513);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'changeTierStatusToShippedTest')
+data.setCell(16, 2, 'testcases.CBCS138_AsShippingICanChangeTierStatusToShipped')
+data.setCell(16, 3, 13604);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'asCustomerICanSeeTheListOfAllMyOrdersTest')
+data.setCell(17, 2, 'testcases.CBCS316_AsCustomerICanSeeTheListOfAllMyOrders')
+data.setCell(17, 3, 10742);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'asCustomerICanSeeEventsCalendarTest')
+data.setCell(18, 2, 'testcases.CBCS318_AsCustomerICanSeeTheCalendar')
+data.setCell(18, 3, 10162);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'asReiverSearchOneOrderUsingOrderNumberTest')
+data.setCell(19, 2, 'testcases.CBCS105_AsReiverSearchOneOrderUsingOrderNumber')
+data.setCell(19, 3, 8482);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'asAdminIMayCreateAReceiverUserTest')
+data.setCell(20, 2, 'testcases.CBCS92_AsAdminICanCreateAReceiverUser')
+data.setCell(20, 3, 8478);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'receiverLoginTest')
+data.setCell(21, 2, 'testcases.CBCS305_ReceiverLogin')
+data.setCell(21, 3, 4931);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'adminLoginTest')
+data.setCell(22, 2, 'testcases.CBCS77_AdminLogin')
+data.setCell(22, 3, 3812);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 14 minutes</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS316_AsCustomerICanCreateAOrder</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">asCustomerICanCreateAOrderTest(lquesada@testingsoft.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling...)</span>
+                <span class="method-start">2833 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">56764 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=asCustomerICanCreateAOrderTest status=SUCCESS method=CBCS316_AsCustomerICanCreateAO...)</span>
+                <span class="method-start">56954 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS306_AsReceiverICanChangeOrderStatusToInSafe</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">57044 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">changeOrderStatusToInSafeTest(lqreceiver, 123, receiver, 0002754-AA, 3, 1, 3, 9.4, White, In Safe, Receiver)</span>
+                <span class="method-start">59211 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">98354 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=changeOrderStatusToInSafeTest status=FAILURE method=CBCS306_AsReceiverICanChangeOrd...)</span>
+                <span class="method-start">98584 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS309_AsGraderICanChangeTierStatusToGraded</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">98674 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">asGraderICanChangeTierStatusToGradedTest(lqgrader, 123, grader, 0002754-AA, 3, 1, 1, 7.5, White, Graded, Grader)</span>
+                <span class="method-start">100807 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">200728 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=asGraderICanChangeTierStatusToGradedTest status=FAILURE method=CBCS309_AsGraderICan...)</span>
+                <span class="method-start">200959 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS81_AsFinalizerICanQualifyAComic</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">201049 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">asFinalizerICanQualifyAComicTest(lqfinalizer, 123, finalizer, 0002754-AA, 3, 1, 1, 9.4, White, Finalized, Finalizer)</span>
+                <span class="method-start">203091 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">306558 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=asFinalizerICanQualifyAComicTest status=FAILURE method=CBCS81_AsFinalizerICanQualif...)</span>
+                <span class="method-start">306758 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS308_AsSlabICanPrintLabelsOfAllComicBooks</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">306848 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">asSlabICanPrintLabelsOfAllComicBooksTest(lqslab, 123, slab, 0002754-AA, 3, 1, 1, 9.4, White, Slab, Slab)</span>
+                <span class="method-start">308940 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">348982 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=asSlabICanPrintLabelsOfAllComicBooksTest status=FAILURE method=CBCS308_AsSlabICanPr...)</span>
+                <span class="method-start">349182 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS86_AsQCICanMarkATierLikeQCFinished</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">349272 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">asQCICanMarkATierLikeQCFinishedTest(lqqc, 123, qc, 0002754-AA, 3, 1, 1, 9.4, White, QC, QC)</span>
+                <span class="method-start">351304 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">366817 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=asQCICanMarkATierLikeQCFinishedTest status=FAILURE method=CBCS86_AsQCICanMarkATierL...)</span>
+                <span class="method-start">367007 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS138_AsShippingICanChangeTierStatusToShipped</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">367087 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">changeTierStatusToShippedTest(lqshipping, 123, shipping, 0002754-AA, 3, 1, 1, 9.4, White, Shipped, 777, Shipping)</span>
+                <span class="method-start">370151 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">383755 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=changeTierStatusToShippedTest status=SUCCESS method=CBCS138_AsShippingICanChangeTie...)</span>
+                <span class="method-start">383935 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS105_AsReiverSearchOneOrderUsingOrderNumber</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">384015 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">asReiverSearchOneOrderUsingOrderNumberTest(lqreceiver, 123, receiver, 0002759-AA, 3, 1, 3, 9.4, White, In Safe, Receiver)</span>
+                <span class="method-start">387218 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">395700 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=asReiverSearchOneOrderUsingOrderNumberTest status=SUCCESS method=CBCS105_AsReiverSe...)</span>
+                <span class="method-start">395860 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS315_AsAdminICanDeleteAReceiver</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">395950 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">asAdminIMayDeleteAReceiverTest(lqadmin, 123, admin, Receiver)</span>
+                <span class="method-start">399063 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">447557 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=asAdminIMayDeleteAReceiverTest status=SUCCESS method=CBCS315_AsAdminICanDeleteARece...)</span>
+                <span class="method-start">447757 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS80_AsCustomerICanAddANewBillingAddress</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">447847 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">asCustomerIMayAddANewBillingAddressTest(lquesada@testingsoft.com, QAtest2014)</span>
+                <span class="method-start">450019 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">470436 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=asCustomerIMayAddANewBillingAddressTest status=SUCCESS method=CBCS80_AsCustomerICan...)</span>
+                <span class="method-start">470616 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS316_AsCustomerICanSeeTheListOfAllMyOrders</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">470696 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">asCustomerICanSeeTheListOfAllMyOrdersTest(lquesada@testingsoft.com, QAtest2014)</span>
+                <span class="method-start">473800 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">484542 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=asCustomerICanSeeTheListOfAllMyOrdersTest status=SUCCESS method=CBCS316_AsCustomerI...)</span>
+                <span class="method-start">484752 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">484832 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">asCustomerICanSelectPickUpAtConvetionAsShippingTest(lquesada@testingsoft.com, QAtest2014, 3, T&T, Aurora Copy, Consumer $29. Value up to $400, chkBillin...)</span>
+                <span class="method-start">486813 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">541377 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=asCustomerICanSelectPickUpAtConvetionAsShippingTest status=SUCCESS method=CBCS_321A...)</span>
+                <span class="method-start">541527 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS316_AsCustomerICanAddANewShippingAddress</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">541617 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">asCustomerICanAddANewShippingAddressTest(lquesada@testingsoft.com, QAtest2014)</span>
+                <span class="method-start">544690 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">593530 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=asCustomerICanAddANewShippingAddressTest status=FAILURE method=CBCS316_AsCustomerIC...)</span>
+                <span class="method-start">593680 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">593770 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">asCustomerICanSelectPickUpAtCBCSAsShippingTest(lquesada@testingsoft.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling...)</span>
+                <span class="method-start">595852 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">650158 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=asCustomerICanSelectPickUpAtCBCSAsShippingTest status=SUCCESS method=CBCS_320AsCust...)</span>
+                <span class="method-start">650318 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS305_ReceiverLogin</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">650398 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">receiverLoginTest(lqreceiver, 123, receiver, 0002754-AA, 3, 1, 3, 9.4, White, In Safe, Receiver)</span>
+                <span class="method-start">652500 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">657431 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=receiverLoginTest status=SUCCESS method=CBCS305_ReceiverLogin.receiverLoginTest(jav...)</span>
+                <span class="method-start">657581 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS_318AsCustomerICanDeleteABillingAddress</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">657671 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">asCustomerICanDeleteABillingAddressTest(lquesada@testingsoft.com, QAtest2014)</span>
+                <span class="method-start">659744 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">689485 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=asCustomerICanDeleteABillingAddressTest status=SUCCESS method=CBCS_318AsCustomerICa...)</span>
+                <span class="method-start">689695 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS317_AsCustomerICanUseMyBillingAddressAsShippingAddress</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">689785 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">asCustomerICanUseMyBillingAddressAsShippingAddressTest(lquesada@testingsoft.com, QAtest2014)</span>
+                <span class="method-start">693338 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">712036 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=asCustomerICanUseMyBillingAddressAsShippingAddressTest status=SUCCESS method=CBCS31...)</span>
+                <span class="method-start">712196 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS214_AsCustomerICanAddACouponToTheaOrder</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">712276 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">asCustomerICanAddACouponToTheaOrderTest(lquesada@testingsoft.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling...)</span>
+                <span class="method-start">714289 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">772794 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=asCustomerICanAddACouponToTheaOrderTest status=SUCCESS method=CBCS214_AsCustomerICa...)</span>
+                <span class="method-start">772954 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS77_AdminLogin</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">773034 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">adminLoginTest(lqadmin, 123, admin)</span>
+                <span class="method-start">775050 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">778862 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=adminLoginTest status=SUCCESS method=CBCS77_AdminLogin.adminLoginTest(java.lang.Str...)</span>
+                <span class="method-start">779022 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS318_AsCustomerICanSeeTheCalendar</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">779113 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">asCustomerICanSeeEventsCalendarTest(lquesada@testingsoft.com, QAtest2014)</span>
+                <span class="method-start">781095 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">791257 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=asCustomerICanSeeEventsCalendarTest status=SUCCESS method=CBCS318_AsCustomerICanSee...)</span>
+                <span class="method-start">791427 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS92_AsAdminICanCreateAReceiverUser</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">791507 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">asAdminIMayCreateAReceiverUserTest(lqadmin, 123, admin, Receiver)</span>
+                <span class="method-start">794610 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">803088 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=asAdminIMayCreateAReceiverUserTest status=SUCCESS method=CBCS92_AsAdminICanCreateAR...)</span>
+                <span class="method-start">840703 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS_319AsCustomerICanEditABillingAddress</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">840793 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">asCustomerICanEditABillingAddressTest(lquesada@testingsoft.com, QAtest2014)</span>
+                <span class="method-start">842932 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">882331 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=asCustomerICanEditABillingAddressTest status=SUCCESS method=CBCS_319AsCustomerICanE...)</span>
+                <span class="method-start">882551 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.CBCS183_ValidateExpandedConsumerTierRulesCorrectly</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">882641 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateExpandedConsumerTierRulesCorrectlyTest(lquesada@testingsoft.com, QAtest2014, 1, 50, Aurora Copy, Expanded Consumer (Pre-1969) $22. Value up...)</span>
+                <span class="method-start">884845 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">940894 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">validateTestStandar([TestResult name=validateExpandedConsumerTierRulesCorrectlyTest status=SUCCESS method=CBCS183_Valida...)</span>
+                <span class="method-start">941044 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>
