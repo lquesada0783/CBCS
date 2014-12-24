@@ -26,7 +26,7 @@ public class CBCS86_AsQCICanMarkATierLikeQCFinished extends TestCaseCBCS {
 	 return new DataSourceXls("Parameters.xls").getData(4, 2);
 	}	
 		
-	@Test(dataProvider = "data")
+	@Test(dataProvider = "data", dependsOnGroups={"printLabelsOfAllComicBooks"},groups={"markATierLikeQCFinished"})
 	public void asQCICanMarkATierLikeQCFinishedTest (String userName, String password, String enviroment, String invoiceNumber,String qytComics, String tier, String comicNumber, String grade, String pageQuality,String orderStatus, String role) {
 		
 		using(

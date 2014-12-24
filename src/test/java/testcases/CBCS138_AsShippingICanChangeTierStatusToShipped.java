@@ -27,7 +27,7 @@ public class CBCS138_AsShippingICanChangeTierStatusToShipped extends TestCaseCBC
 	 return new DataSourceXls("Parameters.xls").getData(5, 2);
 	}	
 	
-	@Test(dataProvider = "data")
+	@Test(dataProvider = "data",dependsOnGroups={"markATierLikeQCFinished"},groups={"changeTierStatusToShipped"})
 	public void changeTierStatusToShippedTest (String userName, String password, String enviroment, String invoiceNumber,String qytComics, String tier, String comicNumber, String grade, String pageQuality,String orderStatus,String trackingNumber, String role) {
 		
 		using(

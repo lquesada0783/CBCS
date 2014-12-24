@@ -38,7 +38,7 @@ public class CBCS316_AsCustomerICanCreateAOrder extends TestCaseCBCS {
 	   }  
 
 	
-	@Test(dataProvider = "data")
+	@Test(dataProvider = "data", groups={"CreateOrder"})
 	public void asCustomerICanCreateAOrderTest(String email, String password, String qtyComics, String amountCoupon, String pedigree, String tier,String billing, String shipping, String provider, String paymentMethod){
 		
 		order = new OrderDataInfo();

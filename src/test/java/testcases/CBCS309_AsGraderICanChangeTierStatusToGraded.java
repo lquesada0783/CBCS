@@ -29,7 +29,7 @@ public class CBCS309_AsGraderICanChangeTierStatusToGraded extends TestCaseCBCS {
 	 
 	}	
 	
-	@Test(dataProvider = "data")
+	@Test(dataProvider = "data", dependsOnGroups={"changeOrderStatusToInSafe"},groups={"changeTierStatusToGraded"})
 	public void asGraderICanChangeTierStatusToGradedTest (String userName, String password, String enviroment,  String invoiceNumber,String qytComics, String tier, String comicNumber, String grade, String pageQuality, String orderStatus, String role) {
 		
 		using(

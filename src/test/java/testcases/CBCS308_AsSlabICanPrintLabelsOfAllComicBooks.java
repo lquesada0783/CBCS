@@ -27,7 +27,7 @@ public class CBCS308_AsSlabICanPrintLabelsOfAllComicBooks extends TestCaseCBCS {
 	}	
 	
 	
-	@Test(dataProvider = "data")
+	@Test(dataProvider = "data", dependsOnGroups={"FinalizerICanQualifyAComic"},groups={"printLabelsOfAllComicBooks"})
 	public void asSlabICanPrintLabelsOfAllComicBooksTest (String userName, String password, String enviroment, String invoiceNumber,String qytComics, String tier, String comicNumber, String grade, String pageQuality,String orderStatus, String role) {
 		
 		using(

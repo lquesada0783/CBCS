@@ -24,7 +24,7 @@ private ProcessOrderReceiverPage processOrderPage;
 	 return new DataSourceXls("Parameters.xls").getData(0,2);
 	}
 
-	@Test(dataProvider = "data")
+	@Test(dataProvider = "data",dependsOnGroups={"CreateOrder"},groups={"changeOrderStatusToInSafe"})
 	public void changeOrderStatusToInSafeTest (String userName, String password, String enviroment, String invoiceNumber,String qytComics, String tier, String comicNumber, String grade, String pageQuality,String orderStatus, String role) {
 		
 		

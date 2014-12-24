@@ -28,7 +28,7 @@ private OrderDataInfo order;
 	return new DataSourceXls(file).getData(0, 2);
 	}	
 
-	@Test(dataProvider = "data")
+	@Test(dataProvider = "data",dependsOnGroups={"CreateOrder"})
 	public void asReiverSearchOneOrderUsingOrderNumberTest (String userName, String password, String enviroment, String invoiceNumber,String qytComics, String tier, String comicNumber, String grade, String pageQuality,String orderStatus, String role) {
 		
 		order = new OrderDataInfo();

@@ -28,7 +28,7 @@ public class CBCS81_AsFinalizerICanQualifyAComic extends TestCaseCBCS {
 	 return new DataSourceXls("Parameters.xls").getData(2, 2);
 	}	
 	
-	@Test(dataProvider = "data")
+	@Test(dataProvider = "data", dependsOnGroups={"changeTierStatusToGraded"},groups={"FinalizerICanQualifyAComic"})
 	public void asFinalizerICanQualifyAComicTest (String userName, String password, String enviroment, String invoiceNumber,String qytComics, String tier, String comicNumber, String grade, String pageQuality,String orderStatus, String role) {
 		
 		using(
