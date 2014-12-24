@@ -1,9 +1,11 @@
 package pages;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.util.List;
 
 import org.testng.Assert;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -63,6 +65,15 @@ public class ProcessOrderReceiverPage extends Page {
 	
 	public ProcessOrderReceiverPage clickYesButton(){
 		yesButton.click();
+		
+		Robot robot;
+		try {
+			robot = new Robot();				
+			robot.keyPress(KeyEvent.VK_ENTER);			
+		} catch (AWTException e) {
+            
+            throw  new RuntimeException(e.getMessage());
+    } 		
 		return this;
 	}
 

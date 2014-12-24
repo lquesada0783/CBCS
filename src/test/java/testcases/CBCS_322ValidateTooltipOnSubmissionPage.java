@@ -3,7 +3,6 @@ package testcases;
 import java.io.IOException;
 
 import jxl.read.biff.BiffException;
-import object.OrderDataInfo;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -22,12 +21,12 @@ public class CBCS_322ValidateTooltipOnSubmissionPage extends TestCaseCBCS {
 		
 	@DataProvider
 	 public Object[][] data() throws BiffException, IOException {
-	        return new DataSourceXls ("Parameters.xls" ).getData(8,2);
+	        return new DataSourceXls ("Parameters.xls" ).getData(15,2);
 	       
 	   }  
 	
 	@Test(dataProvider = "data")
-	public void asCustomerICanCreateAOrderTest(String email, String password, String qtyComics, String amountCoupon, String pedigree, String tier,String billing, String shipping, String provider, String paymentMethod){
+	public void asCustomerICanCreateAOrderTest(String email,String password,String titleText, String issueText, String yearText, String publisherText,  String variantText,  String pedigreeText,  String tierText,  String quantityText, String insuredValueText,  String gradeScreeningText, String fastPassText,  String slideshowText,  String imagenText,  String verifiedSignatureText,  String authenticatedSignatureText){
 		
 	
 		using(
@@ -55,8 +54,7 @@ public class CBCS_322ValidateTooltipOnSubmissionPage extends TestCaseCBCS {
 				
 		.check(
 				
-				submitYourComicPage.submitYourComicLabelMustBePresent()
-				
+				submitYourComicPage.validateTooltip(getWebDriver(), titleText, issueText,yearText, publisherText, variantText, pedigreeText, tierText, quantityText, insuredValueText, gradeScreeningText, fastPassText,  slideshowText, imagenText, verifiedSignatureText, authenticatedSignatureText)
 				);
 		}
 

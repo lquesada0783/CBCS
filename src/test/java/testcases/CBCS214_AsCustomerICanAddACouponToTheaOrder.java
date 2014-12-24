@@ -168,7 +168,7 @@ public class CBCS214_AsCustomerICanAddACouponToTheaOrder extends TestCaseCBCS{
 		.andUsing(
 				
 				orderConfirmationCustomerPage
-				.writeOnderNumber(getWebDriver(),order)				
+				//.writeOnderNumber(getWebDriver(),order)				
 				.clickOkButton(getWebDriver())
 				
 				)

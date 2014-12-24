@@ -189,18 +189,79 @@ public class SubmitYourComicPage extends Page {
 		};
 	}	
 	
-	public Validator validateTooltip(final WebDriver driver, final String amountFastPass,final String amountVideo,final String amountImage,final String amountSubTotal){
+	public Validator validateTooltip(final WebDriver driver, final String textTitle, final String issueText,final String yearText,final String publisherText, final String variantText, final String pedigreeText, final String tierText, final String quantityText,final String insuredValueText, final String gradeScreeningText,final String fastPassText, final String slideshowText, final String imagenText, final String verifiedSignatureText, final String authenticatedSignatureText){
+		 WebElement element;
+		 
+		 element = driver.findElement(By.xpath("(//i[@popover-title='Title'])[1]"));
+		final String titleTextXpath=element.getAttribute("popover").toString();
+		
+		 element = driver.findElement(By.xpath("(//i[@popover-title='Issue'])[1]"));
+		final String issueTextXpath=element.getAttribute("popover").toString();
+		
+		element = driver.findElement(By.xpath("(//i[@popover-title='Year'])[1]"));
+		final String yearTextXpath=element.getAttribute("popover").toString();
+		
+		element = driver.findElement(By.xpath("(//i[@popover-title='Publisher'])[1]"));
+		final String publisherTextXpath=element.getAttribute("popover").toString();
+		
+		element = driver.findElement(By.xpath("(//i[@popover-title='Variant'])[1]"));
+		final String variantTextXpath=element.getAttribute("popover").toString();
+		
+		element = driver.findElement(By.xpath("(//i[@popover-title='Pedigree'])[1]"));
+		final String pedigreeTextXpath=element.getAttribute("popover").toString();
+		
+		element = driver.findElement(By.xpath("(//i[@popover-title='Tier'])[1]"));
+		final String tierTextXpath=element.getAttribute("popover").toString();
+		
+		element = driver.findElement(By.xpath("(//i[@popover-title='Quantity'])[1]"));
+		final String quantityTextXpath=element.getAttribute("popover").toString();
+		
+		element = driver.findElement(By.xpath("(//i[@popover-title='Insured Value'])[1]"));
+		final String insuredValueTextXpath=element.getAttribute("popover").toString();
+		
+		element = driver.findElement(By.xpath("(//i[@popover-title='Grade Screening'])[1]"));
+		final String gradeScreeningTextXpath=element.getAttribute("popover").toString();
+		
+		element = driver.findElement(By.xpath("(//i[@popover-title='Fast pass'])[1]"));
+		final String fastPassTextXpath=element.getAttribute("popover").toString();
+		
+		element = driver.findElement(By.xpath("(//i[@popover-title='Slideshow'])[1]"));
+		final String slideshowTextXpath=element.getAttribute("popover").toString().trim();
+		
+		element = driver.findElement(By.xpath("(//i[@popover-title='Imaging'])[1]"));
+		final String imagenTextXpath=element.getAttribute("popover").toString();
+		
+		element = driver.findElement(By.xpath("(//i[@popover-title='Verified Signature'])[1]"));
+		final String verifiedSignatureTextXpath=element.getAttribute("popover").toString();
+				
+		element = driver.findElement(By.xpath("(//i[@popover-title='Authenticated Signature'])[1]"));
+		final String authenticatedSignatureTextXpath=element.getAttribute("popover").toString();
+		
+		
 		
 		return new Validator()
 		{
 			@Override
 			public void Validate(){					
 				
-				Assert.assertTrue(driver.findElement(By.xpath("//div[@class='subTotalVideoStyle ng-binding' and text()='"+amountFastPass+"']")).isDisplayed());	
-				Assert.assertTrue(driver.findElement(By.xpath("//div[@class='subTotalVideoStyle ng-binding' and text()='"+amountVideo+"']")).isDisplayed());	
-				Assert.assertTrue(driver.findElement(By.xpath("//div[@class='subTotalVideoStyle ng-binding' and text()='"+amountImage+"']")).isDisplayed());	
-				Assert.assertTrue(driver.findElement(By.xpath("//div[@class='subTotalStyle ng-binding' and text()='"+amountSubTotal+"']")).isDisplayed());	
-	
+				Assert.assertEquals(textTitle.trim(),titleTextXpath.trim());
+				Assert.assertEquals(issueText.trim(),issueTextXpath.trim());
+				Assert.assertEquals(yearText.trim(),yearTextXpath.trim());
+				Assert.assertEquals(publisherText.trim(),publisherTextXpath.trim());
+				Assert.assertEquals(variantText.trim(),variantTextXpath.trim());
+				Assert.assertEquals(pedigreeText.trim(),pedigreeTextXpath.trim());
+				Assert.assertEquals(tierText.trim(),tierTextXpath.trim());
+				Assert.assertEquals(quantityText.trim(),quantityTextXpath.trim());
+				Assert.assertEquals(insuredValueText.trim(),insuredValueTextXpath.trim());
+				Assert.assertEquals(gradeScreeningText.trim(),gradeScreeningTextXpath.trim());
+				Assert.assertEquals(fastPassText.toString().trim(),fastPassTextXpath.toString().trim());
+				Assert.assertEquals(slideshowText.trim(),slideshowTextXpath.trim());
+				/*Assert.assertEquals(imagenText.trim(),imagenTextXpath.trim());
+				Assert.assertEquals(verifiedSignatureText.trim(),verifiedSignatureTextXpath.trim());
+				Assert.assertEquals(authenticatedSignatureText.trim(),authenticatedSignatureTextXpath.trim());*/
+				
+				
+						
 			}
 		};
 	}	

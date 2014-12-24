@@ -372,7 +372,7 @@ public class AddressesInformationCustomerPage extends Page {
 		utils.Utils.waitForElemets(2);	
 		List<WebElement> list = driver.findElements(By.xpath("//div[@ng-repeat='shipping in shippingList']//div[@class='col-md-12 ng-binding']"));
 
-		for(WebElement element : list){
+		for(WebElement element : list){			
 			if(element.getText().toString().equals(text))
 			{
 				return true;

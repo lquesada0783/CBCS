@@ -67,7 +67,8 @@ private ProcessOrderReceiverPage processOrderPage;
 				   processOrderPage
 				   .clickPrintAllBarcodesButton()
 				   .and()
-				   .clickYesButton()								   
+				   .clickYesButton()
+				   
 				  )			  
 		  			
 		 

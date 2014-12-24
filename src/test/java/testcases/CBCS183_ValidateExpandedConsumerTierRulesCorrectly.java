@@ -179,7 +179,7 @@ public class CBCS183_ValidateExpandedConsumerTierRulesCorrectly extends
 		.andUsing(
 				
 				orderConfirmationCustomerPage
-				.writeOnderNumber(getWebDriver(),order)				
+				//.writeOnderNumber(getWebDriver(),order)				
 				.clickOkButton(getWebDriver())
 				
 				
