@@ -38,6 +38,12 @@ public class VariantsPage extends Page {
 	@FindBy(xpath="//div[@id='operationResult' and contains(.,'Variant deleted successfully.') and @style='display: block;']")
 	private WebElement deletedVariantSuccessfullyMessage;
 	
+	@FindBy(xpath="//input[@name='name']")
+	private WebElement editVariantNameField;
+	
+	@FindBy(xpath="//div[@id='operationResult' and contains(.,'Variant updated successfully.') and @style='display: block;']")
+	private WebElement editVariantSuccessfullyMessage;
+	
 	@Override
 	public VariantsPage and() {
 	
@@ -61,7 +67,7 @@ public class VariantsPage extends Page {
 		return this;
 	}
 	
-	public VariantsPage clickSaveButton(WebDriver driver){
+	public VariantsPage clickSaveButton(){
 		saveButton.click();		
 		return this;		 
 	}
@@ -89,7 +95,21 @@ public class VariantsPage extends Page {
 		yesButton.click();		
 		return this;		 
 	}
-
+	
+   public VariantsPage clickEditButton(WebDriver driver, String variantName){
+		    utils.Utils.waitForElemets(1);
+			final WebElement editButtonWebElement = driver.findElement(By.xpath("//span[contains(.,'"+variantName+"')]//../..//a[contains(.,'Edit')]"));
+			editButtonWebElement.click();	
+			
+			return this;		 
+	}
+	 
+	public VariantsPage fillFieldsEditVariantModal(String variantName){
+			utils.Utils.waitForElemets(1);
+			editVariantNameField.clear();
+			editVariantNameField.sendKeys(variantName);	
+			return this;
+	}	
 
 	public Validator VariantLabelMustBePresent(){
 		return new Validator()
@@ -146,5 +166,19 @@ public class VariantsPage extends Page {
 			}
 		};
 	}
+	
+	public Validator editVariantSuccessfullyMessageMustBePresent(){
+		return new Validator()
+		{
+			@Override
+			public void Validate(){				
+					
+				boolean thereIsAnEditVariantSuccessfullyMessage = editVariantSuccessfullyMessage !=null;
+				Assert.assertTrue(thereIsAnEditVariantSuccessfullyMessage);			
+				
+			}
+		};
+	}
+
 	
 }

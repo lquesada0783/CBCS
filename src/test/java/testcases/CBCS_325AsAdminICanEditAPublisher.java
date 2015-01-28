@@ -65,7 +65,7 @@ public class CBCS_325AsAdminICanEditAPublisher extends TestCaseCBCS {
 				.and()
 				.fillFieldsAddPublisherModal(publisherName)
 				.then()
-				.clickSaveButton(getWebDriver())
+				.clickSaveButton()
 				
 				)
 						
@@ -95,7 +95,7 @@ public class CBCS_325AsAdminICanEditAPublisher extends TestCaseCBCS {
 			.and()
 			.fillFieldsEditPublisherModal(newPublisherName)
 			.then()
-			.clickSaveButton(getWebDriver())
+			.clickSaveButton()
 			
 			)
 		

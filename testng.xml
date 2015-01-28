@@ -7,7 +7,9 @@
       <class name="testcases.CBCS_306AsReceiverICanChangeOrderStatusToInSafe"/>  
       <class name="testcases.CBCS_309AsGraderICanChangeTierStatusToGraded"/>
       <class name="testcases.CBCS_81AsFinalizerICanQualifyAComic"/> 
-      <class name="testcases.CBCS_308AsSlabICanPrintLabelsOfAllComicBooks"/>     
+      <class name="testcases.CBCS_308AsSlabICanPrintLabelsOfAllComicBooks"/> 
+      <class name="testcases.CBCS_86AsQCICanMarkATierLikeShipping"/> 
+      <class name="testcases.CBCS_138AsShippingICanChangeTierStatusToShipped"/> 
       <class name="testcases.CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping"/>
       <class name="testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping"/>
       <class name="testcases.CBCS_80AsCustomerICanAddANewBillingAddress"/> 
@@ -20,6 +22,7 @@
       <class name="testcases.CBCS_183ValidateExpandedConsumerTierRulesCorrectly"/>
       <class name="testcases.CBCS_318AsCustomerICanSeeTheCalendar"/>
       <class name="testcases.CBCS_319AsAdminICanCreateANewVariant"/>
+      <class name="testcases.CBCS_326AsAdminICanEditAVariant"/>
  	  <class name="testcases.CBCS_320AsAdminICanDeleteAVariant"/>
 	  <class name="testcases.CBCS_323AsAdminICanCreateANewPedigree"/>
       <class name="testcases.CBCS_324AsAdminICanDeleteAPedigree"/>

@@ -66,7 +66,7 @@ public class CBCS_319AsAdminICanCreateANewVariant extends TestCaseCBCS {
 				.and()
 				.fillFieldsAddVariantModal(variantName)
 				.then()
-				.clickSaveButton(getWebDriver())					
+				.clickSaveButton()					
 					
 				)
 					

@@ -61,7 +61,7 @@ public class CBCS_322AsAdminICanDeleteAPublisher extends TestCaseCBCS {
 				.and()
 				.fillFieldsAddPublisherModal(publisherName)
 				.then()
-				.clickSaveButton(getWebDriver())
+				.clickSaveButton()
 				
 				)
 						

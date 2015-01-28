@@ -62,7 +62,7 @@ public class CBCS_320AsAdminICanDeleteAVariant extends TestCaseCBCS {
 			.and()
 			.fillFieldsAddVariantModal(variantName)
 			.then()
-			.clickSaveButton(getWebDriver())					
+			.clickSaveButton()					
 					
 			)
 					

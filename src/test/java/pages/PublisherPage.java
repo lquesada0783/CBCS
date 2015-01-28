@@ -72,7 +72,7 @@ public class PublisherPage extends Page {
 		return this;
 	}	
 	
-	public PublisherPage clickSaveButton(WebDriver driver){
+	public PublisherPage clickSaveButton( ){
 		saveButton.click();		
 		return this;		 
 	}
@@ -98,8 +98,8 @@ public class PublisherPage extends Page {
 	
   public PublisherPage clickEditButton(WebDriver driver, String publisherName){
 	    utils.Utils.waitForElemets(1);
-		final WebElement deleteButtonWebElement = driver.findElement(By.xpath("//span[contains(.,'"+publisherName+"')]//../..//a[contains(.,'Edit')]"));
-		deleteButtonWebElement.click();	
+		final WebElement editButtonWebElement = driver.findElement(By.xpath("//span[contains(.,'"+publisherName+"')]//../..//a[contains(.,'Edit')]"));
+		editButtonWebElement.click();	
 		
 		return this;		 
 	}

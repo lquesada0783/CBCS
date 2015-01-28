@@ -3,11 +3,47 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testcases.CBCS_321AsAdminICanCreateANewPublisher">
+      <class name="testcases.CBCS_309AsGraderICanChangeTierStatusToGraded">
         <methods>
-          <include name="asAdminICanCreateANewPublisherTest"/>
+          <include name="asGraderICanChangeTierStatusToGradedTest"/>
         </methods>
-      </class> <!-- testcases.CBCS_321AsAdminICanCreateANewPublisher -->
+      </class> <!-- testcases.CBCS_309AsGraderICanChangeTierStatusToGraded -->
+      <class name="testcases.CBCS_316AsCustomerICanCreateAOrder">
+        <methods>
+          <include name="close"/>
+          <include name="setup"/>
+          <include name="asCustomerICanCreateAOrderTest"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS_316AsCustomerICanCreateAOrder -->
+      <class name="testcases.CBCS_308AsSlabICanPrintLabelsOfAllComicBooks">
+        <methods>
+          <include name="asSlabICanPrintLabelsOfAllComicBooksTest"/>
+        </methods>
+      </class> <!-- testcases.CBCS_308AsSlabICanPrintLabelsOfAllComicBooks -->
+      <class name="testcases.CBCS_306AsReceiverICanChangeOrderStatusToInSafe">
+        <methods>
+          <include name="close"/>
+          <include name="setup"/>
+          <include name="changeOrderStatusToInSafeTest" invocation-numbers="0"/>
+          <include name="validateTestStandar"/>
+        </methods>
+      </class> <!-- testcases.CBCS_306AsReceiverICanChangeOrderStatusToInSafe -->
+      <class name="testcases.CBCS_86AsQCICanMarkATierLikeShipping">
+        <methods>
+          <include name="asQCICanMarkATierLikeQCFinishedTest"/>
+        </methods>
+      </class> <!-- testcases.CBCS_86AsQCICanMarkATierLikeShipping -->
+      <class name="testcases.CBCS_81AsFinalizerICanQualifyAComic">
+        <methods>
+          <include name="asFinalizerICanQualifyAComicTest"/>
+        </methods>
+      </class> <!-- testcases.CBCS_81AsFinalizerICanQualifyAComic -->
+      <class name="testcases.CBCS_138AsShippingICanChangeTierStatusToShipped">
+        <methods>
+          <include name="changeTierStatusToShippedTest"/>
+        </methods>
+      </class> <!-- testcases.CBCS_138AsShippingICanChangeTierStatusToShipped -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -66,7 +66,7 @@ public class CBCS_321AsAdminICanCreateANewPublisher extends TestCaseCBCS {
 					.and()
 					.fillFieldsAddPublisherModal(publisherName)
 					.then()
-					.clickSaveButton(getWebDriver())
+					.clickSaveButton()
 					
 					
 					)

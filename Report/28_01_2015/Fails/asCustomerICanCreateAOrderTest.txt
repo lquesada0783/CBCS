@@ -1,12 +1,13 @@
 
 ERROR: 
-Window not found. The browser window may have been closed.
-Command duration or timeout: 7 milliseconds
+Unable to locate element: {"method":"xpath","selector":"//input[@id='chkBilling0']"}
+Command duration or timeout: 5.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.43.1', revision: '5163bceef1bc36d43f3dc0b83c88998168a363a0', time: '2014-09-10 09:43:55'
 System info: host: 'MININT-KA5C7LA', ip: '169.254.76.222', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_05'
 Driver info: com.ts.commons.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=30.0, platform=WINDOWS, browserConnectionEnabled=true, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 91582507-1920-4e09-83f2-82c98523d056
+Session ID: 47f54e06-ee0b-4684-97d6-4b306359b891
 
 Full Stack Trace
 ************************************************************************************************************
@@ -21,9 +22,9 @@ org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
 org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
 org.openqa.selenium.By$ByXPath.findElement(By.java:357)
 org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-utils.Utils.clickPaymentMethodCheckbox(Utils.java:51)
-pages.PaymentMethodCustomerPage.clickOneOptionPaymentMethodCheckbox(PaymentMethodCustomerPage.java:37)
-testcases.CBCS_316AsCustomerICanCreateAOrder.asCustomerICanCreateAOrderTest(CBCS_316AsCustomerICanCreateAOrder.java:129)
+utils.Utils.selectBillingAddressOption(Utils.java:39)
+pages.AddressesInformationCustomerPage.selectBillingAddress(AddressesInformationCustomerPage.java:271)
+testcases.CBCS_316AsCustomerICanCreateAOrder.asCustomerICanCreateAOrderTest(CBCS_316AsCustomerICanCreateAOrder.java:110)
 sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
