@@ -231,21 +231,22 @@ public class AddressesInformationCustomerPage extends Page {
 		
 	}
 	
-	public AddressesInformationCustomerPage clickPickUpAtConventionRadio(){		
+	public AddressesInformationCustomerPage clickPickUpAtConventionRadio(){	
+		utils.Utils.waitForElemets(2);
 		pickUpAtConventionRadio.click();
 		return this;
 		
 	}
 	
 	public AddressesInformationCustomerPage clickAcceptButton(){
-		utils.Utils.waitForElemets(1);
+		utils.Utils.waitForElemets(2);
 		acceptButton.click();
 		return this;
 		
 	}
 	
 	  
-	public AddressesInformationCustomerPage selectAConvention(String convention, WebDriver driver){		
+	public AddressesInformationCustomerPage selectAConvention(String convention, WebDriver driver){	
 		
 		return utils.Utils.selectDropDownOption(By.xpath("//select[contains(.,'Select Convention')]"),convention,driver,AddressesInformationCustomerPage.class);		
 	
@@ -266,6 +267,7 @@ public class AddressesInformationCustomerPage extends Page {
     
 	public AddressesInformationCustomerPage selectBillingAddress(String option, WebDriver driver){			
 		utils.Utils.iselementPresent(driver, By.xpath("//input[@id='"+option+"']"));
+		utils.Utils.waitForElemets(2);
 		return utils.Utils.selectBillingAddressOption(option,driver,AddressesInformationCustomerPage.class);		
 	
 	}
@@ -284,7 +286,8 @@ public class AddressesInformationCustomerPage extends Page {
 	 
 	public  PaymentMethodCustomerPage clickNextButton(WebDriver driver){
 		
-		    utils.Utils.iselementPresent(driver, By.xpath("//input[@id='chkBilling1']"));
+		    //utils.Utils.iselementPresent(driver, By.xpath("//input[@id='chkBilling1']"));
+			utils.Utils.waitForElemets(2);
 		    while(utils.Utils.iselementPresent(driver, By.xpath("//button[@id='btnNext' and @disabled='disabled']"))){
 				utils.Utils.waitForElemets(1);
 			}
@@ -313,12 +316,17 @@ public class AddressesInformationCustomerPage extends Page {
 
    public AddressesInformationCustomerPage deleteBillingAddress(CustomerDataInfo customer, WebDriver driver){             
         
-       WebElement element = driver.findElement(By.xpath("(//div[@class='col-md-12 ng-binding' and contains(.,'"+customer.getName()+"')])[1]/../..//div/../..//div/../a[text()='Delete']"));
-       element.click();       
-       driver.findElement(By.xpath("//button[text()='Yes']")).click(); 
+	   utils.Utils.deleteBillingAddress(customer, driver);
        return this;
-     
-      	}	
+       
+    }	
+   
+   public AddressesInformationCustomerPage deleteShipingAddress(CustomerDataInfo customer, WebDriver driver){             
+       
+	   utils.Utils.deleteShippingAddress(customer, driver);
+       return this;
+       
+    }	
    
    public AddressesInformationCustomerPage clickEditBillingAddressLink(CustomerDataInfo customer, WebDriver driver){             
        

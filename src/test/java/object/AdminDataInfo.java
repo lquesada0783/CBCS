@@ -83,7 +83,7 @@ public class AdminDataInfo {
 	
 	
 	public String generateUserName(){
-		 String UserName="Test+";
+		 String UserName="TestUName";
 	     String value = "";
 	     for(int a=0; a<3; a++){
 	    	value+=(int) (Math.random() *9)+1;
@@ -151,7 +151,7 @@ public class AdminDataInfo {
 	 }
 	
 	public String generateFirstName(){
-	     String firstName="Test+";
+	     String firstName="TestFName";
 	     String value = "";
 	     for(int a=0; a<3; a++){
 	    	value+=(int) (Math.random() *9)+1;
@@ -161,7 +161,7 @@ public class AdminDataInfo {
 	 }
 	
 	public String generateLastName(){
-	     String lastName="QA+";
+	     String lastName="QALName";
 	     String value = "";
 	     for(int a=0; a<3; a++){
 	    	value+=(int) (Math.random() *9)+1;

@@ -1,11 +1,11 @@
 package testcases;
 
-import java.io.File;
 import java.io.IOException;
 
 import jxl.read.biff.BiffException;
 import object.CustomerDataInfo;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -26,11 +26,10 @@ public class CBCS_319AsCustomerICanEditABillingAddress extends TestCaseCBCS {
 	CustomerDataInfo customer;
 	
 	@DataProvider
-	public Object[][] data() throws BiffException, IOException {
-		File file = new File(".\\src\\test\\resources\\Parameters.xls");
-	 return new DataSourceXls(file).getData(7,2);
-	 
-	}	
+	 public Object[][] data() throws BiffException, IOException {
+	        return new DataSourceXls ("Parameters.xls" ).getData(7,2);
+	       
+	   }  
 	
 	@Test(dataProvider = "data")
 	public void asCustomerICanEditABillingAddressTest(String email, String password){
@@ -127,8 +126,16 @@ public class CBCS_319AsCustomerICanEditABillingAddress extends TestCaseCBCS {
 				addressesInformationCustomerPage
 				.userNameOnBillingAddressIsPressent(customer.getName(),getWebDriver())
 				
-				);  
-		
+				);  		
+	}
+	
+	@Override
+	@AfterMethod(alwaysRun = true)
+	public void close(){
+	utils.Utils.deleteBillingAddress(customer, getWebDriver());
+    driver.close();
+	driver.quit();
+	
 	}
 
 }

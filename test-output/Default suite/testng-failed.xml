@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testcases.CBCS316_AsCustomerICanCreateAOrder">
+      <class name="testcases.CBCS_321AsAdminICanCreateANewPublisher">
         <methods>
-          <include name="setup"/>
-          <include name="asCustomerICanCreateAOrderTest" invocation-numbers="0"/>
-          <include name="close"/>
-          <include name="validateTestStandar"/>
+          <include name="asAdminICanCreateANewPublisherTest"/>
         </methods>
-      </class> <!-- testcases.CBCS316_AsCustomerICanCreateAOrder -->
+      </class> <!-- testcases.CBCS_321AsAdminICanCreateANewPublisher -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

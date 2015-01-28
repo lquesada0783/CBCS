@@ -35,13 +35,7 @@ public class TierDetailsShippingPage extends Page {
 	private WebElement sendNotificationMessageLabel;
 	
 	@FindBy(xpath="//a[@id='lnkBack']")
-	private WebElement backToOrderButton;
-	
-	@FindBy(xpath="//button[@name='btnChangeStatustoShipping']")
-	private WebElement changeStatusButton;
-	
-	@FindBy(xpath="//div[@id='operationResult' and contains(.,'Tier was changed to Shipping.') and @style='display: block;']")
-	private WebElement tierWasChangedToShippingMessageLabel;
+	private WebElement backToOrderButton;			
 	
 	@FindBy(xpath="//a[@id='lnkBack']")
 	private WebElement backButton;
@@ -68,7 +62,7 @@ public class TierDetailsShippingPage extends Page {
 		return this;
 	}
 	
-	public  TierDetailsShippingPage clickSaveTrackingNumberButton(){ 
+	public  TierDetailsShippingPage clickSaveButton(){ 
 		    saveTrackingNumberButton.click();
 			return this;
 	}
@@ -90,16 +84,9 @@ public class TierDetailsShippingPage extends Page {
 		backToOrderButton.click();
 		ProcessOrderShippingPage processOrderShippingPage= PageFactory.initElements(driver, ProcessOrderShippingPage.class);
 		return processOrderShippingPage;
-	}
-	
-	public TierDetailsShippingPage clickChangeStatusButton(WebDriver driver){
-		changeStatusButton.click();		
-		return this;
-	}
+	}		
 		
-		
-		
-		public Validator tierDetailsLabelMustBePresent(){
+	public Validator tierDetailsLabelMustBePresent(){
 			return new Validator()
 			{
 				@Override
@@ -112,7 +99,7 @@ public class TierDetailsShippingPage extends Page {
 			};
 		}	
 		
-		public Validator trakingSuccessfullyMessageLabelMustBePresent(){
+	public Validator trakingSuccessfullyMessageLabelMustBePresent(){
 			return new Validator()
 			{
 				@Override
@@ -138,7 +125,7 @@ public class TierDetailsShippingPage extends Page {
 			};
 		}*/
 		
-		public Validator sendNotificationMessageLabelMustBePresent(){
+	public Validator sendNotificationMessageLabelMustBePresent(){
 			return new Validator()
 			{
 				@Override
@@ -151,19 +138,4 @@ public class TierDetailsShippingPage extends Page {
 			};
 		}
 		
-		
-		public Validator tierWasChangedToShippingMessageLabelMustBePresent(){
-			return new Validator()
-			{
-				@Override
-				public void Validate(){	
-						
-					boolean thereIsAMessageLabel = tierWasChangedToShippingMessageLabel !=null;
-					Assert.assertTrue(thereIsAMessageLabel);
-					
-				}
-			};
-		}	
-
-
 }

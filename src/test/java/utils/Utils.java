@@ -3,7 +3,9 @@ package utils;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.Assert;
+
 import object.AdminDataInfo;
+import object.CustomerDataInfo;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -48,9 +50,10 @@ public class Utils {
 		
 		driver.findElement(By.xpath("//input[@value='"+option+"']")).click();                 
         return PageFactory.initElements(driver, expectedPage);
-    }	
-	
-	public static void deleteUser(AdminDataInfo user, WebDriver driver){                  
+        
+    }	 
+   
+	public static void validatePaginationUsersPage(AdminDataInfo user, WebDriver driver){                  
         
         WebElement element;       
         while(!Utils.iselementPresent(driver, By.xpath("//tr/td/span[text()='"+user.getUserName()+"']"))){                 
@@ -171,9 +174,101 @@ public class Utils {
 	}	
 	
 	public static String substringOrderNumber(String orderNumber){
-		return orderNumber.substring(3, 7);
-		
+		return orderNumber.substring(3, 7);		
 		
 	}
 	
+	public static void deleteBillingAddress(CustomerDataInfo customer, WebDriver driver){             
+		   utils.Utils.waitForElemets(2);
+	       WebElement element = driver.findElement(By.xpath("//div[contains(.,'"+customer.getName()+"') and @class='col-md-12 ng-binding']/../../../a[contains(.,'Delete')]"));
+           element.click();       
+           
+		   utils.Utils.waitForElemets(2);
+	       driver.findElement(By.xpath("//button[text()='Yes']")).click(); 	
+		   utils.Utils.waitForElemets(2);       
+	     
+	}
+			
+	public static void deleteShippingAddress(CustomerDataInfo customer, WebDriver driver){             
+		  utils.Utils.waitForElemets(2);	
+	       WebElement element = driver.findElement(By.xpath("//div[contains(.,'"+customer.getName()+"') and @class='col-md-12 ng-binding']/../../../a[contains(.,'Delete')]"));
+	       element.click();   
+	       
+	       utils.Utils.waitForElemets(2);   
+	       driver.findElement(By.xpath("//button[text()='Yes']")).click(); 	       
+	       utils.Utils.waitForElemets(2);   
+	}
+	
+  public static void searchAndDeletePublisher(String publisherName, WebDriver driver){  
+	  
+	      WebElement searchField = driver.findElement(By.xpath(".//*[@id='searchingInput']"));
+	      searchField.clear();
+	      searchField.sendKeys(publisherName);
+	      
+	      WebElement searchButton = driver.findElement(By.xpath("//button[@name='Search']"));	
+	      searchButton.click();
+	      
+		  utils.Utils.waitForElemets(2);
+	      WebElement deleteButton = driver.findElement(By.xpath("//span[contains(.,'"+publisherName+"')]//../..//a[contains(.,'Delete')]"));
+	      deleteButton.click();       
+        
+		   utils.Utils.waitForElemets(2);
+	       driver.findElement(By.xpath("//button[contains(.,'Yes')]")).click(); 		  
+		 
+	}	   
+  
+   public static void searchAndDeleteVariant(String variantName, WebDriver driver){  
+	  
+      WebElement searchField = driver.findElement(By.xpath(".//*[@id='searchingInput']"));
+      searchField.clear();
+      searchField.sendKeys(variantName);
+      
+      WebElement searchButton = driver.findElement(By.xpath("//button[@name='Search']"));	
+      searchButton.click();
+      
+	  utils.Utils.waitForElemets(2);
+      WebElement deleteButton = driver.findElement(By.xpath("//span[contains(.,'"+variantName+"')]//../..//a[contains(.,'Delete')]"));
+      deleteButton.click();       
+    
+	   utils.Utils.waitForElemets(2);
+       driver.findElement(By.xpath("//button[contains(.,'Yes')]")).click(); 		  
+	 
+    }
+   
+   
+   public static void searchAndDeletePedigree(String pedigreeName, WebDriver driver){  
+		  
+	      WebElement searchField = driver.findElement(By.xpath(".//*[@id='searchingInput']"));
+	      searchField.clear();
+	      searchField.sendKeys(pedigreeName);
+	      
+	      WebElement searchButton = driver.findElement(By.xpath("//button[@name='Search']"));	
+	      searchButton.click();
+	      
+		  utils.Utils.waitForElemets(2);
+	      WebElement deleteButton = driver.findElement(By.xpath("//span[contains(.,'"+pedigreeName+"')]//../..//a[contains(.,'Delete')]"));
+	      deleteButton.click();       
+	    
+		   utils.Utils.waitForElemets(2);
+	       driver.findElement(By.xpath("//button[contains(.,'Yes')]")).click(); 		  
+		 
+	    }	
+   
+   public static void searchAndDeleteUsers(AdminDataInfo user, WebDriver driver){  
+		  
+	      WebElement searchField = driver.findElement(By.xpath(".//*[@id='searchingInput']"));
+	      searchField.clear();
+	      searchField.sendKeys(user.getUserName());
+	      
+	      WebElement searchButton = driver.findElement(By.xpath("//button[@name='Search']"));	
+	      searchButton.click();
+	      
+		  utils.Utils.waitForElemets(2);
+	      WebElement deleteButton = driver.findElement(By.xpath("//span[contains(.,'"+user.getUserName()+"')]//../..//a[contains(.,'Delete')]"));
+	      deleteButton.click();       
+	    
+		   utils.Utils.waitForElemets(2);
+	       driver.findElement(By.xpath("//button[contains(.,'Yes')]")).click(); 		  
+		 
+	    }	 
 }

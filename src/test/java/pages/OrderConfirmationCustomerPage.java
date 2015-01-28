@@ -46,7 +46,7 @@ public class OrderConfirmationCustomerPage extends Page {
 	}
 	
 	public  OrderConfirmationCustomerPage clickOkButton(WebDriver driver){
-		while(!utils.Utils.iselementPresent(driver, By.xpath("//button[@id='btnBack'and @disabled='disabled']"))){
+		while(!utils.Utils.iselementPresent(driver, By.xpath("//button[@id='btnBack' and @ng-disabled='progress']"))){
 			utils.Utils.waitForElemets(1);
 		}
 		
@@ -85,20 +85,17 @@ public class OrderConfirmationCustomerPage extends Page {
 		return this;		 
     }
 	
-	public  OrderConfirmationCustomerPage writeOnderNumber(WebDriver driver,OrderDataInfo order ){
-		utils.Utils.write(driver, saveOrederNumber(order));		
+	public  OrderConfirmationCustomerPage writeOnderNumber(WebDriver driver,OrderDataInfo order){
+		utils.Utils.write(driver, saveOrederNumber(order));			
 		return this;		 
-    }
-	
+    }	
+		
    public String saveOrederNumber(OrderDataInfo order){
 	   String value=orderNumber.getText();		
-	   order.setOrderNumber(value.substring(0,10));
-	   
+	   order.setOrderNumber(value.substring(0,10));	 
 	   return order.getOrderNumber();
 		
-	}
-		
-	
+	}	
 		
 	public Validator orderConfirmationLabelMustBePresent(){
 		return new Validator()

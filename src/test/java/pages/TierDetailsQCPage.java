@@ -19,11 +19,14 @@ public class TierDetailsQCPage extends Page {
 	@FindBy(xpath="//input[@id='chkQCFinished']")
 	private WebElement qcFinishedCheckbox;	
 	
-	@FindBy(xpath="//div[@id='operationResult' and contains(.,'Comic updated successfully.') and @style='display: block;']")
+	@FindBy(xpath="//div[@id='operationResult' and contains(.,'Tier status was changed successfully.') and @style='display: block;']")
 	private WebElement messageLabel;		
 
 	@FindBy(xpath="//a[@id='lnkBack']")
 	private WebElement backToOrderButton;	
+	
+	@FindBy(xpath="//button[@name='btnChangeStatustoShipping']")
+	private WebElement sentToShippingButton;
 	
 		
 	@Override
@@ -41,6 +44,11 @@ public class TierDetailsQCPage extends Page {
 		qcFinishedCheckbox.click();
 		return this;
 	}
+	
+	public  TierDetailsQCPage clickSentToShippingButton(WebDriver driver){ 
+		   sentToShippingButton.click();
+			return this;
+		}
 	
 	public ProcessOrderQCPage clickBackToOrderButton(WebDriver driver){
 		backToOrderButton.click();

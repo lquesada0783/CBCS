@@ -126,7 +126,7 @@ public class OrderDataInfo {
 		this.authenticatedSignature = authenticatedSignature;
 	}	
 	
-	public  OrderDataInfo fillDataAdmin(OrderDataInfo order){
+	public  OrderDataInfo fillOrderDatOnAdmin(OrderDataInfo order){
 		
 		order.setTypeUser(Constant.EMAIL_CLIENT);	
 		order.setComicTitle(generateComicTitle());
@@ -141,7 +141,7 @@ public class OrderDataInfo {
 		return  order;
 	}
 	
-	public  OrderDataInfo fillDataCustomer(OrderDataInfo order){
+	public  OrderDataInfo fillOrderData(OrderDataInfo order){
 		
 		order.setComicTitle(generateComicTitle());
 		order.setIssueNumber(generateIssueNumber());

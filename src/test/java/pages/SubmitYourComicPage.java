@@ -19,7 +19,7 @@ public class SubmitYourComicPage extends Page {
 	@FindBy(xpath="//h2[text()='Submit your Comic']")
 	private WebElement submitYourComicLabel;
 	
-	@FindBy(xpath="//input[@name='txtTitleComic' and not(@disabled)]")
+	@FindBy(xpath="//input[@name='txtTitleComic' and not(@disabled)]")	
 	private WebElement titleComicField;	
 		
 	@FindBy(xpath="(//input[@name='txtIssueNumber'])[1]")
@@ -73,8 +73,8 @@ public class SubmitYourComicPage extends Page {
 	}
 	
 	public SubmitYourComicPage fillAllFields(OrderDataInfo order, String pedigree, String tier, WebDriver driver){
-		utils.Utils.iselementPresent(driver, By.xpath("(//label[text()='Comic Title'])[1]"));
-		
+		//utils.Utils.iselementPresent(driver, By.xpath("(//label[text()='Comic Title'])[1]"));
+		utils.Utils.waitForElemets(2);
 		titleComicField.sendKeys(order.getComicTitle());
 		issueNumberField.sendKeys(order.getIssueNumber());
 		yearField.sendKeys(order.getYear());
@@ -89,7 +89,8 @@ public class SubmitYourComicPage extends Page {
 	}
 	
 	public SubmitYourComicPage fillAllFieldsWithDataForTierRules(OrderDataInfo order, String qtyComics,String issueNumber, String year, String isuredValue, WebDriver driver){
-		utils.Utils.iselementPresent(driver, By.xpath("(//label[text()='Comic Title'])[1]"));
+		//utils.Utils.iselementPresent(driver, By.xpath("(//label[text()='Comic Title'])[1]"));
+		utils.Utils.waitForElemets(2);
 		titleComicField.sendKeys(order.getComicTitle());
 		issueNumberField.sendKeys(issueNumber);
 		yearField.sendKeys(year);

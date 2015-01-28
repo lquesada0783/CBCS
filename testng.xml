@@ -1,31 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" preserve-order="true" parallel="false">
+<suite name="Suite" parallel="false">
   <test name="Test">
     <classes>
-   	  <class name="testcases.CBCS316_AsCustomerICanCreateAOrder"/>
-   	  <class name="testcases.CBCS306_AsReceiverICanChangeOrderStatusToInSafe"/>   	  
-   	  <class name="testcases.CBCS309_AsGraderICanChangeTierStatusToGraded"/>
-   	  <class name="testcases.CBCS81_AsFinalizerICanQualifyAComic"/>
-   	  <class name="testcases.CBCS308_AsSlabICanPrintLabelsOfAllComicBooks"/>   	  
-   	  <class name="testcases.CBCS86_AsQCICanMarkATierLikeQCFinished"/>
-   	  <class name="testcases.CBCS138_AsShippingICanChangeTierStatusToShipped"/>   	  
-      <class name="testcases.CBCS105_AsReiverSearchOneOrderUsingOrderNumber"/>
-      <class name="testcases.CBCS315_AsAdminICanDeleteAReceiver"/>
-      <class name="testcases.CBCS80_AsCustomerICanAddANewBillingAddress"/>
-      <class name="testcases.CBCS316_AsCustomerICanSeeTheListOfAllMyOrders"/>
+      <class name="testcases.CBCS_316AsCustomerICanCreateAOrder"/> 
+      <class name="testcases.CBCS_306AsReceiverICanChangeOrderStatusToInSafe"/>  
+      <class name="testcases.CBCS_309AsGraderICanChangeTierStatusToGraded"/>
+      <class name="testcases.CBCS_81AsFinalizerICanQualifyAComic"/> 
+      <class name="testcases.CBCS_308AsSlabICanPrintLabelsOfAllComicBooks"/>
+      <class name="testcases.CBCS_138AsShippingICanChangeTierStatusToShipped"/>
+      <class name="testcasesCBCS_86AsQCICanMarkATierLikeShipping"/>
+      <class name="testcases.CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping"/>
       <class name="testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping"/>
-      <class name="testcases.CBCS316_AsCustomerICanAddANewShippingAddress"/>      
-      <class name="testcases.CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping"/>      
-      <class name="testcases.CBCS305_ReceiverLogin"/>
-      <class name="testcases.CBCS_318AsCustomerICanDeleteABillingAddress"/>         
-      <class name="testcases.CBCS317_AsCustomerICanUseMyBillingAddressAsShippingAddress"/>
-      <class name="testcases.CBCS214_AsCustomerICanAddACouponToTheaOrder"/>
-      <class name="testcases.CBCS77_AdminLogin"/>          
-      <class name="testcases.CBCS318_AsCustomerICanSeeTheCalendar"/>    
-      <class name="testcases.CBCS92_AsAdminICanCreateAReceiverUser"/>
-      <class name="testcases.CBCS_319AsCustomerICanEditABillingAddress"/>
-      <class name="testcases.CBCS183_ValidateExpandedConsumerTierRulesCorrectly"/>
+      <class name="testcases.CBCS_80AsCustomerICanAddANewBillingAddress"/> 
+      <class name="testcases.CBCS_319AsCustomerICanEditABillingAddress"/>  
+      <class name="testcases.CBCS_318AsCustomerICanDeleteABillingAddress"/>   
+      <class name="testcases.CBCS_316AsCustomerICanAddANewShippingAddress"/>
+      <class name="testcases.CBCS_317AsCustomerICanUseMyBillingAddressAsShippingAddress"/>   
+      <class name="testcases.CBCS_316AsCustomerICanSeeTheListOfAllMyOrders"/>  
+      <class name="testcases.CBCS_214AsCustomerICanAddACouponToTheaOrder"/>
+      <class name="testcases.CBCS_183ValidateExpandedConsumerTierRulesCorrectly"/>
+      <class name="testcases.CBCS_318AsCustomerICanSeeTheCalendar"/>
+      <class name="testcases.CBCS_319AsAdminICanCreateANewVariant"/>
+ 	  <class name="testcases.CBCS_320AsAdminICanDeleteAVariant"/>
+	  <class name="testcases.CBCS_323AsAdminICanCreateANewPedigree"/>
+      <class name="testcases.CBCS_324AsAdminICanDeleteAPedigree"/>
+      <class name="testcases.CBCS_321AsAdminICanCreateANewPublisher"/>  
+	  <class name="testcases.CBCS_325AsAdminICanEditAPublisher"/>    
+	  <class name="testcases.CBCS_322AsAdminICanDeleteAPublisher"/>
+	  <class name="testcases.CBCS_92AsAdminICanCreateAReceiverUser"/> 
+ 	  <class name="testcases.CBCS_315AsAdminICanDeleteAReceiver"/>
+ 	  <class name="testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber"/> 
+ 	  <class name="testcases.CBCS_77AdminLogin"/>     
+      <class name="testcases.CBCS_305ReceiverLogin"/>	                        
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

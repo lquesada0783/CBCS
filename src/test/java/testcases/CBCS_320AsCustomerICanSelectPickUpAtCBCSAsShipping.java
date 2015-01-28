@@ -1,6 +1,5 @@
 package testcases;
 
-import java.io.File;
 import java.io.IOException;
 
 import jxl.read.biff.BiffException;
@@ -35,17 +34,16 @@ public class CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping extends
 	private OrderDataInfo order;
 	
 	@DataProvider
-	public Object[][] data() throws BiffException, IOException {
-		File file = new File(".\\src\\test\\resources\\Parameters.xls");
-	 return new DataSourceXls(file).getData(8,2);
-	 
-	}	
+	 public Object[][] data() throws BiffException, IOException {
+	        return new DataSourceXls ("Parameters.xls" ).getData(8,2);
+	       
+	   }  
 	
 	@Test(dataProvider = "data")
 	public void asCustomerICanSelectPickUpAtCBCSAsShippingTest (String email, String password, String qtyComics, String convention, String pedigree, String tier,String billing, String shipping, String provider, String paymentMethod){
 		
 		order = new OrderDataInfo();
-		order.fillDataCustomer(order);
+		order.fillOrderData(order);
 		
 		using(
 				dashboardCustomerPage=(DashboardCustomerPage) UI.goToCustomerLoginPage(getWebDriver())
@@ -159,8 +157,7 @@ public class CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping extends
 				
 		.andUsing(
 				
-				orderConfirmationCustomerPage
-				.writeOnderNumber(getWebDriver(),order)				
+				orderConfirmationCustomerPage							
 				.clickOkButton(getWebDriver())
 				
 				)

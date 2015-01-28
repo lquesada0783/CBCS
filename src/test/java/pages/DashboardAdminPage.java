@@ -34,9 +34,15 @@ public class DashboardAdminPage extends Page {
 		return submissionPage;		 
 	}
 	
-	public Users selectOneOptionCatalogsMenue(String optionMenue, WebDriver driver){	
+	public UsersPage selectOneOptionCatalogsMenue(String optionMenue, WebDriver driver){		
     	
-		return utils.Utils.selectListOption(By.xpath("(//li[contains(.,'Catalogs')])[2]/a"),By.xpath("//a[text()='"+optionMenue+"']"),driver,Users.class);
+		return utils.Utils.selectListOption(By.xpath("(//li[contains(.,'Catalogs')])[2]/a"),By.xpath("//a[text()='"+optionMenue+"']"),driver,UsersPage.class);
+
+	}	
+	
+	public <T> T selectOneOptionCatalogMenue(String optionMenue, WebDriver driver, Class<T> expectedPage){		
+    	
+		return utils.Utils.selectListOption(By.xpath("(//li[contains(.,'Catalogs')])[2]/a"),By.xpath("//a[text()='"+optionMenue+"']"),driver,expectedPage);
 
 	}
 		

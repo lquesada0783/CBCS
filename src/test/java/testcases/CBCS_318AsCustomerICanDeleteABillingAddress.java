@@ -1,6 +1,5 @@
 package testcases;
 
-import java.io.File;
 import java.io.IOException;
 
 import jxl.read.biff.BiffException;
@@ -25,11 +24,10 @@ public class CBCS_318AsCustomerICanDeleteABillingAddress extends TestCaseCBCS {
 	CustomerDataInfo customer;
 	
 	@DataProvider
-	public Object[][] data() throws BiffException, IOException {
-		File file = new File(".\\src\\test\\resources\\Parameters.xls");
-	 return new DataSourceXls(file).getData(7,2);
-	 
-	}	
+	 public Object[][] data() throws BiffException, IOException {
+	        return new DataSourceXls ("Parameters.xls" ).getData(7,2);
+	       
+	   }  
 	
 	@Test(dataProvider = "data")
 	public void asCustomerICanDeleteABillingAddressTest(String email, String password){

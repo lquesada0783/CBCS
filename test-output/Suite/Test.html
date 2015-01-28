@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>17/6/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>22/7/4</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Dec 16 19:24:39 CST 2014</td>
+<td>Started on:</td><td>Wed Jan 28 08:51:51 CST 2015</td>
 </tr>
-<tr><td>Total time:</td><td>941 seconds (941174 ms)</td>
+<tr><td>Total time:</td><td>981 seconds (981444 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,6 +68,147 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber.close()'><b>close</b><br>Test class: testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber</td>
+<td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bceef1bc36d43f3dc0b83c88998168a363a0&apos;, time: &apos;2014-09-10 09:43:55&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_05&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:593)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:614)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:463)
+	at utils.TestCaseCBCS.close(TestCaseCBCS.java:33)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:318)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:165)
+	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:362)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
+	... 28 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:123)
+	... 42 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace143295000", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace143295000'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bceef1bc36d43f3dc0b83c88998168a363a0&apos;, time: &apos;2014-09-10 09:43:55&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_05&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:593)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:614)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:463)
+	at utils.TestCaseCBCS.close(TestCaseCBCS.java:33)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:786)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:335)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:330)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:318)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:165)
+	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:362)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
+	... 28 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:123)
+	... 42 more
+</pre></div></td>
+<td>0</td>
+<td>testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber@180bc464</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber.setup()'><b>setup</b><br>Test class: testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber</td>
+<td></td>
+<td>0</td>
+<td>testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber@180bc464</td></tr>
+<tr>
+<td title='testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber.validateTestStandar()'><b>validateTestStandar</b><br>Test class: testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber</td>
+<td></td>
+<td>0</td>
+<td>testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber@180bc464</td></tr>
+<tr>
+<td title='testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber.close()'><b>close</b><br>Test class: testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber</td>
+<td></td>
+<td>0</td>
+<td>testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber@180bc464</td></tr>
+<tr>
+<td title='testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber.validateTestStandar()'><b>validateTestStandar</b><br>Test class: testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber</td>
+<td></td>
+<td>0</td>
+<td>testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber@180bc464</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -75,59 +216,63 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcases.CBCS316_AsCustomerICanAddANewShippingAddress.asCustomerICanAddANewShippingAddressTest()'><b>asCustomerICanAddANewShippingAddressTest</b><br>Test class: testcases.CBCS316_AsCustomerICanAddANewShippingAddress<br>Parameters: lquesada@testingsoft.com, QAtest2014</td>
-<td><div><pre>org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-Command duration or timeout: 30.12 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 52abe2af-6738-449e-b970-e4fa1f435f9f
+<td title='testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping.asCustomerICanSelectPickUpAtConvetionAsShippingTest()'><b>asCustomerICanSelectPickUpAtConvetionAsShippingTest</b><br>Test class: testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping<br>Parameters: lquesadats@gmail.com, QAtest2014, 3, T&T, Aurora Copy, Consumer $29. Value up to $400, chkBilling0, address0, FEDEX, Credit Card</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@name=&apos;txtTitleComic&apos; and not(@disabled)]&quot;}
+Command duration or timeout: 30.53 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bceef1bc36d43f3dc0b83c88998168a363a0&apos;, time: &apos;2014-09-10 09:43:55&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_05&apos;
 Driver info: com.ts.commons.FirefoxDriver
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=30.0}]
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:152)
-	at pages.AddressesInformationCustomerPage.isTextPresentInShippingAddress(AddressesInformationCustomerPage.java:376)
-	at pages.AddressesInformationCustomerPage$5.Validate(AddressesInformationCustomerPage.java:421)
-	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:71)
-	at testcases.CBCS316_AsCustomerICanAddANewShippingAddress.asCustomerICanAddANewShippingAddressTest(CBCS316_AsCustomerICanAddANewShippingAddress.java:104)
-Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Element not found in the cache - perhaps the page has changed since it was looked up
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=30.0, platform=WINDOWS, browserConnectionEnabled=true, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0355bddd-234b-4de1-af48-10d64c8282e7
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
+	at com.sun.proxy.$Proxy8.sendKeys(Unknown Source)
+	at pages.SubmitYourComicPage.fillAllFields(SubmitYourComicPage.java:78)
+	at testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping.asCustomerICanSelectPickUpAtConvetionAsShippingTest(CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping.java:80)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@name=&apos;txtTitleComic&apos; and not(@disabled)]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bceef1bc36d43f3dc0b83c88998168a363a0&apos;, time: &apos;2014-09-10 09:43:55&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_05&apos;
 Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.fxdriver.cache.getElementAt(resource://fxdriver/modules/web_element_cache.js:7610:5)
-	at &lt;anonymous class&gt;.Utils.getElementAt(file:///C:/Users/Laur/AppData/Local/Temp/anonymous3921029865329728316webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:7210:3)
-	at &lt;anonymous class&gt;.WebElement.getElementText(file:///C:/Users/Laur/AppData/Local/Temp/anonymous3921029865329728316webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10322:1)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Laur/AppData/Local/Temp/anonymous3921029865329728316webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10884:11)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Laur/AppData/Local/Temp/anonymous3921029865329728316webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:396:5)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1026816888", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1026816888'><pre>org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-Command duration or timeout: 30.12 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 52abe2af-6738-449e-b970-e4fa1f435f9f
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Laur/AppData/Local/Temp/anonymous3637248013070792412webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9618:7)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Laur/AppData/Local/Temp/anonymous3637248013070792412webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2005028997", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2005028997'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@name=&apos;txtTitleComic&apos; and not(@disabled)]&quot;}
+Command duration or timeout: 30.53 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bceef1bc36d43f3dc0b83c88998168a363a0&apos;, time: &apos;2014-09-10 09:43:55&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_05&apos;
 Driver info: com.ts.commons.FirefoxDriver
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=30.0}]
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=30.0, platform=WINDOWS, browserConnectionEnabled=true, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0355bddd-234b-4de1-af48-10d64c8282e7
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:152)
-	at pages.AddressesInformationCustomerPage.isTextPresentInShippingAddress(AddressesInformationCustomerPage.java:376)
-	at pages.AddressesInformationCustomerPage$5.Validate(AddressesInformationCustomerPage.java:421)
-	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:71)
-	at testcases.CBCS316_AsCustomerICanAddANewShippingAddress.asCustomerICanAddANewShippingAddressTest(CBCS316_AsCustomerICanAddANewShippingAddress.java:104)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
+	at com.sun.proxy.$Proxy8.sendKeys(Unknown Source)
+	at pages.SubmitYourComicPage.fillAllFields(SubmitYourComicPage.java:78)
+	at testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping.asCustomerICanSelectPickUpAtConvetionAsShippingTest(CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping.java:80)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
@@ -148,75 +293,45 @@ Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSele
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Element not found in the cache - perhaps the page has changed since it was looked up
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@name=&apos;txtTitleComic&apos; and not(@disabled)]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bceef1bc36d43f3dc0b83c88998168a363a0&apos;, time: &apos;2014-09-10 09:43:55&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_05&apos;
 Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.fxdriver.cache.getElementAt(resource://fxdriver/modules/web_element_cache.js:7610:5)
-	at &lt;anonymous class&gt;.Utils.getElementAt(file:///C:/Users/Laur/AppData/Local/Temp/anonymous3921029865329728316webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:7210:3)
-	at &lt;anonymous class&gt;.WebElement.getElementText(file:///C:/Users/Laur/AppData/Local/Temp/anonymous3921029865329728316webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10322:1)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Laur/AppData/Local/Temp/anonymous3921029865329728316webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10884:11)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Laur/AppData/Local/Temp/anonymous3921029865329728316webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:396:5)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Laur/AppData/Local/Temp/anonymous3637248013070792412webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9618:7)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Laur/AppData/Local/Temp/anonymous3637248013070792412webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
 </pre></div></td>
-<td>48</td>
-<td>testcases.CBCS316_AsCustomerICanAddANewShippingAddress@190e58a3</td></tr>
+<td>42</td>
+<td>testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping@38082d64</td></tr>
 <tr>
-<td title='testcases.CBCS81_AsFinalizerICanQualifyAComic.asFinalizerICanQualifyAComicTest()'><b>asFinalizerICanQualifyAComicTest</b><br>Test class: testcases.CBCS81_AsFinalizerICanQualifyAComic<br>Parameters: lqfinalizer, 123, finalizer, 0002754-AA, 3, 1, 1, 9.4, White, Finalized, Finalizer</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;Finalized&apos;)]&quot;}
-Command duration or timeout: 30.07 seconds
+<td title='testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping.asCustomerICanSelectPickUpAtConvetionAsShippingTest()'><b>asCustomerICanSelectPickUpAtConvetionAsShippingTest</b><br>Test class: testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping<br>Parameters: lquesadats@gmail.com, QAtest2014, 3, T&T, Aurora Copy, Consumer $29. Value up to $400, chkBilling0, address0, FEDEX, Credit Card</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: T&amp;T
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: a739c3aa-8a49-4929-9a3a-96d874103a0b
-Driver info: com.ts.commons.FirefoxDriver
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=30.0}]
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
-	at utils.Utils$2.Validate(Utils.java:86)
-	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:71)
-	at testcases.CBCS81_AsFinalizerICanQualifyAComic.asFinalizerICanQualifyAComicTest(CBCS81_AsFinalizerICanQualifyAComic.java:127)
-Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;Finalized&apos;)]&quot;}
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bceef1bc36d43f3dc0b83c88998168a363a0&apos;, time: &apos;2014-09-10 09:43:55&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_05&apos;
 Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Laur/AppData/Local/Temp/anonymous1385365678988963347webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8905:7)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Laur/AppData/Local/Temp/anonymous1385365678988963347webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:396:5)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace299720250", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace299720250'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;Finalized&apos;)]&quot;}
-Command duration or timeout: 30.07 seconds
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+	at utils.Utils.selectDropDownOption(Utils.java:33)
+	at pages.AddressesInformationCustomerPage.selectAConvention(AddressesInformationCustomerPage.java:251)
+	at testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping.asCustomerICanSelectPickUpAtConvetionAsShippingTest(CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping.java:116)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1215946669", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1215946669'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: T&amp;T
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: a739c3aa-8a49-4929-9a3a-96d874103a0b
-Driver info: com.ts.commons.FirefoxDriver
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=30.0}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
-	at utils.Utils$2.Validate(Utils.java:86)
-	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:71)
-	at testcases.CBCS81_AsFinalizerICanQualifyAComic.asFinalizerICanQualifyAComicTest(CBCS81_AsFinalizerICanQualifyAComic.java:127)
+Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bceef1bc36d43f3dc0b83c88998168a363a0&apos;, time: &apos;2014-09-10 09:43:55&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_05&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+	at utils.Utils.selectDropDownOption(Utils.java:33)
+	at pages.AddressesInformationCustomerPage.selectAConvention(AddressesInformationCustomerPage.java:251)
+	at testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping.asCustomerICanSelectPickUpAtConvetionAsShippingTest(CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping.java:116)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:1049)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1254)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
 	at org.testng.TestRunner.privateRun(TestRunner.java:767)
@@ -233,72 +348,38 @@ Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSele
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;Finalized&apos;)]&quot;}
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Laur/AppData/Local/Temp/anonymous1385365678988963347webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8905:7)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Laur/AppData/Local/Temp/anonymous1385365678988963347webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:396:5)
 </pre></div></td>
-<td>103</td>
-<td>testcases.CBCS81_AsFinalizerICanQualifyAComic@572bd15e</td></tr>
+<td>34</td>
+<td>testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping@38082d64</td></tr>
 <tr>
-<td title='testcases.CBCS309_AsGraderICanChangeTierStatusToGraded.asGraderICanChangeTierStatusToGradedTest()'><b>asGraderICanChangeTierStatusToGradedTest</b><br>Test class: testcases.CBCS309_AsGraderICanChangeTierStatusToGraded<br>Parameters: lqgrader, 123, grader, 0002754-AA, 3, 1, 1, 7.5, White, Graded, Grader</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;Graded&apos;)]&quot;}
-Command duration or timeout: 30.08 seconds
+<td title='testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping.asCustomerICanSelectPickUpAtConvetionAsShippingTest()'><b>asCustomerICanSelectPickUpAtConvetionAsShippingTest</b><br>Test class: testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping<br>Parameters: lquesadats@gmail.com, QAtest2014, 3, T&T, Aurora Copy, Consumer $29. Value up to $400, chkBilling0, address0, FEDEX, Credit Card</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: T&amp;T
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 2a9e85bf-d324-4b40-a026-0d5ae4a3b87b
-Driver info: com.ts.commons.FirefoxDriver
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=30.0}]
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
-	at utils.Utils$2.Validate(Utils.java:86)
-	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:71)
-	at testcases.CBCS309_AsGraderICanChangeTierStatusToGraded.asGraderICanChangeTierStatusToGradedTest(CBCS309_AsGraderICanChangeTierStatusToGraded.java:133)
-Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;Graded&apos;)]&quot;}
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bceef1bc36d43f3dc0b83c88998168a363a0&apos;, time: &apos;2014-09-10 09:43:55&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_05&apos;
 Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Laur/AppData/Local/Temp/anonymous6236478822604126635webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8905:7)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Laur/AppData/Local/Temp/anonymous6236478822604126635webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:396:5)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace703330801", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace703330801'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;Graded&apos;)]&quot;}
-Command duration or timeout: 30.08 seconds
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+	at utils.Utils.selectDropDownOption(Utils.java:33)
+	at pages.AddressesInformationCustomerPage.selectAConvention(AddressesInformationCustomerPage.java:251)
+	at testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping.asCustomerICanSelectPickUpAtConvetionAsShippingTest(CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping.java:116)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2072313080", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2072313080'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: T&amp;T
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 2a9e85bf-d324-4b40-a026-0d5ae4a3b87b
-Driver info: com.ts.commons.FirefoxDriver
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=30.0}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
-	at utils.Utils$2.Validate(Utils.java:86)
-	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:71)
-	at testcases.CBCS309_AsGraderICanChangeTierStatusToGraded.asGraderICanChangeTierStatusToGradedTest(CBCS309_AsGraderICanChangeTierStatusToGraded.java:133)
+Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bceef1bc36d43f3dc0b83c88998168a363a0&apos;, time: &apos;2014-09-10 09:43:55&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_05&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+	at utils.Utils.selectDropDownOption(Utils.java:33)
+	at pages.AddressesInformationCustomerPage.selectAConvention(AddressesInformationCustomerPage.java:251)
+	at testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping.asCustomerICanSelectPickUpAtConvetionAsShippingTest(CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping.java:116)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:1049)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1254)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
 	at org.testng.TestRunner.privateRun(TestRunner.java:767)
@@ -315,69 +396,71 @@ Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSele
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;Graded&apos;)]&quot;}
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Laur/AppData/Local/Temp/anonymous6236478822604126635webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8905:7)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Laur/AppData/Local/Temp/anonymous6236478822604126635webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:396:5)
 </pre></div></td>
-<td>99</td>
-<td>testcases.CBCS309_AsGraderICanChangeTierStatusToGraded@6be05ef2</td></tr>
+<td>29</td>
+<td>testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping@38082d64</td></tr>
 <tr>
-<td title='testcases.CBCS86_AsQCICanMarkATierLikeQCFinished.asQCICanMarkATierLikeQCFinishedTest()'><b>asQCICanMarkATierLikeQCFinishedTest</b><br>Test class: testcases.CBCS86_AsQCICanMarkATierLikeQCFinished<br>Parameters: lqqc, 123, qc, 0002754-AA, 3, 1, 1, 9.4, White, QC, QC</td>
-<td><div><pre>org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Command duration or timeout: 5.06 seconds
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: ee7bdb67-983a-4d9f-bf37-e024a680f84e
-Driver info: com.ts.commons.FirefoxDriver
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=30.0}]
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:41)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at pages.TierDetailsQCPage.clickQCFinishedCheckbox(TierDetailsQCPage.java:41)
-	at testcases.CBCS86_AsQCICanMarkATierLikeQCFinished.asQCICanMarkATierLikeQCFinishedTest(CBCS86_AsQCICanMarkATierLikeQCFinished.java:83)
-Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Element is not currently visible and so may not be interacted with
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.fxdriver.preconditions.visible(file:///C:/Users/Laur/AppData/Local/Temp/anonymous8609106500083775333webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:8225:5)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/Laur/AppData/Local/Temp/anonymous8609106500083775333webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10867:1)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Laur/AppData/Local/Temp/anonymous8609106500083775333webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10884:11)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Laur/AppData/Local/Temp/anonymous8609106500083775333webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:396:5)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1597073663", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1597073663'><pre>org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Command duration or timeout: 5.06 seconds
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: ee7bdb67-983a-4d9f-bf37-e024a680f84e
-Driver info: com.ts.commons.FirefoxDriver
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=30.0}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
-	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:41)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at pages.TierDetailsQCPage.clickQCFinishedCheckbox(TierDetailsQCPage.java:41)
-	at testcases.CBCS86_AsQCICanMarkATierLikeQCFinished.asQCICanMarkATierLikeQCFinishedTest(CBCS86_AsQCICanMarkATierLikeQCFinished.java:83)
+<td title='testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber.asReiverSearchOneOrderUsingOrderNumberTest()'><b>asReiverSearchOneOrderUsingOrderNumberTest</b><br>Test class: testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber<br>Parameters: lqreceiver, 123, receiver, 0002958-AA, 3, 1, 3, 9.4, White, In Safe, Receiver</td>
+<td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bceef1bc36d43f3dc0b83c88998168a363a0&apos;, time: &apos;2014-09-10 09:43:55&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_05&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:593)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:377)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:453)
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:340)
+	at pages.ProcessOrderReceiverPage.isOrderNumberLabelPresent(ProcessOrderReceiverPage.java:109)
+	at pages.ProcessOrderReceiverPage$2.Validate(ProcessOrderReceiverPage.java:100)
+	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:72)
+	at testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber.asReiverSearchOneOrderUsingOrderNumberTest(CBCS_105AsReiverSearchOneOrderUsingOrderNumber.java:61)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:318)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:233)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:165)
+	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:362)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
+	... 32 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:123)
+	... 46 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1736458419", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1736458419'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bceef1bc36d43f3dc0b83c88998168a363a0&apos;, time: &apos;2014-09-10 09:43:55&apos;
+System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_05&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:593)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:377)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:453)
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:340)
+	at pages.ProcessOrderReceiverPage.isOrderNumberLabelPresent(ProcessOrderReceiverPage.java:109)
+	at pages.ProcessOrderReceiverPage$2.Validate(ProcessOrderReceiverPage.java:100)
+	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:72)
+	at testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber.asReiverSearchOneOrderUsingOrderNumberTest(CBCS_105AsReiverSearchOneOrderUsingOrderNumber.java:61)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
@@ -398,70 +481,57 @@ Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSele
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Element is not currently visible and so may not be interacted with
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.fxdriver.preconditions.visible(file:///C:/Users/Laur/AppData/Local/Temp/anonymous8609106500083775333webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:8225:5)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/Laur/AppData/Local/Temp/anonymous8609106500083775333webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10867:1)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Laur/AppData/Local/Temp/anonymous8609106500083775333webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10884:11)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Laur/AppData/Local/Temp/anonymous8609106500083775333webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:396:5)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:318)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:233)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:165)
+	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:362)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
+	... 32 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:123)
+	... 46 more
 </pre></div></td>
-<td>15</td>
-<td>testcases.CBCS86_AsQCICanMarkATierLikeQCFinished@17e4be04</td></tr>
+<td>16</td>
+<td>testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber@180bc464</td></tr>
 <tr>
-<td title='testcases.CBCS308_AsSlabICanPrintLabelsOfAllComicBooks.asSlabICanPrintLabelsOfAllComicBooksTest()'><b>asSlabICanPrintLabelsOfAllComicBooksTest</b><br>Test class: testcases.CBCS308_AsSlabICanPrintLabelsOfAllComicBooks<br>Parameters: lqslab, 123, slab, 0002754-AA, 3, 1, 1, 9.4, White, Slab, Slab</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;Slab&apos;)]&quot;}
-Command duration or timeout: 30.11 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: dc9abbe9-396a-47cb-8b1b-3b8d2cc9731e
-Driver info: com.ts.commons.FirefoxDriver
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=30.0}]
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
-	at utils.Utils$2.Validate(Utils.java:86)
-	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:71)
-	at testcases.CBCS308_AsSlabICanPrintLabelsOfAllComicBooks.asSlabICanPrintLabelsOfAllComicBooksTest(CBCS308_AsSlabICanPrintLabelsOfAllComicBooks.java:89)
-Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;Slab&apos;)]&quot;}
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Laur/AppData/Local/Temp/anonymous696684438852070015webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8905:7)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Laur/AppData/Local/Temp/anonymous696684438852070015webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:396:5)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1560052922", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1560052922'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;Slab&apos;)]&quot;}
-Command duration or timeout: 30.11 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: dc9abbe9-396a-47cb-8b1b-3b8d2cc9731e
-Driver info: com.ts.commons.FirefoxDriver
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=30.0}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
-	at utils.Utils$2.Validate(Utils.java:86)
-	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:71)
-	at testcases.CBCS308_AsSlabICanPrintLabelsOfAllComicBooks.asSlabICanPrintLabelsOfAllComicBooksTest(CBCS308_AsSlabICanPrintLabelsOfAllComicBooks.java:89)
+<td title='testcases.CBCS_306AsReceiverICanChangeOrderStatusToInSafe.changeOrderStatusToInSafeTest()'><b>changeOrderStatusToInSafeTest</b><br>Test class: testcases.CBCS_306AsReceiverICanChangeOrderStatusToInSafe<br>Parameters: lqreceiver, 123, receiver, 0002958-AA, 3, 1, 3, 9.4, White, In Safe, Receiver</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at pages.ProcessOrderReceiverPage$2.Validate(ProcessOrderReceiverPage.java:100)
+	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:72)
+	at testcases.CBCS_306AsReceiverICanChangeOrderStatusToInSafe.changeOrderStatusToInSafeTest(CBCS_306AsReceiverICanChangeOrderStatusToInSafe.java:59)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace465152579", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace465152579'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at pages.ProcessOrderReceiverPage$2.Validate(ProcessOrderReceiverPage.java:100)
+	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:72)
+	at testcases.CBCS_306AsReceiverICanChangeOrderStatusToInSafe.changeOrderStatusToInSafeTest(CBCS_306AsReceiverICanChangeOrderStatusToInSafe.java:59)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
@@ -482,72 +552,32 @@ Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSele
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;Slab&apos;)]&quot;}
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Laur/AppData/Local/Temp/anonymous696684438852070015webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8905:7)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Laur/AppData/Local/Temp/anonymous696684438852070015webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:396:5)
 </pre></div></td>
-<td>40</td>
-<td>testcases.CBCS308_AsSlabICanPrintLabelsOfAllComicBooks@df9411</td></tr>
+<td>37</td>
+<td>testcases.CBCS_306AsReceiverICanChangeOrderStatusToInSafe@246ae04d</td></tr>
 <tr>
-<td title='testcases.CBCS306_AsReceiverICanChangeOrderStatusToInSafe.changeOrderStatusToInSafeTest()'><b>changeOrderStatusToInSafeTest</b><br>Test class: testcases.CBCS306_AsReceiverICanChangeOrderStatusToInSafe<br>Parameters: lqreceiver, 123, receiver, 0002754-AA, 3, 1, 3, 9.4, White, In Safe, Receiver</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;In Safe&apos;)]&quot;}
-Command duration or timeout: 30.07 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: dd7e44aa-131f-4e79-a202-d17dbc44bb58
-Driver info: com.ts.commons.FirefoxDriver
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=30.0}]
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
-	at utils.Utils$2.Validate(Utils.java:86)
-	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:71)
-	at testcases.CBCS306_AsReceiverICanChangeOrderStatusToInSafe.changeOrderStatusToInSafeTest(CBCS306_AsReceiverICanChangeOrderStatusToInSafe.java:74)
-Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;In Safe&apos;)]&quot;}
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Laur/AppData/Local/Temp/anonymous1220199972256237521webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8905:7)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Laur/AppData/Local/Temp/anonymous1220199972256237521webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:396:5)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace467366499", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace467366499'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;In Safe&apos;)]&quot;}
-Command duration or timeout: 30.07 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: dd7e44aa-131f-4e79-a202-d17dbc44bb58
-Driver info: com.ts.commons.FirefoxDriver
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=30.0}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
-	at utils.Utils$2.Validate(Utils.java:86)
-	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:71)
-	at testcases.CBCS306_AsReceiverICanChangeOrderStatusToInSafe.changeOrderStatusToInSafeTest(CBCS306_AsReceiverICanChangeOrderStatusToInSafe.java:74)
+<td title='testcases.CBCS_306AsReceiverICanChangeOrderStatusToInSafe.changeOrderStatusToInSafeTest()'><b>changeOrderStatusToInSafeTest</b><br>Test class: testcases.CBCS_306AsReceiverICanChangeOrderStatusToInSafe<br>Parameters: lqreceiver, 123, receiver, 0002958-AA, 3, 1, 3, 9.4, White, In Safe, Receiver</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at pages.ProcessOrderReceiverPage$2.Validate(ProcessOrderReceiverPage.java:100)
+	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:72)
+	at testcases.CBCS_306AsReceiverICanChangeOrderStatusToInSafe.changeOrderStatusToInSafeTest(CBCS_306AsReceiverICanChangeOrderStatusToInSafe.java:59)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1986581856", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1986581856'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at pages.ProcessOrderReceiverPage$2.Validate(ProcessOrderReceiverPage.java:100)
+	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:72)
+	at testcases.CBCS_306AsReceiverICanChangeOrderStatusToInSafe.changeOrderStatusToInSafeTest(CBCS_306AsReceiverICanChangeOrderStatusToInSafe.java:59)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:1049)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1254)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
 	at org.testng.TestRunner.privateRun(TestRunner.java:767)
@@ -564,15 +594,51 @@ Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSele
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td/span[text()=&apos;0002754-AA&apos;]/../../td/span[contains(.,&apos;In Safe&apos;)]&quot;}
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
-System info: host: &apos;MININT-KA5C7LA&apos;, ip: &apos;169.254.76.222&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Laur/AppData/Local/Temp/anonymous1220199972256237521webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8905:7)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Laur/AppData/Local/Temp/anonymous1220199972256237521webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:396:5)
 </pre></div></td>
-<td>39</td>
-<td>testcases.CBCS306_AsReceiverICanChangeOrderStatusToInSafe@100a384</td></tr>
+<td>37</td>
+<td>testcases.CBCS_306AsReceiverICanChangeOrderStatusToInSafe@246ae04d</td></tr>
+<tr>
+<td title='testcases.CBCS_306AsReceiverICanChangeOrderStatusToInSafe.changeOrderStatusToInSafeTest()'><b>changeOrderStatusToInSafeTest</b><br>Test class: testcases.CBCS_306AsReceiverICanChangeOrderStatusToInSafe<br>Parameters: lqreceiver, 123, receiver, 0002958-AA, 3, 1, 3, 9.4, White, In Safe, Receiver</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at pages.ProcessOrderReceiverPage$2.Validate(ProcessOrderReceiverPage.java:100)
+	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:72)
+	at testcases.CBCS_306AsReceiverICanChangeOrderStatusToInSafe.changeOrderStatusToInSafeTest(CBCS_306AsReceiverICanChangeOrderStatusToInSafe.java:59)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1316001196", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1316001196'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at pages.ProcessOrderReceiverPage$2.Validate(ProcessOrderReceiverPage.java:100)
+	at com.ts.commons.TestCaseUtil.check(TestCaseUtil.java:72)
+	at testcases.CBCS_306AsReceiverICanChangeOrderStatusToInSafe.changeOrderStatusToInSafeTest(CBCS_306AsReceiverICanChangeOrderStatusToInSafe.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:1049)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1254)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:335)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:330)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>38</td>
+<td>testcases.CBCS_306AsReceiverICanChangeOrderStatusToInSafe@246ae04d</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -582,90 +648,143 @@ Driver info: driver.version: unknown
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcases.CBCS77_AdminLogin.adminLoginTest()'><b>adminLoginTest</b><br>Test class: testcases.CBCS77_AdminLogin<br>Parameters: lqadmin, 123, admin</td>
-<td></td>
-<td>3</td>
-<td>testcases.CBCS77_AdminLogin@799ec4b6</td></tr>
-<tr>
-<td title='testcases.CBCS92_AsAdminICanCreateAReceiverUser.asAdminIMayCreateAReceiverUserTest()'><b>asAdminIMayCreateAReceiverUserTest</b><br>Test class: testcases.CBCS92_AsAdminICanCreateAReceiverUser<br>Parameters: lqadmin, 123, admin, Receiver</td>
-<td></td>
-<td>8</td>
-<td>testcases.CBCS92_AsAdminICanCreateAReceiverUser@6dbac50f</td></tr>
-<tr>
-<td title='testcases.CBCS315_AsAdminICanDeleteAReceiver.asAdminIMayDeleteAReceiverTest()'><b>asAdminIMayDeleteAReceiverTest</b><br>Test class: testcases.CBCS315_AsAdminICanDeleteAReceiver<br>Parameters: lqadmin, 123, admin, Receiver</td>
-<td></td>
-<td>48</td>
-<td>testcases.CBCS315_AsAdminICanDeleteAReceiver@ffeaa19</td></tr>
-<tr>
-<td title='testcases.CBCS214_AsCustomerICanAddACouponToTheaOrder.asCustomerICanAddACouponToTheaOrderTest()'><b>asCustomerICanAddACouponToTheaOrderTest</b><br>Test class: testcases.CBCS214_AsCustomerICanAddACouponToTheaOrder<br>Parameters: lquesada@testingsoft.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling0, address0, FEDEX, Credit Card</td>
-<td></td>
-<td>58</td>
-<td>testcases.CBCS214_AsCustomerICanAddACouponToTheaOrder@67591ba4</td></tr>
-<tr>
-<td title='testcases.CBCS316_AsCustomerICanCreateAOrder.asCustomerICanCreateAOrderTest()'><b>asCustomerICanCreateAOrderTest</b><br>Test class: testcases.CBCS316_AsCustomerICanCreateAOrder<br>Parameters: lquesada@testingsoft.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling0, address0, FEDEX, Credit Card</td>
-<td></td>
-<td>53</td>
-<td>testcases.CBCS316_AsCustomerICanCreateAOrder@5dd72c40</td></tr>
-<tr>
-<td title='testcases.CBCS_318AsCustomerICanDeleteABillingAddress.asCustomerICanDeleteABillingAddressTest()'><b>asCustomerICanDeleteABillingAddressTest</b><br>Test class: testcases.CBCS_318AsCustomerICanDeleteABillingAddress<br>Parameters: lquesada@testingsoft.com, QAtest2014</td>
-<td></td>
-<td>29</td>
-<td>testcases.CBCS_318AsCustomerICanDeleteABillingAddress@63d64969</td></tr>
-<tr>
-<td title='testcases.CBCS_319AsCustomerICanEditABillingAddress.asCustomerICanEditABillingAddressTest()'><b>asCustomerICanEditABillingAddressTest</b><br>Test class: testcases.CBCS_319AsCustomerICanEditABillingAddress<br>Parameters: lquesada@testingsoft.com, QAtest2014</td>
-<td></td>
-<td>39</td>
-<td>testcases.CBCS_319AsCustomerICanEditABillingAddress@5059a6b5</td></tr>
-<tr>
-<td title='testcases.CBCS318_AsCustomerICanSeeTheCalendar.asCustomerICanSeeEventsCalendarTest()'><b>asCustomerICanSeeEventsCalendarTest</b><br>Test class: testcases.CBCS318_AsCustomerICanSeeTheCalendar<br>Parameters: lquesada@testingsoft.com, QAtest2014</td>
-<td></td>
-<td>10</td>
-<td>testcases.CBCS318_AsCustomerICanSeeTheCalendar@216f1cbc</td></tr>
-<tr>
-<td title='testcases.CBCS316_AsCustomerICanSeeTheListOfAllMyOrders.asCustomerICanSeeTheListOfAllMyOrdersTest()'><b>asCustomerICanSeeTheListOfAllMyOrdersTest</b><br>Test class: testcases.CBCS316_AsCustomerICanSeeTheListOfAllMyOrders<br>Parameters: lquesada@testingsoft.com, QAtest2014</td>
-<td></td>
-<td>10</td>
-<td>testcases.CBCS316_AsCustomerICanSeeTheListOfAllMyOrders@2a0aa21e</td></tr>
-<tr>
-<td title='testcases.CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping.asCustomerICanSelectPickUpAtCBCSAsShippingTest()'><b>asCustomerICanSelectPickUpAtCBCSAsShippingTest</b><br>Test class: testcases.CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping<br>Parameters: lquesada@testingsoft.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling0, address0, FEDEX, Credit Card</td>
-<td></td>
-<td>54</td>
-<td>testcases.CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping@6faa7dbc</td></tr>
-<tr>
-<td title='testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping.asCustomerICanSelectPickUpAtConvetionAsShippingTest()'><b>asCustomerICanSelectPickUpAtConvetionAsShippingTest</b><br>Test class: testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping<br>Parameters: lquesada@testingsoft.com, QAtest2014, 3, T&T, Aurora Copy, Consumer $29. Value up to $400, chkBilling0, address0, FEDEX, Credit Card</td>
-<td></td>
-<td>54</td>
-<td>testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping@29d52a29</td></tr>
-<tr>
-<td title='testcases.CBCS317_AsCustomerICanUseMyBillingAddressAsShippingAddress.asCustomerICanUseMyBillingAddressAsShippingAddressTest()'><b>asCustomerICanUseMyBillingAddressAsShippingAddressTest</b><br>Test class: testcases.CBCS317_AsCustomerICanUseMyBillingAddressAsShippingAddress<br>Parameters: lquesada@testingsoft.com, QAtest2014</td>
-<td></td>
-<td>18</td>
-<td>testcases.CBCS317_AsCustomerICanUseMyBillingAddressAsShippingAddress@368eb8bf</td></tr>
-<tr>
-<td title='testcases.CBCS80_AsCustomerICanAddANewBillingAddress.asCustomerIMayAddANewBillingAddressTest()'><b>asCustomerIMayAddANewBillingAddressTest</b><br>Test class: testcases.CBCS80_AsCustomerICanAddANewBillingAddress<br>Parameters: lquesada@testingsoft.com, QAtest2014</td>
-<td></td>
-<td>20</td>
-<td>testcases.CBCS80_AsCustomerICanAddANewBillingAddress@7038ce7b</td></tr>
-<tr>
-<td title='testcases.CBCS105_AsReiverSearchOneOrderUsingOrderNumber.asReiverSearchOneOrderUsingOrderNumberTest()'><b>asReiverSearchOneOrderUsingOrderNumberTest</b><br>Test class: testcases.CBCS105_AsReiverSearchOneOrderUsingOrderNumber<br>Parameters: lqreceiver, 123, receiver, 0002759-AA, 3, 1, 3, 9.4, White, In Safe, Receiver</td>
-<td></td>
-<td>8</td>
-<td>testcases.CBCS105_AsReiverSearchOneOrderUsingOrderNumber@71f993c</td></tr>
-<tr>
-<td title='testcases.CBCS138_AsShippingICanChangeTierStatusToShipped.changeTierStatusToShippedTest()'><b>changeTierStatusToShippedTest</b><br>Test class: testcases.CBCS138_AsShippingICanChangeTierStatusToShipped<br>Parameters: lqshipping, 123, shipping, 0002754-AA, 3, 1, 1, 9.4, White, Shipped, 777, Shipping</td>
-<td></td>
-<td>13</td>
-<td>testcases.CBCS138_AsShippingICanChangeTierStatusToShipped@4c418cf</td></tr>
-<tr>
-<td title='testcases.CBCS305_ReceiverLogin.receiverLoginTest()'><b>receiverLoginTest</b><br>Test class: testcases.CBCS305_ReceiverLogin<br>Parameters: lqreceiver, 123, receiver, 0002754-AA, 3, 1, 3, 9.4, White, In Safe, Receiver</td>
+<td title='testcases.CBCS_77AdminLogin.adminLoginTest()'><b>adminLoginTest</b><br>Test class: testcases.CBCS_77AdminLogin<br>Parameters: lqadmin, 123, admin</td>
 <td></td>
 <td>4</td>
-<td>testcases.CBCS305_ReceiverLogin@259f1b1d</td></tr>
+<td>testcases.CBCS_77AdminLogin@22f71333</td></tr>
 <tr>
-<td title='testcases.CBCS183_ValidateExpandedConsumerTierRulesCorrectly.validateExpandedConsumerTierRulesCorrectlyTest()'><b>validateExpandedConsumerTierRulesCorrectlyTest</b><br>Test class: testcases.CBCS183_ValidateExpandedConsumerTierRulesCorrectly<br>Parameters: lquesada@testingsoft.com, QAtest2014, 1, 50, Aurora Copy, Expanded Consumer (Pre-1969) $22. Value up to $250, 29, 1968, 8.0, 250, USD $8.00, USD $30.00, USD $4.00, USD $64.00, chkBilling0, address0, FEDEX, Credit Card</td>
+<td title='testcases.CBCS_323AsAdminICanCreateANewPedigree.asAdminICanCreateANewPedigreeTest()'><b>asAdminICanCreateANewPedigreeTest</b><br>Test class: testcases.CBCS_323AsAdminICanCreateANewPedigree<br>Parameters: lqadmin, 123, admin, Pedigrees, PedigreeTest, PedigreeEdited</td>
 <td></td>
-<td>56</td>
-<td>testcases.CBCS183_ValidateExpandedConsumerTierRulesCorrectly@44865ee</td></tr>
+<td>15</td>
+<td>testcases.CBCS_323AsAdminICanCreateANewPedigree@1a407d53</td></tr>
+<tr>
+<td title='testcases.CBCS_321AsAdminICanCreateANewPublisher.asAdminICanCreateANewPublisherTest()'><b>asAdminICanCreateANewPublisherTest</b><br>Test class: testcases.CBCS_321AsAdminICanCreateANewPublisher<br>Parameters: lqadmin, 123, admin, Publishers, PublisherTest, PublisherEdited</td>
+<td></td>
+<td>8</td>
+<td>testcases.CBCS_321AsAdminICanCreateANewPublisher@5ebec15</td></tr>
+<tr>
+<td title='testcases.CBCS_319AsAdminICanCreateANewVariant.asAdminICanCreateANewVariantTest()'><b>asAdminICanCreateANewVariantTest</b><br>Test class: testcases.CBCS_319AsAdminICanCreateANewVariant<br>Parameters: lqadmin, 123, admin, Variants, VariantTest, VariantEdited</td>
+<td></td>
+<td>6</td>
+<td>testcases.CBCS_319AsAdminICanCreateANewVariant@64616ca2</td></tr>
+<tr>
+<td title='testcases.CBCS_92AsAdminICanCreateAReceiverUser.asAdminICanCreateAReceiverUserTest()'><b>asAdminICanCreateAReceiverUserTest</b><br>Test class: testcases.CBCS_92AsAdminICanCreateAReceiverUser<br>Parameters: lqadmin, 123, admin, Receiver</td>
+<td></td>
+<td>8</td>
+<td>testcases.CBCS_92AsAdminICanCreateAReceiverUser@2c6a3f77</td></tr>
+<tr>
+<td title='testcases.CBCS_324AsAdminICanDeleteAPedigree.asAdminICanDeleteAPedigreeTest()'><b>asAdminICanDeleteAPedigreeTest</b><br>Test class: testcases.CBCS_324AsAdminICanDeleteAPedigree<br>Parameters: lqadmin, 123, admin, Pedigrees, PedigreeTest, PedigreeEdited</td>
+<td></td>
+<td>15</td>
+<td>testcases.CBCS_324AsAdminICanDeleteAPedigree@2ef9b8bc</td></tr>
+<tr>
+<td title='testcases.CBCS_322AsAdminICanDeleteAPublisher.asAdminICanDeleteAPublisherTest()'><b>asAdminICanDeleteAPublisherTest</b><br>Test class: testcases.CBCS_322AsAdminICanDeleteAPublisher<br>Parameters: lqadmin, 123, admin, Publishers, PublisherTest, PublisherEdited</td>
+<td></td>
+<td>12</td>
+<td>testcases.CBCS_322AsAdminICanDeleteAPublisher@6b2fad11</td></tr>
+<tr>
+<td title='testcases.CBCS_320AsAdminICanDeleteAVariant.asAdminICanDeleteAVariantTest()'><b>asAdminICanDeleteAVariantTest</b><br>Test class: testcases.CBCS_320AsAdminICanDeleteAVariant<br>Parameters: lqadmin, 123, admin, Variants, VariantTest, VariantEdited</td>
+<td></td>
+<td>12</td>
+<td>testcases.CBCS_320AsAdminICanDeleteAVariant@506e6d5e</td></tr>
+<tr>
+<td title='testcases.CBCS_325AsAdminICanEditAPublisher.asAdminICanEditAPublisherTest()'><b>asAdminICanEditAPublisherTest</b><br>Test class: testcases.CBCS_325AsAdminICanEditAPublisher<br>Parameters: lqadmin, 123, admin, Publishers, PublisherTest, PublisherEdited</td>
+<td></td>
+<td>10</td>
+<td>testcases.CBCS_325AsAdminICanEditAPublisher@4e04a765</td></tr>
+<tr>
+<td title='testcases.CBCS_315AsAdminICanDeleteAReceiver.asAdminIMayDeleteAReceiverTest()'><b>asAdminIMayDeleteAReceiverTest</b><br>Test class: testcases.CBCS_315AsAdminICanDeleteAReceiver<br>Parameters: lqadmin, 123, admin, Receiver</td>
+<td></td>
+<td>10</td>
+<td>testcases.CBCS_315AsAdminICanDeleteAReceiver@3f2a3a5</td></tr>
+<tr>
+<td title='testcases.CBCS_214AsCustomerICanAddACouponToTheaOrder.asCustomerICanAddACouponToTheaOrderTest()'><b>asCustomerICanAddACouponToTheaOrderTest</b><br>Test class: testcases.CBCS_214AsCustomerICanAddACouponToTheaOrder<br>Parameters: lquesadats@gmail.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling0, address0, FEDEX, Credit Card</td>
+<td></td>
+<td>97</td>
+<td>testcases.CBCS_214AsCustomerICanAddACouponToTheaOrder@3cda1055</td></tr>
+<tr>
+<td title='testcases.CBCS_316AsCustomerICanAddANewShippingAddress.asCustomerICanAddANewShippingAddressTest()'><b>asCustomerICanAddANewShippingAddressTest</b><br>Test class: testcases.CBCS_316AsCustomerICanAddANewShippingAddress<br>Parameters: lquesadats@gmail.com, QAtest2014</td>
+<td></td>
+<td>26</td>
+<td>testcases.CBCS_316AsCustomerICanAddANewShippingAddress@6fb554cc</td></tr>
+<tr>
+<td title='testcases.CBCS_316AsCustomerICanCreateAOrder.asCustomerICanCreateAOrderTest()'><b>asCustomerICanCreateAOrderTest</b><br>Test class: testcases.CBCS_316AsCustomerICanCreateAOrder<br>Parameters: lquesadats@gmail.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling0, address0, FEDEX, Credit Card</td>
+<td></td>
+<td>57</td>
+<td>testcases.CBCS_316AsCustomerICanCreateAOrder@3d8c7aca</td></tr>
+<tr>
+<td title='testcases.CBCS_318AsCustomerICanDeleteABillingAddress.asCustomerICanDeleteABillingAddressTest()'><b>asCustomerICanDeleteABillingAddressTest</b><br>Test class: testcases.CBCS_318AsCustomerICanDeleteABillingAddress<br>Parameters: lquesadats@gmail.com, QAtest2014</td>
+<td></td>
+<td>41</td>
+<td>testcases.CBCS_318AsCustomerICanDeleteABillingAddress@3fb6a447</td></tr>
+<tr>
+<td title='testcases.CBCS_319AsCustomerICanEditABillingAddress.asCustomerICanEditABillingAddressTest()'><b>asCustomerICanEditABillingAddressTest</b><br>Test class: testcases.CBCS_319AsCustomerICanEditABillingAddress<br>Parameters: lquesadats@gmail.com, QAtest2014</td>
+<td></td>
+<td>37</td>
+<td>testcases.CBCS_319AsCustomerICanEditABillingAddress@5315b42e</td></tr>
+<tr>
+<td title='testcases.CBCS_318AsCustomerICanSeeTheCalendar.asCustomerICanSeeEventsCalendarTest()'><b>asCustomerICanSeeEventsCalendarTest</b><br>Test class: testcases.CBCS_318AsCustomerICanSeeTheCalendar<br>Parameters: lquesadats@gmail.com, QAtest2014</td>
+<td></td>
+<td>7</td>
+<td>testcases.CBCS_318AsCustomerICanSeeTheCalendar@2d554825</td></tr>
+<tr>
+<td title='testcases.CBCS_316AsCustomerICanSeeTheListOfAllMyOrders.asCustomerICanSeeTheListOfAllMyOrdersTest()'><b>asCustomerICanSeeTheListOfAllMyOrdersTest</b><br>Test class: testcases.CBCS_316AsCustomerICanSeeTheListOfAllMyOrders<br>Parameters: lquesadats@gmail.com, QAtest2014</td>
+<td></td>
+<td>22</td>
+<td>testcases.CBCS_316AsCustomerICanSeeTheListOfAllMyOrders@5f2050f6</td></tr>
+<tr>
+<td title='testcases.CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping.asCustomerICanSelectPickUpAtCBCSAsShippingTest()'><b>asCustomerICanSelectPickUpAtCBCSAsShippingTest</b><br>Test class: testcases.CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping<br>Parameters: lquesadats@gmail.com, QAtest2014, 3, 50, Aurora Copy, Consumer $29. Value up to $400, chkBilling0, address0, FEDEX, Credit Card</td>
+<td></td>
+<td>72</td>
+<td>testcases.CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping@73f792cf</td></tr>
+<tr>
+<td title='testcases.CBCS_317AsCustomerICanUseMyBillingAddressAsShippingAddress.asCustomerICanUseMyBillingAddressAsShippingAddressTest()'><b>asCustomerICanUseMyBillingAddressAsShippingAddressTest</b><br>Test class: testcases.CBCS_317AsCustomerICanUseMyBillingAddressAsShippingAddress<br>Parameters: lquesadats@gmail.com, QAtest2014</td>
+<td></td>
+<td>38</td>
+<td>testcases.CBCS_317AsCustomerICanUseMyBillingAddressAsShippingAddress@783e6358</td></tr>
+<tr>
+<td title='testcases.CBCS_80AsCustomerICanAddANewBillingAddress.asCustomerIMayAddANewBillingAddressTest()'><b>asCustomerIMayAddANewBillingAddressTest</b><br>Test class: testcases.CBCS_80AsCustomerICanAddANewBillingAddress<br>Parameters: lquesadats@gmail.com, QAtest2014</td>
+<td></td>
+<td>20</td>
+<td>testcases.CBCS_80AsCustomerICanAddANewBillingAddress@42d3bd8b</td></tr>
+<tr>
+<td title='testcases.CBCS_305ReceiverLogin.receiverLoginTest()'><b>receiverLoginTest</b><br>Test class: testcases.CBCS_305ReceiverLogin<br>Parameters: lqreceiver, 123, receiver, 0002958-AA, 3, 1, 3, 9.4, White, In Safe, Receiver</td>
+<td></td>
+<td>4</td>
+<td>testcases.CBCS_305ReceiverLogin@614c5515</td></tr>
+<tr>
+<td title='testcases.CBCS_183ValidateExpandedConsumerTierRulesCorrectly.validateExpandedConsumerTierRulesCorrectlyTest()'><b>validateExpandedConsumerTierRulesCorrectlyTest</b><br>Test class: testcases.CBCS_183ValidateExpandedConsumerTierRulesCorrectly<br>Parameters: lquesadats@gmail.com, QAtest2014, 1, 50, Aurora Copy, Expanded Consumer (Pre-1969) $22. Value up to $250, 29, 1968, 8.0, 250, USD $8.00, USD $30.00, USD $4.00, USD $64.00, chkBilling0, address0, FEDEX, Credit Card</td>
+<td></td>
+<td>68</td>
+<td>testcases.CBCS_183ValidateExpandedConsumerTierRulesCorrectly@1e67b872</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.CBCS_81AsFinalizerICanQualifyAComic.asFinalizerICanQualifyAComicTest()'><b>asFinalizerICanQualifyAComicTest</b><br>Test class: testcases.CBCS_81AsFinalizerICanQualifyAComic</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testcases.CBCS_309AsGraderICanChangeTierStatusToGraded.asGraderICanChangeTierStatusToGradedTest()'><b>asGraderICanChangeTierStatusToGradedTest</b><br>Test class: testcases.CBCS_309AsGraderICanChangeTierStatusToGraded</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber.asReiverSearchOneOrderUsingOrderNumberTest()'><b>asReiverSearchOneOrderUsingOrderNumberTest</b><br>Test class: testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber<br>Parameters: lqreceiver, 123, receiver, 0002958-AA, 3, 1, 3, 9.4, White, In Safe, Receiver</td>
+<td></td>
+<td>0</td>
+<td>testcases.CBCS_105AsReiverSearchOneOrderUsingOrderNumber@180bc464</td></tr>
+<tr>
+<td title='testcases.CBCS_308AsSlabICanPrintLabelsOfAllComicBooks.asSlabICanPrintLabelsOfAllComicBooksTest()'><b>asSlabICanPrintLabelsOfAllComicBooksTest</b><br>Test class: testcases.CBCS_308AsSlabICanPrintLabelsOfAllComicBooks</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
 </table><p>
 </body>
 </html>
