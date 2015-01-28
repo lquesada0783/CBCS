@@ -7,9 +7,7 @@
       <class name="testcases.CBCS_306AsReceiverICanChangeOrderStatusToInSafe"/>  
       <class name="testcases.CBCS_309AsGraderICanChangeTierStatusToGraded"/>
       <class name="testcases.CBCS_81AsFinalizerICanQualifyAComic"/> 
-      <class name="testcases.CBCS_308AsSlabICanPrintLabelsOfAllComicBooks"/>
-      <class name="testcases.CBCS_138AsShippingICanChangeTierStatusToShipped"/>
-      <class name="testcasesCBCS_86AsQCICanMarkATierLikeShipping"/>
+      <class name="testcases.CBCS_308AsSlabICanPrintLabelsOfAllComicBooks"/>     
       <class name="testcases.CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping"/>
       <class name="testcases.CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping"/>
       <class name="testcases.CBCS_80AsCustomerICanAddANewBillingAddress"/> 
