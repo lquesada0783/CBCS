@@ -14,7 +14,7 @@ import pages.VariantsPage;
 import utils.TestCaseCBCS;
 import utils.UI;
 
-public class CBCS_320AsAdminICanDeleteAVariant extends TestCaseCBCS {
+public class CBCS_326AsAdminICanDeleteAVariant extends TestCaseCBCS {
 	
 	 private DashboardAdminPage dashboardPage;
 	 private VariantsPage variantPage;

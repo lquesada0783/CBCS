@@ -1,21 +1,13 @@
-package signin_logout;
+package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import pages.DashboardAdminPage;
-import pages.DashboardFinalizerPage;
-import pages.DashboardGraderPage;
-import pages.DashboardQCPage;
-import pages.DashboardReceiverPage;
-import pages.DashboardShippingPage;
-import pages.DashboardSlabPage;
-
 import com.ts.commons.Page;
 
-public class AdminLoginPage extends Page {
+public class AdminHomePage extends Page {
 	
 	@FindBy(xpath="//input[@placeholder='User Name']")
 	private WebElement userNameField;	
@@ -27,24 +19,24 @@ public class AdminLoginPage extends Page {
 	private WebElement signInButton;
 
 	@Override
-	public AdminLoginPage and() {		
+	public AdminHomePage and() {		
 		return this;
 	}
 
 	@Override
-	public AdminLoginPage then() {		
+	public AdminHomePage then() {		
 		return this;
 	}
 	
 	
-	public AdminLoginPage clearFields(){
+	public AdminHomePage clearFields(){
 		userNameField.clear();
 		passwordField.clear();
 		return this;
 		
 	}
 	
-	public AdminLoginPage fillFieldsForLogin (String userName, String password){
+	public AdminHomePage fillFieldsForLogin (String userName, String password){
 		clearFields();
 		userNameField.sendKeys(userName);
 		passwordField.sendKeys(password);

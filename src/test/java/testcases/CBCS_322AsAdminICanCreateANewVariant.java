@@ -15,7 +15,7 @@ import pages.VariantsPage;
 import utils.TestCaseCBCS;
 import utils.UI;
 
-public class CBCS_319AsAdminICanCreateANewVariant extends TestCaseCBCS {
+public class CBCS_322AsAdminICanCreateANewVariant extends TestCaseCBCS {
 	
 	 private DashboardAdminPage dashboardPage;
 	 private VariantsPage variantPage;

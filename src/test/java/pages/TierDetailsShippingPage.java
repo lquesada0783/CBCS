@@ -26,13 +26,16 @@ public class TierDetailsShippingPage extends Page {
 	private WebElement notifyClientButton;
 	
 	@FindBy(xpath="//div[@id='operationResult' and contains(.,'Traking number added successfully.') and @style='display: block;']")
-	private WebElement trakingSuccessfullyMessageLabel;	
+	private WebElement trakingSuccessfullyMessage;	
 	
-	/*@FindBy(xpath="//div[@id='operationResult' and contains(.,'A notification was successfully sended to the client.') and @style='display: block;']")
-	private WebElement notificationSuccessfullyMessageLabel;*/	
+	@FindBy(xpath="//div[@id='operationResult' and contains(.,'A notification was successfully sended to the client.') and @style='display: block;']")
+	private WebElement notificationSuccessfullyMessage;	
 	
 	@FindBy(xpath="//div[text()='You already send a notification to this client.']")
-	private WebElement sendNotificationMessageLabel;
+	private WebElement sendNotificationLabel;
+	
+	@FindBy(xpath="Tier status was changed successfully.")
+	private WebElement changedTierStatusMessage;
 	
 	@FindBy(xpath="//a[@id='lnkBack']")
 	private WebElement backToOrderButton;			
@@ -40,6 +43,9 @@ public class TierDetailsShippingPage extends Page {
 	@FindBy(xpath="//a[@id='lnkBack']")
 	private WebElement backButton;
 
+	@FindBy(xpath="//button[@name='btnChangeStatustoShipping' and text()='Send to Shipping']")
+	private WebElement sendToShippingButton;
+	
 	@Override
 	public TierDetailsShippingPage and() {		
 		return this;
@@ -55,6 +61,11 @@ public class TierDetailsShippingPage extends Page {
 		return this;
 	}
 	
+	public  TierDetailsShippingPage clickSendToShippingButton(){ 
+		sendToShippingButton.click();
+		return this;
+	}	
+	
 	public  TierDetailsShippingPage fillTrackingNumberField(String trackingNumber, WebDriver driver){ 
 	    utils.Utils.iselementPresent(driver, By.xpath("(//td/span[@class='ng-binding'])[1]"));
 	    cleanFields();
@@ -67,7 +78,7 @@ public class TierDetailsShippingPage extends Page {
 			return this;
 	}
 	
-	public  TierDetailsShippingPage clicknotifyClientButton(){ 
+	public  TierDetailsShippingPage clickNotifyClientButton(){ 
 		utils.Utils.waitForElemets(1);
 		notifyClientButton.click();
 		return this;
@@ -99,43 +110,48 @@ public class TierDetailsShippingPage extends Page {
 			};
 		}	
 		
-	public Validator trakingSuccessfullyMessageLabelMustBePresent(){
+	public Validator trakingSuccessfullyMessageMustBePresent(){
 			return new Validator()
 			{
 				@Override
 				public void Validate(){	
 						
-					boolean thereIsAMessageLabel = trakingSuccessfullyMessageLabel !=null;
+					boolean thereIsAMessageLabel = trakingSuccessfullyMessage !=null;
 					Assert.assertTrue(thereIsAMessageLabel);
 					
 				}
 			};
 		}	
 		
-		/*public Validator notificationSuccessfullyMessageLabelMustBePresent(){
+	public Validator changedTierStatusMessageMustBePresent(){
 			return new Validator()
 			{
 				@Override
 				public void Validate(){	
 						
-					boolean thereIsAnMessageLabel = notificationSuccessfullyMessageLabel !=null;
-					Assert.assertTrue(thereIsAnMessageLabel);
+					boolean thereIsAChangedTierStatusMessage = changedTierStatusMessage !=null;
+					Assert.assertTrue(thereIsAChangedTierStatusMessage);
 					
 				}
 			};
-		}*/
+	}
 		
-	public Validator sendNotificationMessageLabelMustBePresent(){
+	public Validator notificationMessageAndLabelMustBePresent(){
 			return new Validator()
 			{
 				@Override
 				public void Validate(){	
-						
-					boolean thereIsAnMessageLabel = sendNotificationMessageLabel !=null;
-					Assert.assertTrue(thereIsAnMessageLabel);
+					
+					boolean thereIsANotificationSuccessfullyMessage = notificationSuccessfullyMessage !=null;
+					Assert.assertTrue(thereIsANotificationSuccessfullyMessage);
+					
+					boolean thereIsASendNotificationLabel = sendNotificationLabel !=null;
+					Assert.assertTrue(thereIsASendNotificationLabel);
+					
 					
 				}
 			};
 		}
+	
 		
 }

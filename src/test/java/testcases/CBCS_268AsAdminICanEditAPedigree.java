@@ -8,14 +8,15 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.ts.commons.DataSourceXls;
-
 import pages.DashboardAdminPage;
 import pages.PedigreesPage;
+
+import com.ts.commons.DataSourceXls;
+
 import utils.TestCaseCBCS;
 import utils.UI;
 
-public class CBCS_323AsAdminICanCreateANewPedigree extends TestCaseCBCS {
+public class CBCS_268AsAdminICanEditAPedigree extends TestCaseCBCS {
 	
 	 private DashboardAdminPage dashboardPage;
 	 private PedigreesPage pedigreesPage;
@@ -27,7 +28,7 @@ public class CBCS_323AsAdminICanCreateANewPedigree extends TestCaseCBCS {
 	 }	
 	 
 	 @Test(dataProvider = "data")
-	 public void asAdminICanCreateANewPedigreeTest(String userName, String password, String enviroment, String catalogsPedigree, String pedigreeName, String newPedigreeName){
+	 public void asAdminICanEditAPedigreeTest(String userName, String password, String enviroment, String catalogsPedigree, String pedigreeName, String newPedigreeName){
 			
 		    pedigree=pedigreeName;
 		    
@@ -62,11 +63,12 @@ public class CBCS_323AsAdminICanCreateANewPedigree extends TestCaseCBCS {
 					
 			 .andUsing(
 					
-					 pedigreesPage.clickNewButton(getWebDriver())
+					pedigreesPage
+					.clickNewButton(getWebDriver())
 					.and()
 					.fillFieldsAddPedigreeModal(pedigreeName)
 					.then()
-					.clickSaveButton(getWebDriver())					
+					.clickSaveButton()					
 					
 					)
 					
@@ -74,8 +76,40 @@ public class CBCS_323AsAdminICanCreateANewPedigree extends TestCaseCBCS {
 					 
 					pedigreesPage.addedPedigreesSuccessfullyMessageMustBePresent()
 					
-					);
-		  }
+					)
+					
+			.andUsing(
+								
+					pedigreesPage
+					.fillSearchField(pedigreeName)	
+					.and()
+					.clickSearchButton(getWebDriver())
+										
+					 )
+										
+			.check(					
+
+				pedigreesPage.ValidateIfPedigreeExist(driver, pedigreeName)
+										
+				)		
+				
+			.andUsing(
+									
+				pedigreesPage
+				.clickEditButton(getWebDriver(), pedigreeName)		
+				.and()
+				.fillFieldsEditPedigreeModal(newPedigreeName)
+				.then()
+				.clickSaveButton()
+								
+				   )
+							
+			.check(
+								
+				pedigreesPage.editPedigreeSuccessfullyMessageMustBePresent()	
+								
+				);
+		}		 
 	 
 	 @Override
 	 @AfterMethod (alwaysRun=true)
@@ -84,5 +118,5 @@ public class CBCS_323AsAdminICanCreateANewPedigree extends TestCaseCBCS {
 		driver.close();
 		driver.quit();
 		}
-	 
+
 }

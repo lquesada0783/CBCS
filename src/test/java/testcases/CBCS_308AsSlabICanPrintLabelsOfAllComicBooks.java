@@ -50,7 +50,7 @@ public class CBCS_308AsSlabICanPrintLabelsOfAllComicBooks extends TestCaseCBCS {
 				 processOrderSlabPage=dashboardSlabPage
 				 .processOrderLabelClick(getWebDriver())
 				 .then()
-				 .fillInvoiceOrOrderNumberField(CBCS_316AsCustomerICanCreateAOrder.orderNumber)
+				 .fillInvoiceOrOrderNumberField(CBCS_316AsCustomerICanCreateAnOrder.orderNumber)
 				 .and()
 				 .clickSearchButton()				 
 				 				 
@@ -59,7 +59,7 @@ public class CBCS_308AsSlabICanPrintLabelsOfAllComicBooks extends TestCaseCBCS {
 		  .check(
 				  
 				 processOrderSlabPage
-				 .orderNumberLabelMustBePresent(CBCS_316AsCustomerICanCreateAOrder.orderNumber, getWebDriver())
+				 .orderNumberLabelMustBePresent(CBCS_316AsCustomerICanCreateAnOrder.orderNumber, getWebDriver())
 				 
 				 )
 				 
@@ -89,7 +89,7 @@ public class CBCS_308AsSlabICanPrintLabelsOfAllComicBooks extends TestCaseCBCS {
 			 .check(
 					
 					processOrderSlabPage
-					.checkTierStatus(CBCS_316AsCustomerICanCreateAOrder.orderNumber, orderStatus, getWebDriver())
+					.checkTierStatus(CBCS_316AsCustomerICanCreateAnOrder.orderNumber, orderStatus, getWebDriver())
 					
 					);
 	}

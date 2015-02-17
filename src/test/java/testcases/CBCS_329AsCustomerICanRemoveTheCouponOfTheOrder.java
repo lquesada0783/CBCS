@@ -3,13 +3,11 @@ package testcases;
 import java.io.IOException;
 
 import jxl.read.biff.BiffException;
+import object.OrderDataInfo;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.ts.commons.DataSourceXls;
-
-import object.OrderDataInfo;
 import pages.AddressesInformationCustomerPage;
 import pages.DashboardCustomerPage;
 import pages.OrderConfirmationCustomerPage;
@@ -17,12 +15,13 @@ import pages.OrderSummaryCustomerPage;
 import pages.PaymentMethodCustomerPage;
 import pages.ReviewOrderCustomerPage;
 import pages.SubmitYourComicPage;
+
+import com.ts.commons.DataSourceXls;
+
 import utils.TestCaseCBCS;
 import utils.UI;
 
-public class CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping extends
-		TestCaseCBCS {
-	
+public class CBCS_329AsCustomerICanRemoveTheCouponOfTheOrder extends TestCaseCBCS {
 	
 	private DashboardCustomerPage dashboardCustomerPage;
 	private SubmitYourComicPage submitYourComicPage;
@@ -34,13 +33,12 @@ public class CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping extends
 	private OrderDataInfo order;
 	
 	@DataProvider
-	 public Object[][] data() throws BiffException, IOException {
-	        return new DataSourceXls ("Parameters.xls" ).getData(8,2);
-	       
-	   }  
+	public Object[][] data() throws BiffException, IOException {
+	return new DataSourceXls("Parameters.xls").getData(8, 2);
+	}	
 	
 	@Test(dataProvider = "data")
-	public void asCustomerICanSelectPickUpAtCBCSAsShippingTest (String email, String password, String qtyComics, String convention, String pedigree, String tier,String billing, String shipping, String provider, String paymentMethod){
+	public void asCustomerICanRemoveTheCouponOfTheOrderTest(String email, String password, String qtyComics, String amountCoupon, String pedigree, String tier,String billing, String shipping, String provider, String paymentMethod){
 		
 		order = new OrderDataInfo();
 		order.fillOrderData(order);
@@ -48,7 +46,8 @@ public class CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping extends
 		using(
 				dashboardCustomerPage=(DashboardCustomerPage) UI.goToCustomerLoginPage(getWebDriver())
 				.clickLoginLink(getWebDriver())
-				.fillFieldsForLogin(email , password)
+				.then()
+				.fillFieldsForLogin(email ,password)
 				.and()
 				.clickSignInButton(getWebDriver())
 				
@@ -56,8 +55,7 @@ public class CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping extends
 				
 		 .check(
 			
-				 dashboardCustomerPage
-				 .welcomeLabelMustBePresent()
+				 dashboardCustomerPage.welcomeLabelMustBePresent()
 						
 			  )
 			  
@@ -70,8 +68,7 @@ public class CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping extends
 				
 		.check(
 				
-				submitYourComicPage
-				.submitYourComicLabelMustBePresent()
+				submitYourComicPage.submitYourComicLabelMustBePresent()
 				
 				)
 				
@@ -85,15 +82,48 @@ public class CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping extends
 				)
 				
 		.check(
-				orderSummaryCustomerPage
-				.orderSummaryLabelMustBePresent()
+				orderSummaryCustomerPage.orderSummaryLabelMustBePresent()
 				
 				)
 				
 		.andUsing(
 				
+				orderSummaryCustomerPage
+				.fillCuponField(amountCoupon,getWebDriver())
+				.then()
+				.clickApplyButton()
+				.and()
+				.clickAcceptButton()
+				
+				)
+				
+		.check(
+				orderSummaryCustomerPage
+				.couponLabelMustBePresent()
+				
+				)
+				
+		.andUsing(
+				
+				orderSummaryCustomerPage
+				.clickRemoveCouponLink()
+				.and()
+				.clickYesButton()
+								
+				)
+				
+		.check(
+				
+			orderSummaryCustomerPage
+			.validateSuccessfulMessageIsPresentAndCouponDoesNotMustBePresent(getWebDriver())
+			)
+				
+				
+		.andUsing(
+				
 				addressesInformationCustomerPage=orderSummaryCustomerPage
 				.clickIGreeTermsAndConditionsCheckbox(getWebDriver())
+				.and()
 				.clickNextButton(getWebDriver())
 				
 				)
@@ -109,9 +139,9 @@ public class CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping extends
 				paymentMethodCustomerPage=addressesInformationCustomerPage
 				.selectBillingAddress(billing, getWebDriver())
 				.then()
-				.clickpickUpAtCBCSRadio()
+				.selectShippingAddress(shipping, getWebDriver())
 				.and()
-				.clickAcceptButton()				
+				.selectOneOptionShippingProviderDropdown(provider, getWebDriver())
 				.then()
 				.clickNextButton(getWebDriver())
 				
@@ -119,8 +149,7 @@ public class CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping extends
 				
 				
 		.check(					
-				paymentMethodCustomerPage
-				.paymentMethodLabelMustBePresent()
+				paymentMethodCustomerPage.paymentMethodLabelMustBePresent()
 				
 			)
 			
@@ -136,8 +165,7 @@ public class CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping extends
 			   
 		.check(
 				
-				reviewOrderCustomerPage
-				.reviewOrderLabelMustBePresent(getWebDriver())				
+				reviewOrderCustomerPage.reviewOrderLabelMustBePresent(getWebDriver())
 				
 				)
 				
@@ -150,26 +178,22 @@ public class CBCS_320AsCustomerICanSelectPickUpAtCBCSAsShipping extends
 				
 		.check(
 				
-				orderConfirmationCustomerPage
-				.orderConfirmationLabelMustBePresent()
+				orderConfirmationCustomerPage.orderConfirmationLabelMustBePresent()
 				
 				)
 				
 		.andUsing(
 				
-				orderConfirmationCustomerPage							
+				orderConfirmationCustomerPage								
 				.clickOkButton(getWebDriver())
 				
 				)
 				
 		.check(
 				
-			orderConfirmationCustomerPage
-			.warningMessageMustBePresent()
+			orderConfirmationCustomerPage.warningMessageMustBePresent()
 				
 			);
-		
-	  }
-	
+	}
 
 }

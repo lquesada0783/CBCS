@@ -3,14 +3,13 @@ package testcases;
 import java.io.IOException;
 
 import jxl.read.biff.BiffException;
-import object.OrderDataInfo;
 
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.ts.commons.DataSourceXls;
 
+import object.OrderDataInfo;
 import pages.AddressesInformationCustomerPage;
 import pages.DashboardCustomerPage;
 import pages.OrderConfirmationCustomerPage;
@@ -21,7 +20,9 @@ import pages.SubmitYourComicPage;
 import utils.TestCaseCBCS;
 import utils.UI;
 
-public class CBCS_316AsCustomerICanCreateAOrder extends TestCaseCBCS {
+public class CBCS_323AsCustomerICanSelectPickUpAtCBCSAsShipping extends
+		TestCaseCBCS {
+	
 	
 	private DashboardCustomerPage dashboardCustomerPage;
 	private SubmitYourComicPage submitYourComicPage;
@@ -30,8 +31,7 @@ public class CBCS_316AsCustomerICanCreateAOrder extends TestCaseCBCS {
 	private PaymentMethodCustomerPage paymentMethodCustomerPage;
 	private ReviewOrderCustomerPage reviewOrderCustomerPage;
 	private OrderConfirmationCustomerPage orderConfirmationCustomerPage;
-	private OrderDataInfo order;	
-	public static String orderNumber = "";
+	private OrderDataInfo order;
 	
 	@DataProvider
 	 public Object[][] data() throws BiffException, IOException {
@@ -39,9 +39,8 @@ public class CBCS_316AsCustomerICanCreateAOrder extends TestCaseCBCS {
 	       
 	   }  
 	
-	
-	@Test(dataProvider = "data", groups={"CreateOrder"})
-	public void asCustomerICanCreateAOrderTest(String email, String password, String qtyComics, String amountCoupon, String pedigree, String tier,String billing, String shipping, String provider, String paymentMethod){
+	@Test(dataProvider = "data")
+	public void asCustomerICanSelectPickUpAtCBCSAsShippingTest (String email, String password, String qtyComics, String convention, String pedigree, String tier,String billing, String shipping, String provider, String paymentMethod){
 		
 		order = new OrderDataInfo();
 		order.fillOrderData(order);
@@ -49,8 +48,7 @@ public class CBCS_316AsCustomerICanCreateAOrder extends TestCaseCBCS {
 		using(
 				dashboardCustomerPage=(DashboardCustomerPage) UI.goToCustomerLoginPage(getWebDriver())
 				.clickLoginLink(getWebDriver())
-				.then()
-				.fillFieldsForLogin(email,password)
+				.fillFieldsForLogin(email , password)
 				.and()
 				.clickSignInButton(getWebDriver())
 				
@@ -58,7 +56,8 @@ public class CBCS_316AsCustomerICanCreateAOrder extends TestCaseCBCS {
 				
 		 .check(
 			
-				 dashboardCustomerPage.welcomeLabelMustBePresent()
+				 dashboardCustomerPage
+				 .welcomeLabelMustBePresent()
 						
 			  )
 			  
@@ -71,14 +70,15 @@ public class CBCS_316AsCustomerICanCreateAOrder extends TestCaseCBCS {
 				
 		.check(
 				
-				submitYourComicPage.submitYourComicLabelMustBePresent()
+				submitYourComicPage
+				.submitYourComicLabelMustBePresent()
 				
 				)
 				
 		.andUsing(
 				
 				orderSummaryCustomerPage=submitYourComicPage
-				.fillAllFields(order, pedigree, tier, getWebDriver())
+				.fillAllFields(order, pedigree,tier, getWebDriver())
 				.then()
 				.clickNextButton(getWebDriver())
 				
@@ -109,9 +109,9 @@ public class CBCS_316AsCustomerICanCreateAOrder extends TestCaseCBCS {
 				paymentMethodCustomerPage=addressesInformationCustomerPage
 				.selectBillingAddress(billing, getWebDriver())
 				.then()
-				.selectShippingAddress(shipping, getWebDriver())
+				.clickpickUpAtCBCSRadio()
 				.and()
-				.selectOneOptionShippingProviderDropdown(provider, getWebDriver())
+				.clickAcceptButton()				
 				.then()
 				.clickNextButton(getWebDriver())
 				
@@ -119,7 +119,8 @@ public class CBCS_316AsCustomerICanCreateAOrder extends TestCaseCBCS {
 				
 				
 		.check(					
-				paymentMethodCustomerPage.paymentMethodLabelMustBePresent()
+				paymentMethodCustomerPage
+				.paymentMethodLabelMustBePresent()
 				
 			)
 			
@@ -135,7 +136,8 @@ public class CBCS_316AsCustomerICanCreateAOrder extends TestCaseCBCS {
 			   
 		.check(
 				
-				reviewOrderCustomerPage.reviewOrderLabelMustBePresent(getWebDriver())
+				reviewOrderCustomerPage
+				.reviewOrderLabelMustBePresent(getWebDriver())				
 				
 				)
 				
@@ -148,33 +150,26 @@ public class CBCS_316AsCustomerICanCreateAOrder extends TestCaseCBCS {
 				
 		.check(
 				
-				orderConfirmationCustomerPage.orderConfirmationLabelMustBePresent()
+				orderConfirmationCustomerPage
+				.orderConfirmationLabelMustBePresent()
 				
 				)
 				
 		.andUsing(
 				
-				orderConfirmationCustomerPage
-				.writeOnderNumber(getWebDriver(),order)					
-				//.clickOkButton(getWebDriver())		
-				.clickPrintReceiptButton(getWebDriver())
+				orderConfirmationCustomerPage							
+				.clickOkButton(getWebDriver())
 				
 				)
 				
 		.check(
 				
-			orderConfirmationCustomerPage.warningMessageMustBePresent()
+			orderConfirmationCustomerPage
+			.warningMessageMustBePresent()
 				
 			);
 		
-	  }	
+	  }
 	
-	@Override
-	@AfterMethod (alwaysRun=true)
-	public void close(){
-		orderNumber=order.getOrderNumber();
-		driver.close();
-		driver.quit();
-	}	 
 
 }

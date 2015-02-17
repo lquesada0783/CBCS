@@ -10,27 +10,30 @@ import org.testng.annotations.Test;
 import com.ts.commons.DataSourceXls;
 
 import pages.DashboardCustomerPage;
-import pages.MyAccountPage;
+import pages.NewsCustomerPage;
 import utils.TestCaseCBCS;
 import utils.UI;
 
-public class CBCS_316AsCustomerICanSeeTheListOfAllMyOrders extends TestCaseCBCS {
+public class CBCS_331AsCustomerICanSeeTheNewsPage extends TestCaseCBCS {
 	
 	private DashboardCustomerPage dashboardCustomerPage;
-	private MyAccountPage myAccountPage;
+	private NewsCustomerPage newsPage;
 	
 	@DataProvider
-	public Object[][] data() throws BiffException, IOException {
-	return new DataSourceXls("Parameters.xls").getData(7, 2);
-	}	
+	 public Object[][] data() throws BiffException, IOException {
+	        return new DataSourceXls ("Parameters.xls" ).getData(7,2);
+	       
+	   }  
+	
 	
 	@Test(dataProvider = "data")
-	public void asCustomerICanSeeTheListOfAllMyOrdersTest(String email, String password){
+	public void asCustomerICanSeeTheNewsPageTest(String email, String password){
 		
 		using(
 				dashboardCustomerPage=(DashboardCustomerPage) UI.goToCustomerLoginPage(getWebDriver())
 				.clickLoginLink(getWebDriver())
-				.fillFieldsForLogin(email , password)
+				.then()
+				.fillFieldsForLogin(email,password)
 				.and()
 				.clickSignInButton(getWebDriver())
 				
@@ -44,17 +47,17 @@ public class CBCS_316AsCustomerICanSeeTheListOfAllMyOrders extends TestCaseCBCS 
 			  
 		.andUsing(
 				
-				myAccountPage=dashboardCustomerPage
-				.clickMyAccountTab(getWebDriver())
+				newsPage=dashboardCustomerPage
+				.clickNewsTab(getWebDriver())
 				
 				)
 				
-		
 		.check(
-			
-				myAccountPage.orderListInformationLabelMustBePresent()
 				
-				);		
+			newsPage.validateNewsIsDisplayed(getWebDriver())
+			
+			);
+			  
 		
 	}
 

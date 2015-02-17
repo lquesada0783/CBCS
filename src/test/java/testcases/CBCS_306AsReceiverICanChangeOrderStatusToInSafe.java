@@ -49,7 +49,7 @@ private ProcessOrderReceiverPage processOrderPage;
 				processOrderPage=dashboardPage
 				.processOrderLabelClick(getWebDriver())
 				.then()
-				.fillInvoiceOrOrderNumberField(CBCS_316AsCustomerICanCreateAOrder.orderNumber)
+				.fillInvoiceOrOrderNumberField(CBCS_316AsCustomerICanCreateAnOrder.orderNumber)
 				.and()
 				.clickSearchButton() 
 				
@@ -59,7 +59,7 @@ private ProcessOrderReceiverPage processOrderPage;
 		   .check(
 		    	 
 				  processOrderPage
-				  .orderNumberLabelMustBePresent(CBCS_316AsCustomerICanCreateAOrder.orderNumber, getWebDriver())
+				  .orderNumberLabelMustBePresent(CBCS_316AsCustomerICanCreateAnOrder.orderNumber, getWebDriver())
 		    	 
 				  )
 		    	   
@@ -76,7 +76,7 @@ private ProcessOrderReceiverPage processOrderPage;
 		   .check(
 				   
 				   processOrderPage
-				   .checkTierStatus(CBCS_316AsCustomerICanCreateAOrder.orderNumber, orderStatus, getWebDriver())
+				   .checkTierStatus(CBCS_316AsCustomerICanCreateAnOrder.orderNumber, orderStatus, getWebDriver())
 				   
 				  );
 		}

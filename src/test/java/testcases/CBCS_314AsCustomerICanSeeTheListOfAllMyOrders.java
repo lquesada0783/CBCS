@@ -10,14 +10,14 @@ import org.testng.annotations.Test;
 import com.ts.commons.DataSourceXls;
 
 import pages.DashboardCustomerPage;
-import pages.EventsCalendarPage;
+import pages.MyAccountPage;
 import utils.TestCaseCBCS;
 import utils.UI;
 
-public class CBCS_318AsCustomerICanSeeTheCalendar extends TestCaseCBCS {
+public class CBCS_314AsCustomerICanSeeTheListOfAllMyOrders extends TestCaseCBCS {
 	
-	private DashboardCustomerPage dashboardCustomerPage;	
-	private EventsCalendarPage eventsCalendarPage;
+	private DashboardCustomerPage dashboardCustomerPage;
+	private MyAccountPage myAccountPage;
 	
 	@DataProvider
 	public Object[][] data() throws BiffException, IOException {
@@ -25,7 +25,7 @@ public class CBCS_318AsCustomerICanSeeTheCalendar extends TestCaseCBCS {
 	}	
 	
 	@Test(dataProvider = "data")
-	public void asCustomerICanSeeEventsCalendarTest(String email, String password){
+	public void asCustomerICanSeeTheListOfAllMyOrdersTest(String email, String password){
 		
 		using(
 				dashboardCustomerPage=(DashboardCustomerPage) UI.goToCustomerLoginPage(getWebDriver())
@@ -38,24 +38,24 @@ public class CBCS_318AsCustomerICanSeeTheCalendar extends TestCaseCBCS {
 				
 		 .check(
 			
-				 dashboardCustomerPage
-				 .welcomeLabelMustBePresent()
+				 dashboardCustomerPage.welcomeLabelMustBePresent()
 						
 			  )
 			  
-		
 		.andUsing(
 				
-				eventsCalendarPage=dashboardCustomerPage
-				.clickCalendarTab(getWebDriver())
+				myAccountPage=dashboardCustomerPage
+				.clickMyAccountTab(getWebDriver())
+				
 				)
 				
+		
 		.check(
-						
-				eventsCalendarPage
-				.calendarLabelMustBePresent()
+			
+				myAccountPage.orderListInformationLabelMustBePresent()
 				
 				);		
-	}	
+		
+	}
 
 }

@@ -4,23 +4,20 @@ import java.io.IOException;
 
 import jxl.read.biff.BiffException;
 
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import pages.DashboardAdminPage;
-import pages.PublisherPage;
-
 import com.ts.commons.DataSourceXls;
 
+import pages.DashboardAdminPage;
+import pages.PublisherPage;
 import utils.TestCaseCBCS;
 import utils.UI;
 
-public class CBCS_325AsAdminICanEditAPublisher extends TestCaseCBCS {
+public class CBCS_281AsAdminICanDeleteAPublisher extends TestCaseCBCS {
 	
 	private DashboardAdminPage dashboardPage;
 	private PublisherPage publisherPage;
-	public static String publisher = "";
 	 
 	 @DataProvider
 	 public Object[][] data() throws BiffException, IOException {
@@ -28,10 +25,9 @@ public class CBCS_325AsAdminICanEditAPublisher extends TestCaseCBCS {
 	 }	
 	 
 	 @Test(dataProvider = "data")
-	 public void asAdminICanEditAPublisherTest(String userName, String password, String enviroment, String catalogsPublisher, String publisherName, String newPublisherName){
+	 public void asAdminICanDeleteAPublisherTest(String userName, String password, String enviroment, String catalogsPublisher, String publisherName, String newPublisherName){
 			
-		publisher=newPublisherName;
-		  
+						
 		using(
 				dashboardPage=(DashboardAdminPage) UI.goToAdminLoginPage(getWebDriver())
 				.fillFieldsForLogin(userName , password)
@@ -47,19 +43,19 @@ public class CBCS_325AsAdminICanEditAPublisher extends TestCaseCBCS {
 							
 				 )
 			
-		 .andUsing(
+		.andUsing(
 						
 				publisherPage=dashboardPage
 				.selectOneOptionCatalogMenue(catalogsPublisher, getWebDriver(),PublisherPage.class)  					
 						
 				)
 						
-		 .check(
+		.check(
 					
 			publisherPage.PublisherLabelMustBePresent()
 						
 				)
-		 .andUsing(
+		.andUsing(
 						
 				publisherPage.clickNewButton(getWebDriver())
 				.and()
@@ -91,28 +87,17 @@ public class CBCS_325AsAdminICanEditAPublisher extends TestCaseCBCS {
 			
 		.andUsing(
 				
-			publisherPage.clickEditButton(getWebDriver(), publisherName)		
+			publisherPage.clickDeleteButton(getWebDriver(), publisherName)
 			.and()
-			.fillFieldsEditPublisherModal(newPublisherName)
-			.then()
-			.clickSaveButton()
+			.clickYesButton(getWebDriver())
 			
 			)
 		
 		.check(
 			
-			publisherPage.editPublisherSuccessfullyMessageMustBePresent()	
+			publisherPage.deletedPublisherSuccessfullyMessageMustBePresent()	
 			
 			);
 		}
-	 
-	 @Override
-	 @AfterMethod (alwaysRun=true)
-	 public void close(){
-		utils.Utils.searchAndDeletePublisher(publisher, getWebDriver());
-		driver.close();
-		driver.quit();
-		
-	 }
 
 }

@@ -15,7 +15,7 @@ import pages.TierDetailsQCPage;
 import utils.TestCaseCBCS;
 import utils.UI;
 
-public class CBCS_86AsQCICanMarkATierLikeShipping extends TestCaseCBCS {
+public class CBCS_86AsQCICanMarkATierLikeQC extends TestCaseCBCS {
 	
 	private DashboardQCPage dashboardQCPage;
 	private ProcessOrderQCPage processOrderQCPage;
@@ -49,7 +49,7 @@ public class CBCS_86AsQCICanMarkATierLikeShipping extends TestCaseCBCS {
 				 processOrderQCPage=dashboardQCPage
 				 .processOrderLabelClick(getWebDriver())
 				 .then()
-				 .fillInvoiceOrOrderNumberField(CBCS_316AsCustomerICanCreateAOrder.orderNumber)
+				 .fillInvoiceOrOrderNumberField(CBCS_316AsCustomerICanCreateAnOrder.orderNumber)
 				 .and()
 				 .clickSearchButton()				 
 				 				 
@@ -58,7 +58,7 @@ public class CBCS_86AsQCICanMarkATierLikeShipping extends TestCaseCBCS {
 		  .check(
 				  
 				  processOrderQCPage
-				  .validateOrderNumber(CBCS_316AsCustomerICanCreateAOrder.orderNumber, getWebDriver())				
+				  .validateOrderNumber(CBCS_316AsCustomerICanCreateAnOrder.orderNumber, getWebDriver())				
 				 
 				 )
 				 
@@ -80,9 +80,7 @@ public class CBCS_86AsQCICanMarkATierLikeShipping extends TestCaseCBCS {
 		   .andUsing(
 				   
 				   tierDetailsQCPage
-				   .clickQCFinishedCheckbox(getWebDriver())
-				   .and()
-				   .clickSentToShippingButton(getWebDriver())
+				   .clickQCFinishedCheckbox(getWebDriver())				   
 				   
 				    )
 				    
@@ -103,7 +101,7 @@ public class CBCS_86AsQCICanMarkATierLikeShipping extends TestCaseCBCS {
 			.check(
 					
 				processOrderQCPage
-				.checkTierStatus(CBCS_316AsCustomerICanCreateAOrder.orderNumber, orderStatus, getWebDriver())
+				.checkTierStatus(CBCS_316AsCustomerICanCreateAnOrder.orderNumber, orderStatus, getWebDriver())
 				
 				 );		
 		

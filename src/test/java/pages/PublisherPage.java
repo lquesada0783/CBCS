@@ -65,10 +65,10 @@ public class PublisherPage extends Page {
 		return this;
 	}
 	
-	public PublisherPage fillFieldsEditPublisherModal(String publisherName){
+	public PublisherPage fillFieldsEditPublisherModal(String newPublisherName){
 		utils.Utils.waitForElemets(1);
 		editPublisherNameField.clear();
-		editPublisherNameField.sendKeys(publisherName);	
+		editPublisherNameField.sendKeys(newPublisherName);	
 		return this;
 	}	
 	

@@ -50,7 +50,7 @@ public class CBCS_138AsShippingICanChangeTierStatusToShipped extends TestCaseCBC
 				 processOrderShippingPage=dashboardShippingPage
 				 .clickProcessOrderLabel(getWebDriver())
 				 .then()
-				 .fillInvoiceOrOrderNumberField(CBCS_316AsCustomerICanCreateAOrder.orderNumber)
+				 .fillInvoiceOrOrderNumberField(CBCS_316AsCustomerICanCreateAnOrder.orderNumber)
 				 .and()
 				 .clickSearchButton()				 
 				 				 
@@ -59,14 +59,14 @@ public class CBCS_138AsShippingICanChangeTierStatusToShipped extends TestCaseCBC
 		  .check(
 				  
 				  processOrderShippingPage
-				  .validateOrderNumber(CBCS_316AsCustomerICanCreateAOrder.orderNumber, getWebDriver())				
+				  .validateOrderNumber(CBCS_316AsCustomerICanCreateAnOrder.orderNumber, getWebDriver())				
 				 
 				 )
 				 
 		   .andUsing(
 				   
 				   tierDetailsShippingPage=processOrderShippingPage
-				   .clickDetailsLink(CBCS_316AsCustomerICanCreateAOrder.orderNumber, getWebDriver())
+				   .clickDetailsLink(CBCS_316AsCustomerICanCreateAnOrder.orderNumber, getWebDriver())
 				   
 				   )
 				   
@@ -80,49 +80,63 @@ public class CBCS_138AsShippingICanChangeTierStatusToShipped extends TestCaseCBC
 		   .andUsing(
 				   
 				   tierDetailsShippingPage
-				   .fillTrackingNumberField(trackingNumber, getWebDriver())
-				   .clickSaveButton() 
+				   .clickSendToShippingButton()
+				   
+				   
 				   
 				   
 				    )
 				    
-		   .check(
-				  
-				   tierDetailsShippingPage
-				  .trakingSuccessfullyMessageLabelMustBePresent()
-				   
-				  )
-			
+		    .check(
+		    		
+		    	tierDetailsShippingPage
+		    	.changedTierStatusMessageMustBePresent()
+		    	
+		    	)
+		    	
+		    .andUsing(		 
+		    		
+		    	tierDetailsShippingPage
+		    	.fillTrackingNumberField(trackingNumber, getWebDriver())
+				.clickSaveButton() 
+		    	
+		    	)
+		    	
+		    .check(
+		    		
+		    	tierDetailsShippingPage
+		    	.trakingSuccessfullyMessageMustBePresent()
+		    	
+		    	)		    
+		 
 			.andUsing(
 					
-					tierDetailsShippingPage
-					.clicknotifyClientButton()
+				tierDetailsShippingPage
+				.clickNotifyClientButton()
 					
-					 )
+				 )
 			 
 			.check(
 					
-					tierDetailsShippingPage
-					.sendNotificationMessageLabelMustBePresent()
-				   
-				
+				tierDetailsShippingPage
+				.notificationMessageAndLabelMustBePresent()
+				  				
 				 )
 				 
 			.andUsing(
 					
-					processOrderShippingPage=tierDetailsShippingPage
-					.clickBackButton(getWebDriver())
+				processOrderShippingPage=tierDetailsShippingPage
+				.clickBackButton(getWebDriver())
 					
 					)
 			
 		    .check(
 		    		
-		    		processOrderShippingPage
-					.checkTierStatus(CBCS_316AsCustomerICanCreateAOrder.orderNumber, orderStatus, getWebDriver())
-					
+		    	processOrderShippingPage
+				.checkTierStatus(CBCS_316AsCustomerICanCreateAnOrder.orderNumber, orderStatus, getWebDriver())					
 		    		
 		    	);
 		
-	}					
+		}					
 
 }

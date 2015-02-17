@@ -15,7 +15,7 @@ import com.ts.commons.DataSourceXls;
 import utils.TestCaseCBCS;
 import utils.UI;
 
-public class CBCS_324AsAdminICanDeleteAPedigree extends TestCaseCBCS {
+public class CBCS_241AsAdminICanDeleteAPedigree extends TestCaseCBCS {
 	
 	 private DashboardAdminPage dashboardPage;
 	 private PedigreesPage pedigreesPage;
@@ -64,7 +64,7 @@ public class CBCS_324AsAdminICanDeleteAPedigree extends TestCaseCBCS {
 			    .and()
 				.fillFieldsAddPedigreeModal(pedigreeName)
 				.then()
-				.clickSaveButton(getWebDriver())					
+				.clickSaveButton()					
 					
 				)
 					

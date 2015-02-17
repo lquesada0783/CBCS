@@ -17,7 +17,7 @@ import pages.MyAccountPage;
 import utils.TestCaseCBCS;
 import utils.UI;
 
-public class CBCS_316AsCustomerICanAddANewShippingAddress extends TestCaseCBCS {
+public class CBCS_320AsCustomerICanCreateANewShippingAddress extends TestCaseCBCS {
 	
 	private DashboardCustomerPage dashboardCustomerPage;
 	private MyAccountPage myAccountPage;

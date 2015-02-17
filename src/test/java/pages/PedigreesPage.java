@@ -37,7 +37,13 @@ public class PedigreesPage extends Page {
 	
 	@FindBy(xpath="//div[@id='operationResult' and contains(.,'Pedigrees deleted successfully.') and @style='display: block;']")
 	private WebElement deletedPedigreeSuccessfullyMessage;
-
+	
+	@FindBy(xpath="//input[@name='description']")
+	private WebElement editPedigreeNameField;
+	
+	@FindBy(xpath="//div[@id='operationResult' and contains(.,'Pedigree updated successfully.') and @style='display: block;']")
+	private WebElement editPedigreeSuccessfullyMessage;
+	
 	@Override
 	public PedigreesPage and() {		
 		return this;
@@ -60,7 +66,7 @@ public class PedigreesPage extends Page {
 		return this;
 	}
 	
-	public PedigreesPage clickSaveButton(WebDriver driver){
+	public PedigreesPage clickSaveButton(){
 		saveButton.click();		
 		return this;		 
 	}
@@ -88,7 +94,21 @@ public class PedigreesPage extends Page {
 		yesButton.click();		
 		return this;		 
 	}
-
+	
+	public PedigreesPage clickEditButton(WebDriver driver, String pedigreeName){
+	    utils.Utils.waitForElemets(1);
+		final WebElement editButtonWebElement = driver.findElement(By.xpath("//span[contains(.,'"+pedigreeName+"')]//../..//a[contains(.,'Edit')]"));
+		editButtonWebElement.click();	
+		
+		return this;		 
+	}
+	
+	public PedigreesPage fillFieldsEditPedigreeModal(String newPedigreeName){
+		utils.Utils.waitForElemets(1);
+		editPedigreeNameField.clear();
+		editPedigreeNameField.sendKeys(newPedigreeName);	
+		return this;
+	}	
 
 	public Validator PedigreesLabelMustBePresent(){
 		return new Validator()
@@ -145,5 +165,20 @@ public class PedigreesPage extends Page {
 			}
 		};
 	}
+	
+	public Validator editPedigreeSuccessfullyMessageMustBePresent(){
+		return new Validator()
+		{
+			@Override
+			public void Validate(){				
+					
+				boolean thereIsAnEditPedigreeSuccessfullyMessage = editPedigreeSuccessfullyMessage !=null;
+				Assert.assertTrue(thereIsAnEditPedigreeSuccessfullyMessage);			
+				
+			}
+		};
+	}
+	
+	
 
 }

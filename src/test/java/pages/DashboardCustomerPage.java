@@ -22,6 +22,15 @@ public class DashboardCustomerPage extends Page {
 	
 	@FindBy(xpath="//a[text()='Calendar']")
 	private WebElement calendarTab;
+	
+	@FindBy(xpath="//a[@href='#/news/' and text()='News']")
+	private WebElement newsTab;
+	
+	@FindBy(xpath="//ul[@class='nav navbar-nav']//a[@href='#/events' and text()='Events']")
+	private WebElement eventsTab;
+	
+	@FindBy(xpath="//ul[@class='nav navbar-nav']//a[@href='#/about/faq/' and text()='FAQ']")
+	private WebElement faqTab;
 
 	@Override
 	public DashboardCustomerPage and() {
@@ -54,7 +63,26 @@ public class DashboardCustomerPage extends Page {
 		return eventsCalendarPage;		 
 	}
 	
+	public NewsCustomerPage clickNewsTab(WebDriver driver){		
+		utils.Utils.waitForElemets(1);			
+		newsTab.click();		
+		NewsCustomerPage newsCustomerPage= PageFactory.initElements(driver, NewsCustomerPage.class);
+		return newsCustomerPage;		 
+	}
 	
+	public EventsCustomerPage clickEventsTab(WebDriver driver){		
+		utils.Utils.waitForElemets(1);			
+		eventsTab.click();		
+		EventsCustomerPage eventsCustomerPage= PageFactory.initElements(driver, EventsCustomerPage.class);
+		return eventsCustomerPage;		 
+	}
+	
+	public FAQPage clickFAQTab(WebDriver driver){		
+		utils.Utils.waitForElemets(1);			
+		faqTab.click();		
+		FAQPage faqPage = PageFactory.initElements(driver, FAQPage.class);
+		return faqPage;		 
+	}
 	
 	public Validator welcomeLabelMustBePresent(){
 		return new Validator()

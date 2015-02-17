@@ -59,7 +59,7 @@ public class CBCS_81AsFinalizerICanQualifyAComic extends TestCaseCBCS {
 		.andUsing(
 				
 				processOrderPage				
-				.fillInvoiceOrOrderNumberField(CBCS_316AsCustomerICanCreateAOrder.orderNumber)
+				.fillInvoiceOrOrderNumberField(CBCS_316AsCustomerICanCreateAnOrder.orderNumber)
 				.and()
 				.clickSearchButton()
 					 
@@ -67,13 +67,13 @@ public class CBCS_81AsFinalizerICanQualifyAComic extends TestCaseCBCS {
 					  
 		  .check(
 				  processOrderPage
-				  .orderNumberLabelMustBePresent(CBCS_316AsCustomerICanCreateAOrder.orderNumber, getWebDriver())				
+				  .orderNumberLabelMustBePresent(CBCS_316AsCustomerICanCreateAnOrder.orderNumber, getWebDriver())				
 				)
 		   
 		.andUsing(
 				   
 				  bulkGradingFinalizerPage=processOrderPage
-				  .clickDetailsLink(CBCS_316AsCustomerICanCreateAOrder.orderNumber, getWebDriver())	
+				  .clickDetailsLink(CBCS_316AsCustomerICanCreateAnOrder.orderNumber, getWebDriver())	
 				   
 				   )
 			
@@ -127,7 +127,7 @@ public class CBCS_81AsFinalizerICanQualifyAComic extends TestCaseCBCS {
 		     .check(
 				    	
 				   processOrderPage
-				    .checkTierStatus(CBCS_316AsCustomerICanCreateAOrder.orderNumber, orderStatus, getWebDriver())
+				    .checkTierStatus(CBCS_316AsCustomerICanCreateAnOrder.orderNumber, orderStatus, getWebDriver())
 				    	
 				    );
 			}

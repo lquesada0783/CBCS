@@ -1,7 +1,6 @@
 package pages;
 
 import org.testng.Assert;
-
 import object.OrderDataInfo;
 
 import org.openqa.selenium.By;
@@ -244,6 +243,8 @@ public class SubmitYourComicPage extends Page {
 		{
 			@Override
 			public void Validate(){					
+				//System.out.println("excel-->"+fastPassText.trim());
+				//System.out.println("xpath-->"+fastPassTextXpath.trim());
 				
 				Assert.assertEquals(textTitle.trim(),titleTextXpath.trim());
 				Assert.assertEquals(issueText.trim(),issueTextXpath.trim());
@@ -251,15 +252,15 @@ public class SubmitYourComicPage extends Page {
 				Assert.assertEquals(publisherText.trim(),publisherTextXpath.trim());
 				Assert.assertEquals(variantText.trim(),variantTextXpath.trim());
 				Assert.assertEquals(pedigreeText.trim(),pedigreeTextXpath.trim());
-				Assert.assertEquals(tierText.trim(),tierTextXpath.trim());
+				Assert.assertEquals(tierText.trim(),tierTextXpath.trim());;
 				Assert.assertEquals(quantityText.trim(),quantityTextXpath.trim());
-				Assert.assertEquals(insuredValueText.trim(),insuredValueTextXpath.trim());
-				Assert.assertEquals(gradeScreeningText.trim(),gradeScreeningTextXpath.trim());
-				Assert.assertEquals(fastPassText.toString().trim(),fastPassTextXpath.toString().trim());
-				Assert.assertEquals(slideshowText.trim(),slideshowTextXpath.trim());
-				/*Assert.assertEquals(imagenText.trim(),imagenTextXpath.trim());
-				Assert.assertEquals(verifiedSignatureText.trim(),verifiedSignatureTextXpath.trim());
-				Assert.assertEquals(authenticatedSignatureText.trim(),authenticatedSignatureTextXpath.trim());*/
+				Assert.assertEquals(insuredValueText.trim(),insuredValueTextXpath.trim());				
+				Assert.assertEquals(gradeScreeningText.trim(),gradeScreeningTextXpath.trim());				
+				Assert.assertEquals(fastPassText.toString().trim(),fastPassTextXpath.toString().trim());				
+				Assert.assertEquals(slideshowText.trim(),slideshowTextXpath.trim());				
+				Assert.assertEquals(imagenText.trim(),imagenTextXpath.trim());				
+				Assert.assertEquals(verifiedSignatureText.trim(),verifiedSignatureTextXpath.trim());				
+				Assert.assertEquals(authenticatedSignatureText.trim(),authenticatedSignatureTextXpath.trim());
 				
 				
 						

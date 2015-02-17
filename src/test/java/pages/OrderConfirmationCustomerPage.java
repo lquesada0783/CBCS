@@ -6,7 +6,6 @@ import java.awt.event.KeyEvent;
 
 import object.OrderDataInfo;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -46,39 +45,25 @@ public class OrderConfirmationCustomerPage extends Page {
 	}
 	
 	public  OrderConfirmationCustomerPage clickOkButton(WebDriver driver){
-		while(!utils.Utils.iselementPresent(driver, By.xpath("//button[@id='btnBack' and @ng-disabled='progress']"))){
+		okButton.click();
+		
+		/*while(!utils.Utils.iselementPresent(driver, By.xpath("//button[@id='btnBack' and @ng-disabled='progress']"))){
 			utils.Utils.waitForElemets(1);
-		}
+		}	
 		
 		utils.Utils.refreshPage(driver);				
-		okButton.click();		
-	
+		okButton.click();*/
+		
 			Robot robot;
 			try {
 				robot = new Robot();				
-				robot.keyPress(KeyEvent.VK_ENTER);			
+				robot.keyPress(KeyEvent.VK_ENTER);				
 			} catch (AWTException e) {
                 
                 throw  new RuntimeException(e.getMessage());
-        } 		
+        } 			
 		return this;		 
-    }
-	
-	public OrderConfirmationCustomerPage clickOkButtonRobot (){
-        
-        Robot robot;
-         try {
-               robot = new Robot();
-               robot.keyPress(KeyEvent. VK_ENTER);
-            
-        } catch (AWTException e) {
-               
-                throw  new RuntimeException(e.getMessage());
-        }
-        
-        
-         return this ;  
- }
+    }	
 	
 	public  OrderConfirmationCustomerPage clickPrintReceiptButton(WebDriver driver){
 		printReceiptButton.click();		

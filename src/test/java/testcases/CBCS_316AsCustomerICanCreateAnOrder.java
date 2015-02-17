@@ -5,6 +5,7 @@ import java.io.IOException;
 import jxl.read.biff.BiffException;
 import object.OrderDataInfo;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -20,7 +21,7 @@ import pages.SubmitYourComicPage;
 import utils.TestCaseCBCS;
 import utils.UI;
 
-public class CBCS_214AsCustomerICanAddACouponToTheaOrder extends TestCaseCBCS{
+public class CBCS_316AsCustomerICanCreateAnOrder extends TestCaseCBCS {
 	
 	private DashboardCustomerPage dashboardCustomerPage;
 	private SubmitYourComicPage submitYourComicPage;
@@ -29,15 +30,18 @@ public class CBCS_214AsCustomerICanAddACouponToTheaOrder extends TestCaseCBCS{
 	private PaymentMethodCustomerPage paymentMethodCustomerPage;
 	private ReviewOrderCustomerPage reviewOrderCustomerPage;
 	private OrderConfirmationCustomerPage orderConfirmationCustomerPage;
-	private OrderDataInfo order;
+	private OrderDataInfo order;	
+	public static String orderNumber = "";
 	
 	@DataProvider
-	public Object[][] data() throws BiffException, IOException {
-	return new DataSourceXls("Parameters.xls").getData(8, 2);
-	}	
+	 public Object[][] data() throws BiffException, IOException {
+	        return new DataSourceXls ("Parameters.xls" ).getData(8,2);
+	       
+	   }  
 	
-	@Test(dataProvider = "data")
-	public void asCustomerICanAddACouponToTheaOrderTest(String email, String password, String qtyComics, String amountCoupon, String pedigree, String tier,String billing, String shipping, String provider, String paymentMethod){
+	
+	@Test(dataProvider = "data", groups={"CreateOrder"})
+	public void asCustomerICanCreateAOrderTest(String email, String password, String qtyComics, String amountCoupon, String pedigree, String tier,String billing, String shipping, String provider, String paymentMethod){
 		
 		order = new OrderDataInfo();
 		order.fillOrderData(order);
@@ -46,7 +50,7 @@ public class CBCS_214AsCustomerICanAddACouponToTheaOrder extends TestCaseCBCS{
 				dashboardCustomerPage=(DashboardCustomerPage) UI.goToCustomerLoginPage(getWebDriver())
 				.clickLoginLink(getWebDriver())
 				.then()
-				.fillFieldsForLogin(email ,password)
+				.fillFieldsForLogin(email,password)
 				.and()
 				.clickSignInButton(getWebDriver())
 				
@@ -74,38 +78,22 @@ public class CBCS_214AsCustomerICanAddACouponToTheaOrder extends TestCaseCBCS{
 		.andUsing(
 				
 				orderSummaryCustomerPage=submitYourComicPage
-				.fillAllFields(order, pedigree,tier, getWebDriver())
+				.fillAllFields(order, pedigree, tier, getWebDriver())
 				.then()
 				.clickNextButton(getWebDriver())
 				
 				)
 				
 		.check(
-				orderSummaryCustomerPage.orderSummaryLabelMustBePresent()
+				orderSummaryCustomerPage
+				.orderSummaryLabelMustBePresent()
 				
 				)
 				
 		.andUsing(
 				
-				orderSummaryCustomerPage
-				.fillCuponField(amountCoupon,getWebDriver())
-				.then()
-				.clickApplyButton()
-				.and()
-				.clickAcceptButton()
-				
-				)
-				
-		.check(
-				orderSummaryCustomerPage
-				.couponLabelMustBePresent()
-				
-				)
-				
-		.andUsing(
-				
-				addressesInformationCustomerPage=
-				orderSummaryCustomerPage.clickIGreeTermsAndConditionsCheckbox(getWebDriver())
+				addressesInformationCustomerPage=orderSummaryCustomerPage
+				.clickIGreeTermsAndConditionsCheckbox(getWebDriver())
 				.clickNextButton(getWebDriver())
 				
 				)
@@ -153,8 +141,7 @@ public class CBCS_214AsCustomerICanAddACouponToTheaOrder extends TestCaseCBCS{
 				
 		.andUsing(
 				
-				orderConfirmationCustomerPage=
-				reviewOrderCustomerPage
+				orderConfirmationCustomerPage=reviewOrderCustomerPage
 				.clickNextButton(getWebDriver())
 				
 				)
@@ -168,8 +155,9 @@ public class CBCS_214AsCustomerICanAddACouponToTheaOrder extends TestCaseCBCS{
 		.andUsing(
 				
 				orderConfirmationCustomerPage
-				//.writeOnderNumber(getWebDriver(),order)				
-				.clickOkButton(getWebDriver())
+				.writeOnderNumber(getWebDriver(),order)					
+				//.clickOkButton(getWebDriver())		
+				.clickPrintReceiptButton(getWebDriver())
 				
 				)
 				
@@ -179,8 +167,14 @@ public class CBCS_214AsCustomerICanAddACouponToTheaOrder extends TestCaseCBCS{
 				
 			);
 		
-	  }
+	  }	
 	
+	@Override
+	@AfterMethod (alwaysRun=true)
+	public void close(){
+		orderNumber=order.getOrderNumber();
+		driver.close();
+		driver.quit();
+	}	 
 
 }
-

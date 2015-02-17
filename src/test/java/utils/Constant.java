@@ -5,10 +5,10 @@ public class Constant {
 	public static final int TIME_OUT = 10;
 		
 	/*------------------------------------------------------Client_Page_Login--------------------------------------------------*/
-	public static final   String CUSTOMER_LOGIN_URL = "http://cbcscomics-prep.cloudapp.net/#/index";
+	public static final   String CUSTOMER_LOGIN_URL = "http://cbcscomics.cloudapp.net/#/index";
 	
 	/*------------------------------------------------------Admin_Page_Login---------------------------------------------------*/
-	public static final   String ADMIN_lOGIN_URL = "http://cbcscomics-prep.cloudapp.net/admin#/login";	
+	public static final   String ADMIN_lOGIN_URL = "http://cbcscomics.cloudapp.net/admin#/login";		
 	
 	/*-------------------------------------------------Data-Order--------------------------------------------------------------*/
 	public static final   String EMAIL_CLIENT="lquesada@testingsoft.com";
@@ -22,6 +22,5 @@ public class Constant {
 	/*-------------------------------------------------Catalogs------------------------------------------------------------------*/
 	
 	public static final   String CATALOGS_USERS="Users";	
-	
 	
 }

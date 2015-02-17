@@ -1,16 +1,16 @@
-package signin_logout;
+package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import pages.DashboardCustomerPage;
+import org.testng.Assert;
 
 import com.ts.commons.Page;
+import com.ts.commons.Validator;
 
 
-public class CBCSHomePage extends Page {	
+public class CustomerHomePage extends Page {	
 		
 	@FindBy(xpath="//a[text()='Login' and @onmouseover='']")
 	private WebElement loginLink;	
@@ -26,29 +26,30 @@ public class CBCSHomePage extends Page {
 	
 			
 	@Override
-	public CBCSHomePage and() {		
+	public CustomerHomePage and() {		
 		return this;
 	}
 
 	@Override
-	public CBCSHomePage then() {		
+	public CustomerHomePage then() {		
 		return this;
 	}
 	
-	public CBCSHomePage clickLoginLink(WebDriver driver){
+	public CustomerHomePage clickLoginLink(WebDriver driver){
+		utils.Utils.waitForElemets(1);
 		loginLink.click();
 		return this;		 
 	}
 	
 	
-	public CBCSHomePage clearFields(){
+	public CustomerHomePage clearFields(){
 		emailField.clear();
 		passwordField.clear();
 		return this;
 		
 	}
 	
-	public CBCSHomePage fillFieldsForLogin (String email, String password){
+	public CustomerHomePage fillFieldsForLogin (String email, String password){
 		clearFields();
 		emailField.sendKeys(email);
 		passwordField.sendKeys(password);
@@ -60,6 +61,19 @@ public class CBCSHomePage extends Page {
 		signInButton.click();
 		DashboardCustomerPage dashboardCustomerPage= PageFactory.initElements(driver, DashboardCustomerPage.class);
 		return dashboardCustomerPage;		 
+	}
+	
+	public Validator loginLinkMustBePresent(){
+		return new Validator()
+		{
+			@Override
+			public void Validate(){				
+				
+				boolean thereIsALoginLink = loginLink !=null;
+				Assert.assertTrue(thereIsALoginLink);
+				
+			}
+		};
 	}
 	
 

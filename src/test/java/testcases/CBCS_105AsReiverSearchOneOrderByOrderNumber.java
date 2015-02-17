@@ -15,7 +15,7 @@ import pages.ProcessOrderReceiverPage;
 import utils.TestCaseCBCS;
 import utils.UI;
 
-public class CBCS_105AsReiverSearchOneOrderUsingOrderNumber extends TestCaseCBCS {
+public class CBCS_105AsReiverSearchOneOrderByOrderNumber extends TestCaseCBCS {
 	
 private DashboardReceiverPage dashboardPage;
 private ProcessOrderReceiverPage processOrderPage;
@@ -52,7 +52,7 @@ private OrderDataInfo order;
 				   processOrderPage=dashboardPage
 				   .processOrderLabelClick(getWebDriver())
 				   .then()
-				   .fillInvoiceOrOrderNumberField(CBCS_316AsCustomerICanCreateAOrder.orderNumber)
+				   .fillInvoiceOrOrderNumberField(CBCS_316AsCustomerICanCreateAnOrder.orderNumber)
 				   .and()
 				   .clickSearchButton()
 				   
@@ -61,7 +61,7 @@ private OrderDataInfo order;
 		    .check(
 		    		
 		    		processOrderPage
-		    		.orderNumberLabelMustBePresent(CBCS_316AsCustomerICanCreateAOrder.orderNumber, getWebDriver())
+		    		.orderNumberLabelMustBePresent(CBCS_316AsCustomerICanCreateAnOrder.orderNumber, getWebDriver())
 		    		
 		    	   );	
 		

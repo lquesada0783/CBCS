@@ -20,8 +20,7 @@ import pages.SubmitYourComicPage;
 import utils.TestCaseCBCS;
 import utils.UI;
 
-public class CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping extends
-		TestCaseCBCS {
+public class CBCS_214AsCustomerICanAddTheCouponAmountToTheOrder extends TestCaseCBCS{
 	
 	private DashboardCustomerPage dashboardCustomerPage;
 	private SubmitYourComicPage submitYourComicPage;
@@ -33,13 +32,12 @@ public class CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping extends
 	private OrderDataInfo order;
 	
 	@DataProvider
-	 public Object[][] data() throws BiffException, IOException {
-	        return new DataSourceXls ("Parameters.xls" ).getData(9,2);
-	       
-	   }  
+	public Object[][] data() throws BiffException, IOException {
+	return new DataSourceXls("Parameters.xls").getData(8, 2);
+	}	
 	
 	@Test(dataProvider = "data")
-	public void asCustomerICanSelectPickUpAtConvetionAsShippingTest (String email, String password, String qtyComics, String convention, String pedigree, String tier,String billing, String shipping, String provider, String paymentMethod){
+	public void asCustomerICanAddACouponToTheaOrderTest(String email, String password, String qtyComics, String amountCoupon, String pedigree, String tier,String billing, String shipping, String provider, String paymentMethod){
 		
 		order = new OrderDataInfo();
 		order.fillOrderData(order);
@@ -47,6 +45,7 @@ public class CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping extends
 		using(
 				dashboardCustomerPage=(DashboardCustomerPage) UI.goToCustomerLoginPage(getWebDriver())
 				.clickLoginLink(getWebDriver())
+				.then()
 				.fillFieldsForLogin(email ,password)
 				.and()
 				.clickSignInButton(getWebDriver())
@@ -55,8 +54,7 @@ public class CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping extends
 				
 		 .check(
 			
-				 dashboardCustomerPage
-				 .welcomeLabelMustBePresent()
+				 dashboardCustomerPage.welcomeLabelMustBePresent()
 						
 			  )
 			  
@@ -69,8 +67,7 @@ public class CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping extends
 				
 		.check(
 				
-				submitYourComicPage
-				.submitYourComicLabelMustBePresent()
+				submitYourComicPage.submitYourComicLabelMustBePresent()
 				
 				)
 				
@@ -84,8 +81,24 @@ public class CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping extends
 				)
 				
 		.check(
+				orderSummaryCustomerPage.orderSummaryLabelMustBePresent()
+				
+				)
+				
+		.andUsing(
+				
 				orderSummaryCustomerPage
-				.orderSummaryLabelMustBePresent()
+				.fillCuponField(amountCoupon,getWebDriver())
+				.then()
+				.clickApplyButton()
+				.and()
+				.clickAcceptButton()
+				
+				)
+				
+		.check(
+				orderSummaryCustomerPage
+				.couponLabelMustBePresent()
 				
 				)
 				
@@ -109,20 +122,17 @@ public class CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping extends
 				paymentMethodCustomerPage=addressesInformationCustomerPage
 				.selectBillingAddress(billing, getWebDriver())
 				.then()
-				.clickPickUpAtConventionRadio()
+				.selectShippingAddress(shipping, getWebDriver())
 				.and()
-				.clickAcceptButton()	
+				.selectOneOptionShippingProviderDropdown(provider, getWebDriver())
 				.then()
-				.selectAConvention(convention, getWebDriver())
-				.and()
 				.clickNextButton(getWebDriver())
 				
 				)
 				
 				
 		.check(					
-				paymentMethodCustomerPage
-				.paymentMethodLabelMustBePresent()
+				paymentMethodCustomerPage.paymentMethodLabelMustBePresent()
 				
 			)
 			
@@ -138,8 +148,7 @@ public class CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping extends
 			   
 		.check(
 				
-				reviewOrderCustomerPage
-				.reviewOrderLabelMustBePresent(getWebDriver())				
+				reviewOrderCustomerPage.reviewOrderLabelMustBePresent(getWebDriver())
 				
 				)
 				
@@ -152,26 +161,25 @@ public class CBCS_321AsCustomerICanSelectPickUpAtConvetionAsShipping extends
 				
 		.check(
 				
-				orderConfirmationCustomerPage
-				.orderConfirmationLabelMustBePresent()
+				orderConfirmationCustomerPage.orderConfirmationLabelMustBePresent()
 				
 				)
 				
 		.andUsing(
 				
-				orderConfirmationCustomerPage				
-				.then()
+				orderConfirmationCustomerPage							
 				.clickOkButton(getWebDriver())
 				
 				)
 				
 		.check(
 				
-			orderConfirmationCustomerPage
-			.warningMessageMustBePresent()
+			orderConfirmationCustomerPage.warningMessageMustBePresent()
 				
-			);	
-
-	}
+			);
+		
+	  }
+	
 
 }
+

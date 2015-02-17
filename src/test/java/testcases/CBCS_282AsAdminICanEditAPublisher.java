@@ -4,20 +4,23 @@ import java.io.IOException;
 
 import jxl.read.biff.BiffException;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.ts.commons.DataSourceXls;
-
 import pages.DashboardAdminPage;
 import pages.PublisherPage;
+
+import com.ts.commons.DataSourceXls;
+
 import utils.TestCaseCBCS;
 import utils.UI;
 
-public class CBCS_322AsAdminICanDeleteAPublisher extends TestCaseCBCS {
+public class CBCS_282AsAdminICanEditAPublisher extends TestCaseCBCS {
 	
 	private DashboardAdminPage dashboardPage;
 	private PublisherPage publisherPage;
+	public static String publisher = "";
 	 
 	 @DataProvider
 	 public Object[][] data() throws BiffException, IOException {
@@ -25,9 +28,10 @@ public class CBCS_322AsAdminICanDeleteAPublisher extends TestCaseCBCS {
 	 }	
 	 
 	 @Test(dataProvider = "data")
-	 public void asAdminICanDeleteAPublisherTest(String userName, String password, String enviroment, String catalogsPublisher, String publisherName, String newPublisherName){
+	 public void asAdminICanEditAPublisherTest(String userName, String password, String enviroment, String catalogsPublisher, String publisherName, String newPublisherName){
 			
-						
+		publisher=newPublisherName;
+		  
 		using(
 				dashboardPage=(DashboardAdminPage) UI.goToAdminLoginPage(getWebDriver())
 				.fillFieldsForLogin(userName , password)
@@ -43,21 +47,22 @@ public class CBCS_322AsAdminICanDeleteAPublisher extends TestCaseCBCS {
 							
 				 )
 			
-		.andUsing(
+		 .andUsing(
 						
 				publisherPage=dashboardPage
 				.selectOneOptionCatalogMenue(catalogsPublisher, getWebDriver(),PublisherPage.class)  					
 						
 				)
 						
-		.check(
+		 .check(
 					
 			publisherPage.PublisherLabelMustBePresent()
 						
 				)
-		.andUsing(
+		 .andUsing(
 						
-				publisherPage.clickNewButton(getWebDriver())
+				publisherPage
+				.clickNewButton(getWebDriver())
 				.and()
 				.fillFieldsAddPublisherModal(publisherName)
 				.then()
@@ -73,7 +78,8 @@ public class CBCS_322AsAdminICanDeleteAPublisher extends TestCaseCBCS {
 					
 		 .andUsing(
 					
-			publisherPage.fillSearchField(publisherName)
+			publisherPage
+			.fillSearchField(publisherName)
 			.and()
 			.clickSearchButton(getWebDriver())
 					
@@ -87,17 +93,29 @@ public class CBCS_322AsAdminICanDeleteAPublisher extends TestCaseCBCS {
 			
 		.andUsing(
 				
-			publisherPage.clickDeleteButton(getWebDriver(), publisherName)
+			publisherPage
+			.clickEditButton(getWebDriver(), publisherName)		
 			.and()
-			.clickYesButton(getWebDriver())
+			.fillFieldsEditPublisherModal(newPublisherName)
+			.then()
+			.clickSaveButton()
 			
 			)
 		
 		.check(
 			
-			publisherPage.deletedPublisherSuccessfullyMessageMustBePresent()	
+			publisherPage.editPublisherSuccessfullyMessageMustBePresent()	
 			
 			);
 		}
+	 
+	 @Override
+	 @AfterMethod (alwaysRun=true)
+	 public void close(){
+		utils.Utils.searchAndDeletePublisher(publisher, getWebDriver());
+		driver.close();
+		driver.quit();
+		
+	 }
 
 }

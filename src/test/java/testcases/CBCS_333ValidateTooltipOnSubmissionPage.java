@@ -14,7 +14,7 @@ import pages.SubmitYourComicPage;
 import utils.TestCaseCBCS;
 import utils.UI;
 
-public class CBCS_322ValidateTooltipOnSubmissionPage extends TestCaseCBCS {
+public class CBCS_333ValidateTooltipOnSubmissionPage extends TestCaseCBCS {
 	
 	private DashboardCustomerPage dashboardCustomerPage;
 	private SubmitYourComicPage submitYourComicPage;
@@ -26,7 +26,7 @@ public class CBCS_322ValidateTooltipOnSubmissionPage extends TestCaseCBCS {
 	   }  
 	
 	@Test(dataProvider = "data")
-	public void asCustomerICanCreateAOrderTest(String email,String password,String titleText, String issueText, String yearText, String publisherText,  String variantText,  String pedigreeText,  String tierText,  String quantityText, String insuredValueText,  String gradeScreeningText, String fastPassText,  String slideshowText,  String imagenText,  String verifiedSignatureText,  String authenticatedSignatureText){
+	public void validateTooltipOnSubmissionPageTest(String email,String password,String titleText, String issueText, String yearText, String publisherText,  String variantText,  String pedigreeText,  String tierText,  String quantityText, String insuredValueText,  String gradeScreeningText, String fastPassText,  String slideshowText,  String imagenText,  String verifiedSignatureText,  String authenticatedSignatureText){
 		
 	
 		using(

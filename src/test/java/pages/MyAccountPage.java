@@ -14,6 +14,9 @@ public class MyAccountPage extends Page {
 	
 	@FindBy(xpath="//a[text()='Address Information']")
 	private WebElement addressInformationTab;
+	
+	@FindBy(xpath="//a[text()='Manage your Credit Card']")
+	private WebElement manageyourCreditCardTab;
 		
 	@FindBy(xpath="//h3[text()='Order List Information']")
 	private WebElement orderListInformationLabel;
@@ -21,6 +24,8 @@ public class MyAccountPage extends Page {
 	@FindBy(xpath="//a[text()='Orders']")
 	private WebElement ordersTab;
 	
+	@FindBy(xpath="//a[@href='#changePasswordTab' and text()='Change Password']")
+	private WebElement changePasswordTab;
 
 	@Override
 	public MyAccountPage and() {
@@ -37,6 +42,19 @@ public class MyAccountPage extends Page {
 		addressInformationTab.click();		
 		AddressesInformationCustomerPage addressesInformationCustomerPage= PageFactory.initElements(driver, AddressesInformationCustomerPage.class);
 		return addressesInformationCustomerPage;		 
+	}	
+	
+
+	public ManageYourCreditCardPage clickManageYourCreditCardTab(WebDriver driver){			
+		manageyourCreditCardTab.click();		
+		ManageYourCreditCardPage manageYourCreditCardPage= PageFactory.initElements(driver, ManageYourCreditCardPage.class);
+		return manageYourCreditCardPage;		 
+	}	
+	
+	public ChangePasswordPage clickChangePasswordTab(WebDriver driver){			
+		changePasswordTab.click();		
+		ChangePasswordPage changePasswordPage= PageFactory.initElements(driver, ChangePasswordPage.class);
+		return changePasswordPage;		 
 	}	
 	
 	public Validator ordersTabMustBePresent(){

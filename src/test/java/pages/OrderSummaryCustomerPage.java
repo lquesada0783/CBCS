@@ -3,12 +3,13 @@ package pages;
 import java.util.List;
 
 import org.testng.Assert;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import utils.Utils;
 
 import com.ts.commons.Page;
 import com.ts.commons.Validator;
@@ -35,7 +36,16 @@ public class OrderSummaryCustomerPage extends Page {
 	
 	@FindBy(xpath="//div[text()='Coupon']/../..//div[text()='USD $50.00']")
 	private WebElement couponLabel;	
-		
+	
+	@FindBy(xpath="//div[text()='SubTotal']/../../../div/div/a[contains(.,'Remove')]")
+	private WebElement removeCouponLink;	
+	
+	@FindBy(xpath="//button[@class='btn btn-primary' and text()='Yes']")	
+	private WebElement yesButton;	
+	
+	@FindBy(xpath="//div[@id='operationResult' and contains(.,Coupon deleted successfully.') and @style='display: block;']")
+	private WebElement deletedCouponSuccessfulMessage;
+	
 	@Override
 	public OrderSummaryCustomerPage and() {
 		return this;
@@ -79,6 +89,18 @@ public class OrderSummaryCustomerPage extends Page {
 		nextButton.click();
 		AddressesInformationCustomerPage addressesInformationCustomerPage = PageFactory.initElements(driver, AddressesInformationCustomerPage.class);
 		return addressesInformationCustomerPage;		 
+	}
+	
+	public  OrderSummaryCustomerPage clickRemoveCouponLink( ){
+		utils.Utils.waitForElemets(2);	
+		removeCouponLink.click();		
+		return this;		 
+	}
+	
+	public  OrderSummaryCustomerPage clickYesButton( ){
+		yesButton.click();
+		utils.Utils.waitForElemets(2);
+		return this;		 
 	}
 	
 	 public Validator orderSummaryLabelMustBePresent(){
@@ -129,11 +151,30 @@ public class OrderSummaryCustomerPage extends Page {
 				@Override
 				public void Validate(){				
 					
-					boolean thereIsAnOrderSummaryLabel = couponLabel !=null;
-					Assert.assertTrue(thereIsAnOrderSummaryLabel);
+					boolean thereIsACouponLabel = couponLabel !=null;
+					Assert.assertTrue(thereIsACouponLabel);
 					
 				}
 			};
 		} 
+
+	 
+	 public Validator validateSuccessfulMessageIsPresentAndCouponDoesNotMustBePresent(final WebDriver driver){		
+	 
+			return new Validator()
+			{
+				@Override
+				public void Validate(){	
+					
+					boolean thereIsADeletedCouponSuccessfullyMessage = deletedCouponSuccessfulMessage !=null;
+					Assert.assertTrue(thereIsADeletedCouponSuccessfullyMessage);
+					
+					Assert.assertFalse(Utils.iselementPresent(driver, By.xpath("//div[text()='Coupon']/../..//div[text()='USD $50.00']")));
+					
+					
+				}
+			};
+		} 
+
 
 }

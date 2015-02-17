@@ -15,7 +15,7 @@ import pages.PublisherPage;
 import utils.TestCaseCBCS;
 import utils.UI;
 
-public class CBCS_321AsAdminICanCreateANewPublisher extends TestCaseCBCS {
+public class CBCS_279AsAdminICanCreateANewPublisher extends TestCaseCBCS {
 	
 	 private DashboardAdminPage dashboardPage;
 	 private PublisherPage publisherPage;
